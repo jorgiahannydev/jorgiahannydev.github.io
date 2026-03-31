@@ -9,13 +9,13 @@ export default function Hero() {
           alt="Foto de perfil de Jorgiahanny Almea"
           width={180}
           height={180}
-          className="rounded-full mx-auto mb-6 object-cover border-4 border-pink-400 shadow-md"
+          className="rounded-full mx-auto mb-6 object-cover border-4 border-rose-400 shadow-md"
           priority
         />
         <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
           Jorgiahanny Almea Martínez
         </h1>
-        <p className="text-pink-500 font-semibold text-lg mb-4">
+        <p className="text-rose-500 font-semibold text-lg mb-4">
           Full Stack Developer Jr.&nbsp;&nbsp;|&nbsp;&nbsp;HTML · CSS · JavaScript · React · Node.js
         </p>
         <p className="text-gray-600 leading-relaxed text-justify mb-8">
@@ -31,13 +31,13 @@ export default function Hero() {
           <a
             href="/cv.pdf"
             download
-            className="bg-pink-500 hover:bg-pink-600 active:scale-95 text-white font-semibold px-6 py-2.5 rounded-lg transition-all shadow"
+            className="bg-rose-500 hover:bg-rose-600 active:scale-95 text-white font-semibold px-6 py-2.5 rounded-lg transition-all shadow"
           >
             Descargar CV
           </a>
           <a
             href="#contacto"
-            className="border-2 border-slate-400 hover:border-pink-400 hover:text-pink-500 active:scale-95 text-slate-600 font-semibold px-6 py-2.5 rounded-lg transition-all"
+            className="border-2 border-slate-400 hover:border-rose-400 hover:text-rose-500 active:scale-95 text-slate-600 font-semibold px-6 py-2.5 rounded-lg transition-all"
           >
             Contacto
           </a>
