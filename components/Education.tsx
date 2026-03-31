@@ -38,17 +38,17 @@ export default function Education() {
         <h2 className="text-2xl md:text-3xl font-bold text-slate-800 text-center mb-2">
           Educación
         </h2>
-        <div className="w-12 h-1 bg-pink-300 rounded mx-auto mb-10" />
+        <div className="w-12 h-1 bg-pink-200 rounded mx-auto mb-10" />
 
         <div className="flex flex-col gap-3">
           {items.map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-xl border-l-4 border-pink-300 shadow-sm px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
+              className="bg-white rounded-xl border-l-4 border-pink-200 shadow-sm px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
             >
               <div>
                 <h3 className="font-bold text-slate-800 text-sm">{item.title}</h3>
-                <p className="text-pink-400 font-medium text-xs mt-0.5">{item.institution}</p>
+                <p className="text-pink-200 font-medium text-xs mt-0.5">{item.institution}</p>
               </div>
               <span className="text-gray-400 text-xs italic whitespace-nowrap">{item.date}</span>
             </div>

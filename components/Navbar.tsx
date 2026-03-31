@@ -26,7 +26,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-slate-300 hover:text-pink-300 text-sm font-medium transition-colors"
+                className="text-slate-300 hover:text-pink-200 text-sm font-medium transition-colors"
               >
                 {l.label}
               </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block text-slate-300 hover:text-pink-300 text-sm font-medium py-1 transition-colors"
+                className="block text-slate-300 hover:text-pink-200 text-sm font-medium py-1 transition-colors"
               >
                 {l.label}
               </a>

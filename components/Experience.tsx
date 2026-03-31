@@ -77,18 +77,18 @@ export default function Experience() {
         <h2 className="text-2xl md:text-3xl font-bold text-slate-800 text-center mb-2">
           Experiencia Laboral
         </h2>
-        <div className="w-12 h-1 bg-pink-300 rounded mx-auto mb-10" />
+        <div className="w-12 h-1 bg-pink-200 rounded mx-auto mb-10" />
 
         <div className="flex flex-col gap-4">
           {jobs.map((job) => (
             <div
               key={job.title + job.date}
-              className="bg-white rounded-xl border-l-4 border-pink-300 shadow-sm px-6 py-5"
+              className="bg-white rounded-xl border-l-4 border-pink-200 shadow-sm px-6 py-5"
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
                 <div>
                   <h3 className="font-bold text-slate-800 text-base">{job.title}</h3>
-                  <p className="text-pink-400 font-medium text-sm">{job.company}</p>
+                  <p className="text-pink-200 font-medium text-sm">{job.company}</p>
                 </div>
                 <span className="text-gray-400 text-xs italic sm:text-right whitespace-nowrap pt-0.5">
                   {job.date}
