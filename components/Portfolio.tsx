@@ -91,7 +91,7 @@ function ProjectCard({ p }: { p: Project }) {
           <Image src={p.img} alt={p.alt} fill className="object-cover" />
         </div>
       ) : (
-        <div className="h-44 bg-gradient-to-br from-slate-700 to-rose-500 flex items-center justify-center">
+        <div className="h-44 bg-gradient-to-br from-slate-700 to-pink-400 flex items-center justify-center">
           <span className="text-white font-bold text-xl tracking-wide">{p.placeholder}</span>
         </div>
       )}
@@ -102,7 +102,7 @@ function ProjectCard({ p }: { p: Project }) {
           {p.tags.map((t) => (
             <span
               key={t}
-              className="text-xs bg-rose-50 text-rose-600 border border-rose-200 px-2.5 py-0.5 rounded-full font-medium"
+              className="text-xs bg-pink-50 text-pink-500 border border-pink-200 px-2.5 py-0.5 rounded-full font-medium"
             >
               {t}
             </span>
@@ -114,7 +114,7 @@ function ProjectCard({ p }: { p: Project }) {
               href={p.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs bg-rose-500 hover:bg-rose-600 text-white font-semibold px-3 py-1.5 rounded-lg transition-colors"
+              className="text-xs bg-pink-400 hover:bg-pink-500 text-white font-semibold px-3 py-1.5 rounded-lg transition-colors"
             >
               Ver demo
             </a>
@@ -142,7 +142,7 @@ export default function Portfolio() {
         <h2 className="text-2xl md:text-3xl font-bold text-slate-800 text-center mb-2">
           Portafolio
         </h2>
-        <div className="w-12 h-1 bg-rose-400 rounded mx-auto mb-10" />
+        <div className="w-12 h-1 bg-pink-300 rounded mx-auto mb-10" />
 
         <h3 className="text-base font-semibold text-slate-600 mb-4">Proyectos de Desarrollo Web</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
