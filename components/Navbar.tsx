@@ -26,7 +26,7 @@ export default function Navbar() {
         <a
           href="#presentacion"
           className="text-sm md:text-base tracking-widest truncate italic"
-          style={{ fontFamily: "var(--font-playfair)", color: "#7a1e3e" }}
+          style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}
         >
           Jorgiahanny Almea Martínez
         </a>

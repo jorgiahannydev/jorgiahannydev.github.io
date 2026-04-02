@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lora } from "next/font/google";
+import { Playfair_Display, Lora, Newsreader } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -14,6 +14,14 @@ const lora = Lora({
   subsets: ["latin"],
   variable: "--font-lora",
   weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -39,8 +47,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${playfair.variable} ${lora.variable}`}>
-      <body className="bg-[#fdf8f0] text-stone-800 antialiased">
+    <html lang="es" className={`${playfair.variable} ${lora.variable} ${newsreader.variable}`}>
+      <body className="bg-[#fdf9f3] text-stone-800 antialiased">
         {children}
       </body>
     </html>

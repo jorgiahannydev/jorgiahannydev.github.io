@@ -13,7 +13,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: var(--font-playfair), "Palatino Linotype", Georgia, serif;
+  font-family: var(--font-newsreader), var(--font-playfair), "Palatino Linotype", Georgia, serif;
 }
 
 /* ── Patrón ornamental (cruz/plus) en todas las secciones — estilo Stitch ── */
