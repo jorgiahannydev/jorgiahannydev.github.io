@@ -51,14 +51,15 @@ function ProjectCard({ p }: { p: Project }) {
     <div
       className="group relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1"
       style={{
-        backgroundColor: "#f5efe6",
-        border: "1px solid rgba(200,144,58,0.18)",
-        boxShadow: "0 2px 10px rgba(122,30,62,0.07)",
+        backgroundColor: "#fdf9f3",
+        border: "1px solid rgba(197,160,89,0.18)",
+        boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
+        borderRadius: "4px",
       }}
     >
       {/* Icono botánico superpuesto al hover */}
       <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-15 transition-opacity duration-500 text-3xl pointer-events-none"
-        style={{ color: "#3d0a1e" }}>
+        style={{ color: "#8e4766" }}>
         ❧
       </div>
 
@@ -73,7 +74,7 @@ function ProjectCard({ p }: { p: Project }) {
       ) : (
         <div
           className="aspect-[3/4] flex items-center justify-center overflow-hidden"
-          style={{ background: "linear-gradient(160deg, #3d0a1e 0%, #b8891f 100%)" }}
+          style={{ background: "linear-gradient(160deg, #800020 0%, #C5A059 100%)" }}
         >
           <span
             className="font-bold text-2xl tracking-widest italic group-hover:scale-105 transition-transform duration-500 inline-block"
@@ -89,11 +90,11 @@ function ProjectCard({ p }: { p: Project }) {
         <span className="b-label text-[0.65rem]">{p.category}</span>
         <h4
           className="font-semibold text-xl italic leading-snug"
-          style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}
+          style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}
         >
           {p.title}
         </h4>
-        <p className="text-sm leading-relaxed flex-1" style={{ color: "#3a2428", fontFamily: "var(--font-lora)" }}>
+        <p className="text-sm leading-relaxed flex-1" style={{ color: "#524348", fontFamily: "var(--font-noto-serif)" }}>
           {p.description}
         </p>
 
@@ -103,7 +104,7 @@ function ProjectCard({ p }: { p: Project }) {
             <a
               href={p.demo} target="_blank" rel="noopener noreferrer"
               className="italic border-b pb-0.5"
-              style={{ fontFamily: "var(--font-newsreader)", color: "#af2b3e", borderColor: "rgba(175,43,62,0.3)", fontSize: "0.9rem" }}
+              style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766", borderColor: "rgba(142,71,102,0.3)", fontSize: "0.9rem" }}
             >
               Ver en vivo
             </a>
@@ -112,7 +113,7 @@ function ProjectCard({ p }: { p: Project }) {
             <a
               href={p.code} target="_blank" rel="noopener noreferrer"
               className="italic border-b pb-0.5"
-              style={{ fontFamily: "var(--font-newsreader)", color: "#af2b3e", borderColor: "rgba(175,43,62,0.3)", fontSize: "0.9rem" }}
+              style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766", borderColor: "rgba(142,71,102,0.3)", fontSize: "0.9rem" }}
             >
               Ver código
             </a>
@@ -137,13 +138,13 @@ export default function PortfolioCarousel() {
         <div>
           <h2
             className="text-4xl md:text-5xl font-bold italic"
-            style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}
+            style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}
           >
             Galería de Obras
           </h2>
           <p
             className="mt-3 italic"
-            style={{ fontFamily: "var(--font-lora)", color: "#3a2428", fontSize: "0.95rem" }}
+            style={{ fontFamily: "var(--font-noto-serif)", color: "#524348", fontSize: "0.95rem" }}
           >
             Proyectos que definen el estilo y la técnica moderna.
           </p>
@@ -159,14 +160,14 @@ export default function PortfolioCarousel() {
             onMouseLeave={() => setHoveredArrow(null)}
             style={{
               width: "3rem", height: "3rem", borderRadius: "9999px",
-              border: `2px solid ${hoveredArrow === "prev" && page !== 0 ? "#b8891f" : "#3d0a1e"}`,
-              background: hoveredArrow === "prev" && page !== 0 ? "#b8891f" : "#3d0a1e",
-              color: hoveredArrow === "prev" && page !== 0 ? "#3d0a1e" : "#faebd7",
+              border: `2px solid ${hoveredArrow === "prev" && page !== 0 ? "#C5A059" : "#800020"}`,
+              background: hoveredArrow === "prev" && page !== 0 ? "#C5A059" : "#800020",
+              color: hoveredArrow === "prev" && page !== 0 ? "#800020" : "#fdf9f3",
               fontSize: "1.2rem",
               display: "flex", alignItems: "center", justifyContent: "center",
               cursor: page === 0 ? "not-allowed" : "pointer",
               opacity: page === 0 ? 0.3 : 1,
-              boxShadow: "0 2px 10px rgba(61,10,30,0.3)",
+              boxShadow: "0 12px 32px rgba(28,28,24,0.12)",
               transform: hoveredArrow === "prev" && page !== 0 ? "scale(1.08)" : "scale(1)",
               transition: "background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s",
               flexShrink: 0,
@@ -182,14 +183,14 @@ export default function PortfolioCarousel() {
             onMouseLeave={() => setHoveredArrow(null)}
             style={{
               width: "3rem", height: "3rem", borderRadius: "9999px",
-              border: `2px solid ${hoveredArrow === "next" && page !== totalPages - 1 ? "#b8891f" : "#3d0a1e"}`,
-              background: hoveredArrow === "next" && page !== totalPages - 1 ? "#b8891f" : "#3d0a1e",
-              color: hoveredArrow === "next" && page !== totalPages - 1 ? "#3d0a1e" : "#faebd7",
+              border: `2px solid ${hoveredArrow === "next" && page !== totalPages - 1 ? "#C5A059" : "#800020"}`,
+              background: hoveredArrow === "next" && page !== totalPages - 1 ? "#C5A059" : "#800020",
+              color: hoveredArrow === "next" && page !== totalPages - 1 ? "#800020" : "#fdf9f3",
               fontSize: "1.2rem",
               display: "flex", alignItems: "center", justifyContent: "center",
               cursor: page === totalPages - 1 ? "not-allowed" : "pointer",
               opacity: page === totalPages - 1 ? 0.3 : 1,
-              boxShadow: "0 2px 10px rgba(61,10,30,0.3)",
+              boxShadow: "0 12px 32px rgba(28,28,24,0.12)",
               transform: hoveredArrow === "next" && page !== totalPages - 1 ? "scale(1.08)" : "scale(1)",
               transition: "background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s",
               flexShrink: 0,
@@ -218,7 +219,7 @@ export default function PortfolioCarousel() {
               width: i === page ? "1.5rem" : "0.5rem",
               height: "0.5rem",
               borderRadius: "9999px",
-              backgroundColor: i === page ? "#b8891f" : "rgba(200,144,58,0.3)",
+              backgroundColor: i === page ? "#C5A059" : "rgba(197,160,89,0.3)",
             }}
             aria-label={`Página ${i + 1}`}
           />

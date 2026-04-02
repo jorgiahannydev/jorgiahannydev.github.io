@@ -18,24 +18,23 @@ export default function ScrollToTop() {
       style={{
         width: "2.8rem",
         height: "2.8rem",
-        backgroundColor: "#3d0a1e",
-        border: "1px solid rgba(184,137,31,0.5)",
-        borderRadius: "2px",
+        backgroundColor: "#800020",
+        border: "1px solid rgba(197,160,89,0.5)",
+        borderRadius: "4px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        boxShadow: "0 4px 16px rgba(61,10,30,0.25)",
+        boxShadow: "0 12px 32px rgba(28,28,24,0.12)",
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? "auto" : "none",
         transform: visible ? "translateY(0)" : "translateY(12px)",
       }}
-      onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#5a1030")}
-      onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#3d0a1e")}
+      onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#8e4766")}
+      onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#800020")}
     >
-      {/* Fleur-de-lis simplificada como flecha hacia arriba */}
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 13V3M8 3L3.5 7.5M8 3L12.5 7.5" stroke="#d4a83a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M5 2.5 Q8 0.5 11 2.5" stroke="rgba(212,168,58,0.45)" strokeWidth="0.8" fill="none" strokeLinecap="round"/>
+        <path d="M8 13V3M8 3L3.5 7.5M8 3L12.5 7.5" stroke="#C5A059" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M5 2.5 Q8 0.5 11 2.5" stroke="rgba(197,160,89,0.45)" strokeWidth="0.8" fill="none" strokeLinecap="round"/>
       </svg>
     </button>
   );

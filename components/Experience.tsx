@@ -24,7 +24,7 @@ const jobs = [
   {
     title: "Esteticista Integral",
     company: "Salón Patricia — Viña del Mar",
-    date: "Jul 2024 — Presente",
+    date: "Jul 2024 — Jun 2025",
     items: [
       "Prestación de servicios estéticos integrales (manicura, pedicura, limpieza facial, tratamientos cosmetológicos, depilación).",
       "Gestión de agenda y base de datos de clientes mediante software especializado.",
@@ -74,19 +74,19 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function Experience() {
   return (
-    <section id="experiencia" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f5efe6" }}>
+    <section id="experiencia" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#fdf9f3" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}>
           Experiencia Laboral
         </h2>
         <p className="text-center b-label mt-3 mb-2">Una trayectoria de logros</p>
         <div className="b-section-line">
-          <span style={{ color: "#b8891f", fontSize: "1rem" }}>❦</span>
+          <span style={{ color: "#C5A059", fontSize: "1rem" }}>❦</span>
         </div>
 
         {/* Timeline */}
-        <div className="relative pl-8 ml-2" style={{ borderLeft: "2px solid rgba(122,30,62,0.18)" }}>
+        <div className="relative pl-8 ml-2" style={{ borderLeft: "2px solid rgba(142,71,102,0.2)" }}>
           {jobs.map((job, i) => (
             <div key={job.title + job.date} className={`relative ${i < jobs.length - 1 ? "mb-10" : ""}`}>
 
@@ -94,16 +94,16 @@ export default function Experience() {
               <div
                 className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-4"
                 style={{
-                  backgroundColor: i % 2 === 0 ? "#3d0a1e" : "#b8891f",
-                  borderColor: "#f5efe6",
-                  boxShadow: "0 0 0 1px rgba(122,30,62,0.25)",
+                  backgroundColor: i % 2 === 0 ? "#800020" : "#C5A059",
+                  borderColor: "#fdf9f3",
+                  boxShadow: "0 0 0 1px rgba(142,71,102,0.25)",
                 }}
               />
 
               {/* Fecha */}
               <span
                 className="block text-sm italic mb-0.5"
-                style={{ fontFamily: "var(--font-playfair)", color: "#b8891f" }}
+                style={{ fontFamily: "var(--font-playfair)", color: "#C5A059" }}
               >
                 {job.date}
               </span>
@@ -111,28 +111,29 @@ export default function Experience() {
               {/* Título */}
               <h3
                 className="font-bold text-base leading-snug"
-                style={{ fontFamily: "var(--font-playfair)", color: "#3d0a1e" }}
+                style={{ fontFamily: "var(--font-playfair)", color: "#800020" }}
               >
                 {job.title}
               </h3>
 
               {/* Empresa */}
-              <p className="text-sm italic mb-3" style={{ color: "#7a2040" }}>
+              <p className="text-sm italic mb-3" style={{ color: "#8e4766" }}>
                 {job.company}
               </p>
 
               {/* Descripción */}
               <div
-                className="px-5 py-4 rounded-sm"
+                className="px-5 py-4"
                 style={{
-                  backgroundColor: "#f9f4ec",
-                  borderLeft: "3px solid " + (i % 2 === 0 ? "#3d0a1e" : "#b8891f"),
-                  boxShadow: "0 1px 6px rgba(122,30,62,0.07)",
+                  backgroundColor: "#f1ede7",
+                  borderLeft: "3px solid " + (i % 2 === 0 ? "#800020" : "#C5A059"),
+                  boxShadow: "0 12px 32px rgba(28,28,24,0.04)",
+                  borderRadius: "0 4px 4px 0",
                 }}
               >
                 <ul className="list-disc list-inside space-y-1">
                   {job.items.map((item) => (
-                    <li key={item} className="text-sm leading-relaxed" style={{ color: "#3d0a1e" }}>
+                    <li key={item} className="text-sm leading-relaxed" style={{ color: "#1c1c18" }}>
                       {item}
                     </li>
                   ))}

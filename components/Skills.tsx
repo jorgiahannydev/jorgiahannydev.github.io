@@ -9,22 +9,22 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#ede5d8" }}>
+    <section id="skills" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}>
           Habilidades Técnicas
         </h2>
         <div className="b-section-line">
-          <span style={{ color: "#b8891f", fontSize: "1rem" }}>❦</span>
+          <span style={{ color: "#C5A059", fontSize: "1rem" }}>❦</span>
         </div>
 
         <div
           className="p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
           style={{
-            backgroundColor: "#f5efe6",
-            border: "1px solid rgba(200,144,58,0.25)",
-            boxShadow: "0 2px 12px rgba(122,30,62,0.07)",
+            backgroundColor: "#fdf9f3",
+            border: "1px solid rgba(197,160,89,0.22)",
+            boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
           }}
         >
           {groups.map((g) => (
@@ -38,15 +38,17 @@ export default function Skills() {
                     style={
                       g.learning
                         ? {
-                            border: "1.5px solid #b8891f",
-                            color: "#9a6520",
-                            backgroundColor: "#fef9f0",
-                            fontFamily: "var(--font-lora)",
+                            border: "1.5px solid #C5A059",
+                            color: "#775a19",
+                            backgroundColor: "#fdf9f3",
+                            fontFamily: "var(--font-noto-serif)",
+                            borderRadius: "4px",
                           }
                         : {
-                            backgroundColor: "#3d0a1e",
-                            color: "#f5efe6",
-                            fontFamily: "var(--font-lora)",
+                            backgroundColor: "#800020",
+                            color: "#fdf9f3",
+                            fontFamily: "var(--font-noto-serif)",
+                            borderRadius: "4px",
                           }
                     }
                   >

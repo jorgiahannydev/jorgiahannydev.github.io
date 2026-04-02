@@ -46,13 +46,13 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 header-border pb-6 transition-shadow duration-300"
       style={{
-        backgroundColor: "rgba(245, 239, 230, 0.95)",
+        backgroundColor: "rgba(253, 249, 243, 0.95)",
         backdropFilter: "blur(18px)",
         WebkitBackdropFilter: "blur(18px)",
-        borderBottom: "1px solid rgba(61, 10, 30, 0.15)",
+        borderBottom: "1px solid rgba(128,0,32,0.12)",
         boxShadow: scrolled
-          ? "0 4px 24px rgba(61,10,30,0.1)"
-          : "0 1px 8px rgba(61,10,30,0.04)",
+          ? "0 4px 24px rgba(28,28,24,0.10)"
+          : "0 1px 8px rgba(28,28,24,0.04)",
       }}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-[72px]">
@@ -63,7 +63,7 @@ export default function Navbar() {
           className="italic shrink-0"
           style={{
             fontFamily: "var(--font-newsreader)",
-            color: "#3d0a1e",
+            color: "#800020",
             fontSize: "clamp(0.85rem, 2vw, 1rem)",
             letterSpacing: "0.06em",
           }}
@@ -74,7 +74,7 @@ export default function Navbar() {
         {/* Separador vertical */}
         <div
           className="hidden lg:block h-5 w-px mx-6 shrink-0"
-          style={{ backgroundColor: "rgba(184,137,31,0.35)" }}
+          style={{ backgroundColor: "rgba(197,160,89,0.35)" }}
         />
 
         {/* Links desktop */}
@@ -91,17 +91,17 @@ export default function Navbar() {
                     fontSize: "0.72rem",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
-                    color: isActive ? "#b8891f" : "#7a2040",
+                    color: isActive ? "#C5A059" : "#8e4766",
                   }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "#b8891f")}
-                  onMouseLeave={e => (e.currentTarget.style.color = isActive ? "#b8891f" : "#7a2040")}
+                  onMouseEnter={e => (e.currentTarget.style.color = "#C5A059")}
+                  onMouseLeave={e => (e.currentTarget.style.color = isActive ? "#C5A059" : "#8e4766")}
                 >
                   {l.label}
                   {/* Underline activo */}
                   <span
                     className="absolute bottom-0 left-0 h-px transition-all duration-300"
                     style={{
-                      backgroundColor: "#b8891f",
+                      backgroundColor: "#C5A059",
                       width: isActive ? "100%" : "0%",
                     }}
                   />
@@ -120,11 +120,11 @@ export default function Navbar() {
             fontSize: "0.68rem",
             letterSpacing: "0.2em",
             textTransform: "uppercase",
-            color: "#f5efe6",
-            backgroundColor: "#3d0a1e",
-            border: "1px solid rgba(184,137,31,0.5)",
+            color: "#fdf9f3",
+            backgroundColor: "#800020",
+            border: "1px solid rgba(197,160,89,0.5)",
             padding: "0.45rem 1.2rem",
-            borderRadius: "2px",
+            borderRadius: "4px",
             transition: "opacity 0.2s",
           }}
           onMouseEnter={e => (e.currentTarget.style.opacity = "0.82")}
@@ -136,7 +136,7 @@ export default function Navbar() {
         {/* Mobile/tablet toggle */}
         <button
           className="lg:hidden p-1"
-          style={{ color: "#3d0a1e" }}
+          style={{ color: "#800020" }}
           onClick={() => setOpen(!open)}
           aria-label="Abrir menú"
         >
@@ -157,8 +157,8 @@ export default function Navbar() {
         <div
           className="lg:hidden px-6 py-4 flex flex-col gap-1"
           style={{
-            backgroundColor: "rgba(245, 239, 230, 0.98)",
-            borderTop: "1px solid rgba(184,137,31,0.2)",
+            backgroundColor: "rgba(253, 249, 243, 0.98)",
+            borderTop: "1px solid rgba(197,160,89,0.2)",
           }}
         >
           {links.map((l) => (
@@ -172,8 +172,8 @@ export default function Navbar() {
                 fontSize: "0.78rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: active === l.href ? "#b8891f" : "#7a2040",
-                borderColor: "rgba(184,137,31,0.12)",
+                color: active === l.href ? "#C5A059" : "#8e4766",
+                borderColor: "rgba(197,160,89,0.12)",
               }}
             >
               {l.label}
@@ -188,10 +188,10 @@ export default function Navbar() {
               fontSize: "0.72rem",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "#f5efe6",
-              backgroundColor: "#3d0a1e",
-              border: "1px solid rgba(184,137,31,0.4)",
-              borderRadius: "2px",
+              color: "#fdf9f3",
+              backgroundColor: "#800020",
+              border: "1px solid rgba(197,160,89,0.4)",
+              borderRadius: "4px",
             }}
           >
             Contrátame
