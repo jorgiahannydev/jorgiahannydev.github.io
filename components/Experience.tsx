@@ -72,31 +72,42 @@ const jobs = [
 
 export default function Experience() {
   return (
-    <section id="experiencia" className="py-16 bg-white">
+    <section id="experiencia" className="py-16" style={{ backgroundColor: "#fce8ed" }}>
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-800 text-center mb-2">
+        <h2 className="text-3xl font-bold text-center" style={{ color: "#7a1e3e" }}>
           Experiencia Laboral
         </h2>
-        <div className="w-12 h-1 bg-pink-300 rounded mx-auto mb-10" />
+        <div className="b-section-line">
+          <span style={{ color: "#c8903a", fontSize: "0.65rem" }}>✦</span>
+        </div>
 
         <div className="flex flex-col gap-4">
           {jobs.map((job) => (
             <div
               key={job.title + job.date}
-              className="bg-white rounded-xl border-l-4 border-pink-300 shadow-sm px-6 py-5"
+              className="rounded-xl px-6 py-5"
+              style={{
+                backgroundColor: "#fff8fa",
+                borderLeft: "4px solid #c8903a",
+                boxShadow: "0 1px 8px rgba(122,30,62,0.08)",
+              }}
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
                 <div>
-                  <h3 className="font-bold text-slate-800 text-base">{job.title}</h3>
-                  <p className="text-pink-400 font-medium text-sm">{job.company}</p>
+                  <h3 className="font-bold text-base" style={{ color: "#7a1e3e" }}>
+                    {job.title}
+                  </h3>
+                  <p className="text-sm italic mt-0.5" style={{ color: "#9a4060" }}>
+                    {job.company}
+                  </p>
                 </div>
-                <span className="text-gray-400 text-xs italic sm:text-right whitespace-nowrap pt-0.5">
+                <span className="text-xs italic whitespace-nowrap pt-0.5" style={{ color: "#c8903a" }}>
                   {job.date}
                 </span>
               </div>
-              <ul className="list-disc list-inside space-y-1">
+              <ul className="list-disc list-inside space-y-1.5">
                 {job.items.map((item) => (
-                  <li key={item} className="text-gray-600 text-sm">
+                  <li key={item} className="text-sm leading-relaxed" style={{ color: "#3d1520" }}>
                     {item}
                   </li>
                 ))}

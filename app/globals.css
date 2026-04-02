@@ -3,3 +3,98 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  font-family: var(--font-garamond), Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  background-color: #fce8ed;
+  color: #2a1015;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-playfair), "Palatino Linotype", Georgia, serif;
+}
+
+/* ── Divisor hero: ····· texto ····· (estilo portada) ── */
+.b-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.b-divider::before,
+.b-divider::after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    #c8903a 0px, #c8903a 3px,
+    transparent 3px, transparent 7px
+  );
+}
+
+/* ── Línea ornamental bajo títulos de sección ── */
+.b-section-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0.4rem auto 2.5rem;
+}
+.b-section-line::before,
+.b-section-line::after {
+  content: "";
+  flex: 0 0 50px;
+  height: 1px;
+}
+.b-section-line::before {
+  background: linear-gradient(to right, transparent, #c8903a);
+}
+.b-section-line::after {
+  background: linear-gradient(to left, transparent, #c8903a);
+}
+
+/* ── Texto decorativo dorado ── */
+.b-label {
+  font-family: var(--font-playfair), serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c8903a;
+}
+
+/* ── Botones ── */
+.btn-bridgerton-primary {
+  background-color: #7a1e3e;
+  color: #fce8ed;
+  font-family: var(--font-playfair), serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  padding: 0.65rem 2rem;
+  border-radius: 9999px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-block;
+}
+.btn-bridgerton-primary:hover  { background-color: #5e1630; }
+.btn-bridgerton-primary:active { transform: scale(0.97); }
+
+.btn-bridgerton-outline {
+  border: 1.5px solid #c8903a;
+  color: #c8903a;
+  font-family: var(--font-playfair), serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  padding: 0.65rem 2rem;
+  border-radius: 9999px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-block;
+  background-color: transparent;
+}
+.btn-bridgerton-outline:hover  { background-color: rgba(200,144,58,0.08); }
+.btn-bridgerton-outline:active { transform: scale(0.97); }

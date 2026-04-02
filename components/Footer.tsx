@@ -1,7 +1,15 @@
 export default function Footer() {
   return (
-    <footer className="bg-slate-800 text-slate-400 text-center text-sm py-5 px-4">
-      <p>© 2026 Jorgiahanny Almea Martínez · Buscando mi primera oportunidad como Full Stack Developer Jr.</p>
+    <footer
+      className="text-center py-5 px-4"
+      style={{ backgroundColor: "#7a1e3e", color: "#f5c5d0" }}
+    >
+      <p
+        className="text-xs tracking-[0.25em] uppercase"
+        style={{ fontFamily: "var(--font-playfair)" }}
+      >
+        ✦ &nbsp; © 2026 Jorgiahanny Almea Martínez &nbsp;·&nbsp; Full Stack Developer Jr. &nbsp; ✦
+      </p>
     </footer>
   );
 }
