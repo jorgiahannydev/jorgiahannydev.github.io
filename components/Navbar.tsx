@@ -73,12 +73,12 @@ export default function Navbar() {
 
         {/* Separador vertical */}
         <div
-          className="hidden md:block h-5 w-px mx-6 shrink-0"
+          className="hidden lg:block h-5 w-px mx-6 shrink-0"
           style={{ backgroundColor: "rgba(184,137,31,0.35)" }}
         />
 
         {/* Links desktop */}
-        <ul className="hidden md:flex items-center gap-7 flex-1">
+        <ul className="hidden lg:flex items-center gap-7 flex-1">
           {links.map((l) => {
             const isActive = active === l.href;
             return (
@@ -114,7 +114,7 @@ export default function Navbar() {
         {/* CTA — Contrátame */}
         <a
           href="#contacto"
-          className="hidden md:inline-block shrink-0 ml-4"
+          className="hidden lg:inline-block shrink-0 ml-4"
           style={{
             fontFamily: "var(--font-newsreader)",
             fontSize: "0.68rem",
@@ -133,9 +133,9 @@ export default function Navbar() {
           Contrátame
         </a>
 
-        {/* Mobile toggle */}
+        {/* Mobile/tablet toggle */}
         <button
-          className="md:hidden p-1"
+          className="lg:hidden p-1"
           style={{ color: "#3d0a1e" }}
           onClick={() => setOpen(!open)}
           aria-label="Abrir menú"
@@ -152,10 +152,10 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile/tablet menu */}
       {open && (
         <div
-          className="md:hidden px-6 py-4 flex flex-col gap-1"
+          className="lg:hidden px-6 py-4 flex flex-col gap-1"
           style={{
             backgroundColor: "rgba(245, 239, 230, 0.98)",
             borderTop: "1px solid rgba(184,137,31,0.2)",
