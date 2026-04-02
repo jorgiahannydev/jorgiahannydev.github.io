@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --font-newsreader: 'Newsreader';
+}
+
 body {
   font-family: var(--font-lora), Georgia, serif;
   font-size: 1rem;
@@ -70,7 +74,7 @@ h1, h2, h3, h4, h5 {
 
 /* ── Texto decorativo dorado ── */
 .b-label {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-newsreader), var(--font-playfair), serif;
   font-size: 0.84rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -81,7 +85,7 @@ h1, h2, h3, h4, h5 {
 .btn-bridgerton-primary {
   background: linear-gradient(135deg, #b05070 0%, #7a1e3e 100%);
   color: #fef0f4;
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-newsreader), var(--font-playfair), serif;
   font-weight: 600;
   font-size: 0.78rem;
   padding: 0.65rem 2rem;
@@ -101,7 +105,7 @@ h1, h2, h3, h4, h5 {
 .btn-bridgerton-outline {
   border: 1.5px solid #c8903a;
   color: #9a6520;
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-newsreader), var(--font-playfair), serif;
   font-weight: 600;
   font-size: 0.78rem;
   padding: 0.65rem 2rem;

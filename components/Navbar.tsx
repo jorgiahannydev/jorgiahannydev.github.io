@@ -38,7 +38,7 @@ export default function Navbar() {
               <a
                 href={l.href}
                 className="text-sm tracking-widest uppercase transition-colors"
-                style={{ color: "#9a4060", fontFamily: "var(--font-playfair)", fontSize: "0.72rem" }}
+                style={{ color: "#9a4060", fontFamily: "var(--font-newsreader)", fontSize: "0.72rem" }}
                 onMouseEnter={e => (e.currentTarget.style.color = "#c8903a")}
                 onMouseLeave={e => (e.currentTarget.style.color = "#9a4060")}
               >
@@ -80,7 +80,7 @@ export default function Navbar() {
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className="block text-sm py-1 tracking-widest uppercase transition-colors"
-                style={{ color: "#9a4060", fontFamily: "var(--font-playfair)", fontSize: "0.72rem" }}
+                style={{ color: "#9a4060", fontFamily: "var(--font-newsreader)", fontSize: "0.72rem" }}
               >
                 {l.label}
               </a>
