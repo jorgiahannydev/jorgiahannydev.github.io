@@ -125,6 +125,7 @@ function ProjectCard({ p }: { p: Project }) {
 
 export default function PortfolioCarousel() {
   const [page, setPage] = useState(0);
+  const [hoveredArrow, setHoveredArrow] = useState<"prev" | "next" | null>(null);
   const perPage = 3;
   const totalPages = Math.ceil(projects.length / perPage);
   const visible = projects.slice(page * perPage, page * perPage + perPage);
@@ -154,17 +155,20 @@ export default function PortfolioCarousel() {
             onClick={() => setPage((p) => Math.max(0, p - 1))}
             disabled={page === 0}
             aria-label="Anterior"
+            onMouseEnter={() => setHoveredArrow("prev")}
+            onMouseLeave={() => setHoveredArrow(null)}
             style={{
               width: "3rem", height: "3rem", borderRadius: "9999px",
-              border: "2px solid #3d0a1e",
-              background: "#3d0a1e",
-              color: "#faebd7",
+              border: `2px solid ${hoveredArrow === "prev" && page !== 0 ? "#b8891f" : "#3d0a1e"}`,
+              background: hoveredArrow === "prev" && page !== 0 ? "#b8891f" : "#3d0a1e",
+              color: hoveredArrow === "prev" && page !== 0 ? "#3d0a1e" : "#faebd7",
               fontSize: "1.2rem",
               display: "flex", alignItems: "center", justifyContent: "center",
               cursor: page === 0 ? "not-allowed" : "pointer",
               opacity: page === 0 ? 0.3 : 1,
               boxShadow: "0 2px 10px rgba(61,10,30,0.3)",
-              transition: "background 0.2s, transform 0.15s",
+              transform: hoveredArrow === "prev" && page !== 0 ? "scale(1.08)" : "scale(1)",
+              transition: "background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s",
               flexShrink: 0,
             }}
           >
@@ -174,17 +178,20 @@ export default function PortfolioCarousel() {
             onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
             disabled={page === totalPages - 1}
             aria-label="Siguiente"
+            onMouseEnter={() => setHoveredArrow("next")}
+            onMouseLeave={() => setHoveredArrow(null)}
             style={{
               width: "3rem", height: "3rem", borderRadius: "9999px",
-              border: "2px solid #3d0a1e",
-              background: "#3d0a1e",
-              color: "#faebd7",
+              border: `2px solid ${hoveredArrow === "next" && page !== totalPages - 1 ? "#b8891f" : "#3d0a1e"}`,
+              background: hoveredArrow === "next" && page !== totalPages - 1 ? "#b8891f" : "#3d0a1e",
+              color: hoveredArrow === "next" && page !== totalPages - 1 ? "#3d0a1e" : "#faebd7",
               fontSize: "1.2rem",
               display: "flex", alignItems: "center", justifyContent: "center",
               cursor: page === totalPages - 1 ? "not-allowed" : "pointer",
               opacity: page === totalPages - 1 ? 0.3 : 1,
               boxShadow: "0 2px 10px rgba(61,10,30,0.3)",
-              transition: "background 0.2s, transform 0.15s",
+              transform: hoveredArrow === "next" && page !== totalPages - 1 ? "scale(1.08)" : "scale(1)",
+              transition: "background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s",
               flexShrink: 0,
             }}
           >
