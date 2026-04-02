@@ -73,7 +73,7 @@ function ProjectCard({ p }: { p: Project }) {
       ) : (
         <div
           className="aspect-[3/4] flex items-center justify-center overflow-hidden"
-          style={{ background: "linear-gradient(160deg, #800020 0%, #C5A059 100%)" }}
+          style={{ background: "linear-gradient(160deg, #8e4766 0%, #D886A7 100%)" }}
         >
           <span
             className="font-bold text-2xl tracking-widest italic group-hover:scale-105 transition-transform duration-500 inline-block"
@@ -89,7 +89,7 @@ function ProjectCard({ p }: { p: Project }) {
         <span className="b-label text-[0.65rem]">{p.category}</span>
         <h4
           className="font-semibold text-xl italic leading-snug"
-          style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}
+          style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
         >
           {p.title}
         </h4>
@@ -137,7 +137,7 @@ export default function PortfolioCarousel() {
         <div>
           <h2
             className="text-4xl md:text-5xl font-bold italic"
-            style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}
+            style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
           >
             Galería de Obras
           </h2>

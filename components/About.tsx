@@ -15,7 +15,7 @@ export default function About() {
             className="relative group"
             style={{
               padding: "38px",
-              background: "linear-gradient(145deg, #3a0c16 0%, #1e0608 35%, #2a0a12 65%, #3a0c16 100%)",
+              background: "linear-gradient(145deg, #5a2e47 0%, #8e4766 35%, #D886A7 65%, #8e4766 100%)",
               boxShadow:
                 "0 16px 56px rgba(28,28,24,0.45), " +
                 "0 4px 16px rgba(28,28,24,0.25), " +
