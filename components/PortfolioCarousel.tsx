@@ -151,18 +151,42 @@ export default function PortfolioCarousel() {
         {/* Flechas de navegación */}
         <div className="flex gap-3 flex-shrink-0">
           <button
-            className="carousel-arrow"
             onClick={() => setPage((p) => Math.max(0, p - 1))}
             disabled={page === 0}
             aria-label="Anterior"
+            style={{
+              width: "3rem", height: "3rem", borderRadius: "9999px",
+              border: "2px solid #3d0a1e",
+              background: "#3d0a1e",
+              color: "#faebd7",
+              fontSize: "1.2rem",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              cursor: page === 0 ? "not-allowed" : "pointer",
+              opacity: page === 0 ? 0.3 : 1,
+              boxShadow: "0 2px 10px rgba(61,10,30,0.3)",
+              transition: "background 0.2s, transform 0.15s",
+              flexShrink: 0,
+            }}
           >
             ←
           </button>
           <button
-            className="carousel-arrow"
             onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
             disabled={page === totalPages - 1}
             aria-label="Siguiente"
+            style={{
+              width: "3rem", height: "3rem", borderRadius: "9999px",
+              border: "2px solid #3d0a1e",
+              background: "#3d0a1e",
+              color: "#faebd7",
+              fontSize: "1.2rem",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              cursor: page === totalPages - 1 ? "not-allowed" : "pointer",
+              opacity: page === totalPages - 1 ? 0.3 : 1,
+              boxShadow: "0 2px 10px rgba(61,10,30,0.3)",
+              transition: "background 0.2s, transform 0.15s",
+              flexShrink: 0,
+            }}
           >
             →
           </button>
