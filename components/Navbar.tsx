@@ -121,10 +121,10 @@ export default function Navbar() {
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: "#fdf9f3",
-            backgroundColor: "#800020",
-            border: "1px solid rgba(197,160,89,0.5)",
+            background: "linear-gradient(145deg, #8e4766 0%, #D886A7 100%)",
+            border: "none",
             padding: "0.45rem 1.2rem",
-            borderRadius: "4px",
+            borderRadius: "2px",
             transition: "opacity 0.2s",
           }}
           onMouseEnter={e => (e.currentTarget.style.opacity = "0.82")}
@@ -136,7 +136,7 @@ export default function Navbar() {
         {/* Mobile/tablet toggle */}
         <button
           className="lg:hidden p-1"
-          style={{ color: "#800020" }}
+          style={{ color: "#8e4766" }}
           onClick={() => setOpen(!open)}
           aria-label="Abrir menú"
         >
@@ -187,10 +187,10 @@ export default function Navbar() {
               fontSize: "0.72rem",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "#fdf9f3",
-              backgroundColor: "#800020",
-              border: "1px solid rgba(197,160,89,0.4)",
-              borderRadius: "4px",
+              color: "#ffffff",
+              background: "linear-gradient(145deg, #8e4766 0%, #D886A7 100%)",
+              border: "none",
+              borderRadius: "2px",
             }}
           >
             Contrátame

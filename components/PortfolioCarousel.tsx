@@ -159,9 +159,9 @@ export default function PortfolioCarousel() {
             onMouseLeave={() => setHoveredArrow(null)}
             style={{
               width: "3rem", height: "3rem", borderRadius: "9999px",
-              border: `2px solid ${hoveredArrow === "prev" && page !== 0 ? "#C5A059" : "#800020"}`,
-              background: hoveredArrow === "prev" && page !== 0 ? "#C5A059" : "#800020",
-              color: hoveredArrow === "prev" && page !== 0 ? "#800020" : "#fdf9f3",
+              border: `2px solid ${hoveredArrow === "prev" && page !== 0 ? "#C5A059" : "#8e4766"}`,
+              background: hoveredArrow === "prev" && page !== 0 ? "#C5A059" : "linear-gradient(145deg, #8e4766, #D886A7)",
+              color: hoveredArrow === "prev" && page !== 0 ? "#8e4766" : "#ffffff",
               fontSize: "1.2rem",
               display: "flex", alignItems: "center", justifyContent: "center",
               cursor: page === 0 ? "not-allowed" : "pointer",
@@ -182,9 +182,9 @@ export default function PortfolioCarousel() {
             onMouseLeave={() => setHoveredArrow(null)}
             style={{
               width: "3rem", height: "3rem", borderRadius: "9999px",
-              border: `2px solid ${hoveredArrow === "next" && page !== totalPages - 1 ? "#C5A059" : "#800020"}`,
-              background: hoveredArrow === "next" && page !== totalPages - 1 ? "#C5A059" : "#800020",
-              color: hoveredArrow === "next" && page !== totalPages - 1 ? "#800020" : "#fdf9f3",
+              border: `2px solid ${hoveredArrow === "next" && page !== totalPages - 1 ? "#C5A059" : "#8e4766"}`,
+              background: hoveredArrow === "next" && page !== totalPages - 1 ? "#C5A059" : "linear-gradient(145deg, #8e4766, #D886A7)",
+              color: hoveredArrow === "next" && page !== totalPages - 1 ? "#8e4766" : "#ffffff",
               fontSize: "1.2rem",
               display: "flex", alignItems: "center", justifyContent: "center",
               cursor: page === totalPages - 1 ? "not-allowed" : "pointer",

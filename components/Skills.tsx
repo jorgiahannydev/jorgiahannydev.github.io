@@ -45,10 +45,10 @@ export default function Skills() {
                             borderRadius: "4px",
                           }
                         : {
-                            backgroundColor: "#800020",
-                            color: "#fdf9f3",
+                            background: "linear-gradient(145deg, #8e4766, #D886A7)",
+                            color: "#ffffff",
                             fontFamily: "var(--font-noto-serif)",
-                            borderRadius: "4px",
+                            borderRadius: "2px",
                           }
                     }
                   >
