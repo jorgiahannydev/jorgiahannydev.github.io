@@ -8,7 +8,7 @@ body {
   font-family: var(--font-lora), Georgia, serif;
   font-size: 1rem;
   line-height: 1.8;
-  background-color: #fce8ed;
+  background-color: #fdf9f3;
   color: #2a1015;
 }
 
@@ -16,15 +16,15 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-playfair), "Palatino Linotype", Georgia, serif;
 }
 
-/* ── Patrón floral sutil en todas las secciones ── */
+/* ── Patrón ornamental (cruz/plus) en todas las secciones — estilo Stitch ── */
 #presentacion,
 #skills,
 #experiencia,
 #portafolio,
 #educacion,
 #contacto {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><g transform='translate(50 50)'><ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14'/><ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14' transform='rotate(72)'/>  <ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14' transform='rotate(144)'/><ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14' transform='rotate(216)'/><ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14' transform='rotate(288)'/><circle r='4' fill='%23c8903a' opacity='0.13'/></g><circle cx='0' cy='0' r='1.5' fill='%23c8903a' opacity='0.12'/><circle cx='100' cy='0' r='1.5' fill='%23c8903a' opacity='0.12'/><circle cx='0' cy='100' r='1.5' fill='%23c8903a' opacity='0.12'/><circle cx='100' cy='100' r='1.5' fill='%23c8903a' opacity='0.12'/></svg>");
-  background-size: 100px 100px;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0c1.1 0 2 .9 2 2v26h26c1.1 0 2 .9 2 2s-.9 2-2 2H32v26c0 1.1-.9 2-2 2s-2-.9-2-2V32H2c-1.1 0-2-.9-2-2s.9-2 2-2h26V2c0-1.1.9-2 2-2z' fill='%23c8903a' fill-opacity='0.045' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
 }
 
 /* ── Divisor hero: ····· texto ····· ── */
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5 {
 /* ── Texto decorativo dorado ── */
 .b-label {
   font-family: var(--font-playfair), serif;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #c8903a;
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5 {
   color: #fef0f4;
   font-family: var(--font-playfair), serif;
   font-weight: 600;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   padding: 0.65rem 2rem;
   border-radius: 9999px;
   letter-spacing: 0.15em;
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5 {
   color: #9a6520;
   font-family: var(--font-playfair), serif;
   font-weight: 600;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   padding: 0.65rem 2rem;
   border-radius: 9999px;
   letter-spacing: 0.15em;

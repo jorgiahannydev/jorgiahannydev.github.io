@@ -9,18 +9,18 @@ const items = [
 
 export default function Education() {
   return (
-    <section id="educacion" className="py-16" style={{ backgroundColor: "#fce8ed" }}>
+    <section id="educacion" className="py-16" style={{ backgroundColor: "#fdf9f3" }}>
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center" style={{ color: "#7a1e3e" }}>Educación</h2>
         <div className="b-section-line">
-          <span style={{ color: "#c8903a", fontSize: "0.65rem" }}>✦</span>
+          <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>
         </div>
 
         <div className="flex flex-col gap-3">
           {items.map((item) => (
             <div key={item.title}
               className="rounded-xl px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
-              style={{ backgroundColor: "#fff8fa", borderLeft: "4px solid #c8903a", boxShadow: "0 1px 8px rgba(122,30,62,0.07)" }}>
+              style={{ backgroundColor: "#fef9f3", borderLeft: "4px solid #c8903a", boxShadow: "0 1px 8px rgba(122,30,62,0.07)" }}>
               <div>
                 <h3 className="font-bold text-sm leading-snug" style={{ color: "#7a1e3e" }}>{item.title}</h3>
                 <p className="text-sm italic mt-0.5" style={{ color: "#9a4060" }}>{item.institution}</p>

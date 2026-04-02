@@ -53,7 +53,7 @@ function ProjectCard({ p }: { p: Project }) {
   return (
     <div
       className="rounded-xl overflow-hidden flex flex-col hover:-translate-y-1 transition-all duration-300"
-      style={{ backgroundColor: "#fff8fa", border: "1px solid #e8a0b8", boxShadow: "0 2px 10px rgba(122,30,62,0.08)" }}
+      style={{ backgroundColor: "#fdf9f3", border: "1px solid rgba(200,144,58,0.22)", boxShadow: "0 2px 10px rgba(122,30,62,0.07)" }}
     >
       {p.img ? (
         <div className="relative h-44 w-full">
@@ -102,11 +102,11 @@ function ProjectCard({ p }: { p: Project }) {
 
 export default function Portfolio() {
   return (
-    <section id="portafolio" className="py-16" style={{ backgroundColor: "#fdf0f3" }}>
+    <section id="portafolio" className="py-16" style={{ backgroundColor: "#f7f3ed" }}>
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center" style={{ color: "#7a1e3e" }}>Portafolio</h2>
         <div className="b-section-line">
-          <span style={{ color: "#c8903a", fontSize: "0.65rem" }}>✦</span>
+          <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>
         </div>
 
         <p className="b-label mb-4">❧ &nbsp; Proyectos de Desarrollo Web</p>
@@ -119,7 +119,7 @@ export default function Portfolio() {
           {workPhotos.map((p) => (
             <div key={p.title}
               className="rounded-xl overflow-hidden hover:-translate-y-1 transition-all duration-300"
-              style={{ backgroundColor: "#fff8fa", border: "1px solid #e8a0b8", boxShadow: "0 2px 10px rgba(122,30,62,0.08)" }}>
+              style={{ backgroundColor: "#fdf9f3", border: "1px solid rgba(200,144,58,0.22)", boxShadow: "0 2px 10px rgba(122,30,62,0.07)" }}>
               <div className="relative h-44 w-full">
                 <Image src={p.img} alt={p.alt} fill className="object-cover" />
               </div>

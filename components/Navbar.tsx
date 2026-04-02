@@ -11,7 +11,7 @@ const links = [
 ];
 
 const navStyle: React.CSSProperties = {
-  backgroundColor: "rgba(253, 240, 244, 0.88)",
+  backgroundColor: "rgba(253, 249, 243, 0.90)",
   backdropFilter: "blur(14px)",
   WebkitBackdropFilter: "blur(14px)",
   borderBottom: "1px solid rgba(200, 144, 58, 0.35)",
@@ -70,7 +70,7 @@ export default function Navbar() {
         <ul
           className="md:hidden px-4 pb-4 flex flex-col gap-3"
           style={{
-            backgroundColor: "rgba(253, 240, 244, 0.97)",
+            backgroundColor: "rgba(253, 249, 243, 0.97)",
             borderTop: "1px solid rgba(200, 144, 58, 0.2)",
           }}
         >

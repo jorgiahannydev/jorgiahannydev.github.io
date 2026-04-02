@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Digital Curator | Clarissa Harrington</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#775a19",
+                        "inverse-surface": "#31302d",
+                        "inverse-primary": "#ffb0ce",
+                        "surface-bright": "#fdf9f3",
+                        "outline": "#847378",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#8e0f28",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f7f3ed",
+                        "secondary-fixed": "#ffdea5",
+                        "secondary-container": "#fed488",
+                        "surface-tint": "#8e4766",
+                        "surface-container": "#f1ede7",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#524348",
+                        "tertiary-container": "#ff717c",
+                        "on-surface": "#1c1c18",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf9f3",
+                        "tertiary-fixed": "#ffdada",
+                        "surface-container-highest": "#e6e2dc",
+                        "on-secondary-fixed": "#261900",
+                        "primary-fixed": "#ffd9e5",
+                        "surface-container-high": "#ebe8e2",
+                        "on-secondary-container": "#785a1a",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e6e2dc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#40000b",
+                        "inverse-on-surface": "#f4f0ea",
+                        "secondary-fixed-dim": "#e9c176",
+                        "primary": "#8e4766",
+                        "tertiary": "#af2b3e",
+                        "primary-container": "#d886a7",
+                        "on-primary-fixed-variant": "#72304e",
+                        "on-background": "#1c1c18",
+                        "primary-fixed-dim": "#ffb0ce",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fdf9f3",
+                        "on-primary-fixed": "#3b0322",
+                        "on-primary-container": "#5d1f3d",
+                        "surface-dim": "#dddad4",
+                        "on-tertiary-container": "#72001c",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d6c1c7",
+                        "on-secondary-fixed-variant": "#5d4201"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Noto Serif", "serif"],
+                        "label": ["Noto Serif", "serif"],
+                        "newsreader": ["Newsreader", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-ornamental {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0c1.1 0 2 .9 2 2v26h26c1.1 0 2 .9 2 2s-.9 2-2 2H32v26c0 1.1-.9 2-2 2s-2-.9-2-2V32H2c-1.1 0-2-.9-2-2s.9-2 2-2h26V2c0-1.1.9-2 2-2z' fill='%23775a19' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .wax-seal-shadow {
+            box-shadow: 0px 12px 32px rgba(28, 28, 24, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9f3]/80 dark:bg-[#1c1c18]/80 backdrop-blur-md border-b border-[#775a19]/10 shadow-sm">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="text-2xl font-newsreader font-bold text-[#8e4766] dark:text-[#d886a7]">The Digital Curator</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#8e4766] dark:text-[#d886a7] font-semibold border-b-2 border-[#775a19] pb-1 font-newsreader italic tracking-tight" href="#hero">Home</a>
+<a class="text-[#775a19] dark:text-[#d886a7]/70 hover:text-[#8e4766] transition-colors font-newsreader italic tracking-tight" href="#bio">Bio</a>
+<a class="text-[#775a19] dark:text-[#d886a7]/70 hover:text-[#8e4766] transition-colors font-newsreader italic tracking-tight" href="#experience">Experience</a>
+<a class="text-[#775a19] dark:text-[#d886a7]/70 hover:text-[#8e4766] transition-colors font-newsreader italic tracking-tight" href="#works">Works</a>
+<a class="text-[#775a19] dark:text-[#d886a7]/70 hover:text-[#8e4766] transition-colors font-newsreader italic tracking-tight" href="#contact">Correspondence</a>
+<a class="ml-4 px-6 py-2 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-sm font-label uppercase tracking-widest text-xs hover:opacity-80 transition-opacity cursor-pointer active:scale-95" href="#contact">Inquire</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden bg-ornamental" id="hero">
+<div class="absolute inset-0 pointer-events-none opacity-20 flex justify-between px-4 md:px-20 py-40">
+<div class="w-64 h-64 border-t-2 border-l-2 border-secondary/30 rounded-tl-[100px]"></div>
+<div class="w-64 h-64 border-b-2 border-r-2 border-secondary/30 rounded-br-[100px] self-end"></div>
+</div>
+<div class="max-w-4xl w-full text-center z-10 space-y-12">
+<div class="inline-block px-4 py-1 border-y border-secondary/20 mb-4">
+<span class="font-label uppercase tracking-[0.3em] text-secondary text-xs">A Collector's Edition Portfolio</span>
+</div>
+<h1 class="font-headline text-5xl md:text-8xl italic text-primary leading-tight">Clarissa Harrington</h1>
+<div class="relative bg-surface-container-low p-8 md:p-16 border border-secondary/10 shadow-sm max-w-2xl mx-auto rounded-sm">
+<div class="absolute -top-4 -left-4 w-12 h-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">eco</span>
+</div>
+<div class="absolute -bottom-4 -right-4 w-12 h-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">eco</span>
+</div>
+<h2 class="font-headline text-3xl mb-6 text-on-surface">The Digital Curator</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                        Preserving the elegance of the past through the precision of the digital future. A curated journey of aesthetic excellence and structural mastery.
+                    </p>
+<div class="mt-10 flex flex-col md:flex-row gap-6 justify-center">
+<a class="px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary font-label text-sm uppercase tracking-widest shadow-md hover:opacity-90 transition-all" href="#works">Enter the Archives</a>
+<a class="px-8 py-3 border border-secondary text-secondary font-label text-sm uppercase tracking-widest hover:bg-secondary/5 transition-all" href="#bio">Learn More</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="py-24 bg-surface px-6" id="bio">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 border border-secondary/20 rounded-sm translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+<div class="overflow-hidden bg-surface-container shadow-xl aspect-[4/5] relative">
+<img alt="Portrait of Clarissa Harrington" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" data-alt="Elegant portrait of a woman in Regency-inspired modern attire, soft natural window lighting, warm tones, refined and sophisticated aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1M5jhqwU2VErmGe8r3SgLPLPJCaoEbQoYCTlTtYHi_224VtN7CrgCsFfWuxNN5l8R8p-is5IOAsjjSA-f0lU78j_CrXxEATa6zx976cHmoO1bQKK8djVekNwdtDMwCGOgxOSID7HNQQOzbu05TCve2dCGAdeGRMPmEzjZW1EGRMnxwpzLuwSiFLcNweHt2bAsWCkk0F4htyQhyoCbtMOffjjWlPLEedFOv9XS1LfDq4_6_sVLlqT04hvFO7O3VxR5sgC1w7vnntad"/>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="font-headline text-4xl md:text-5xl text-primary italic">A Life of Curated Experiences</h2>
+<div class="space-y-6 text-on-surface-variant font-body leading-relaxed text-lg">
+<p>
+                            Born from a deep reverence for the archival arts and the tactile beauty of handwritten history, Clarissa Harrington has spent a decade refining the intersection of classical aesthetics and modern functionality.
+                        </p>
+<p>
+                            As a digital curator, she approaches every project with the meticulous eye of an antiquarian and the strategic mind of a contemporary architect. Her work is not merely designed; it is composed—each element a deliberate stroke in a larger narrative of timeless elegance.
+                        </p>
+<div class="pt-6 border-t border-secondary/10 flex gap-12">
+<div>
+<span class="block font-headline text-2xl text-secondary">X+</span>
+<span class="font-label uppercase text-[10px] tracking-widest">Years of Practice</span>
+</div>
+<div>
+<span class="block font-headline text-2xl text-secondary">LV</span>
+<span class="font-label uppercase text-[10px] tracking-widest">Selected Works</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="flex justify-center py-12 bg-surface">
+<span class="material-symbols-outlined text-secondary/40 text-5xl">settings_seating</span>
+</div>
+<!-- Experience Section -->
+<section class="py-24 bg-surface-container-low px-6" id="experience">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl md:text-5xl text-primary">The Professional Season</h2>
+<p class="font-label uppercase tracking-widest text-xs mt-4 text-secondary">A Timeline of Achievements</p>
+</div>
+<div class="relative space-y-16">
+<!-- Vertical Line -->
+<div class="absolute left-1/2 -translate-x-1/2 h-full w-px bg-secondary/20"></div>
+<!-- Entry I -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="md:text-right">
+<span class="font-headline text-3xl text-secondary">MMXXIV - Present</span>
+<h3 class="font-headline text-2xl mt-2">Principal Curator</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">The Harrington Studio</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface-container-low z-10 hidden md:block"></div>
+<div class="bg-surface-container-lowest p-6 shadow-sm border-l-4 border-primary">
+<p class="font-body text-sm leading-relaxed">Overseeing the digital identity of premier luxury brands across Europe, focusing on high-concept visual storytelling and bespoke UX architectures.</p>
+</div>
+</div>
+<!-- Entry II -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="md:order-2">
+<span class="font-headline text-3xl text-secondary">MMXXI - MMXXIII</span>
+<h3 class="font-headline text-2xl mt-2">Senior Visual Architect</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Belle Époque Digital</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-surface-container-low z-10 hidden md:block"></div>
+<div class="md:order-1 bg-surface-container-lowest p-6 shadow-sm border-r-4 border-secondary md:text-right">
+<p class="font-body text-sm leading-relaxed">Pioneered the 'Regency Web' design system, winning three international accolades for excellence in editorial UI design.</p>
+</div>
+</div>
+<!-- Entry III -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="md:text-right">
+<span class="font-headline text-3xl text-secondary">MMXVIII - MMXXI</span>
+<h3 class="font-headline text-2xl mt-2">Design Fellow</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Guild of Digital Craftsmen</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface-container-low z-10 hidden md:block"></div>
+<div class="bg-surface-container-lowest p-6 shadow-sm border-l-4 border-primary">
+<p class="font-body text-sm leading-relaxed">Intensive study in classical typography and its application in responsive environments, graduating with the highest honors.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-24 bg-surface px-6" id="works">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="font-headline text-4xl md:text-5xl text-primary">Gallery of Selected Works</h2>
+<p class="font-body text-on-surface-variant mt-4 italic">A showcase of projects that define the modern classic.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-low overflow-hidden rounded-sm border border-secondary/10 hover:border-secondary/30 transition-all">
+<div class="aspect-[3/4] overflow-hidden">
+<img alt="The Ivory Collection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High-end interior design catalog cover, minimalist cream textures, elegant typography, editorial still life photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfK-ZMA1yi_DTjhm2VoiY_FCqhdCBkDH04RSFezwUReag5UCJOjY3JFtqL9KHn48Yk3G8u5AygUvdAxWxMn_lhZ3e4TDP9300Bo8VNvY8hBjr0zKLRyvM_WJTE0bE1xPtnaZAeB7IGeQM67mIUPdfrxbXSoJ7ejF5RPdTyXM5i2fOyIOAOuP_MM7YI_jhdAoKThRkYdl12xXLtj08lrSzSIlUOyh3CAoEtxrFymWIibdzvpk4q9TOaRqpwDOD93hJEjJTy3NEve0rc"/>
+</div>
+<div class="p-8 text-center space-y-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Visual Identity</span>
+<h3 class="font-headline text-2xl">The Ivory Collection</h3>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">A minimalist rebranding for a luxury home fragrance line in London.</p>
+<a class="inline-block mt-4 text-tertiary font-headline italic border-b border-tertiary/20 pb-1" href="#">Examine Case</a>
+</div>
+<div class="absolute top-4 right-4 opacity-10">
+<span class="material-symbols-outlined text-4xl">local_florist</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-low overflow-hidden rounded-sm border border-secondary/10 hover:border-secondary/30 transition-all">
+<div class="aspect-[3/4] overflow-hidden">
+<img alt="Veridian Papers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Artistic book layout with open pages showing elegant serif font, thick textured paper, moody lighting, dark greens and golds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqfsVsPwLeeIu6WTtiIVafisMDZq2orcpshvosaEk2u8f6EMZO13YnHpqebfoQA57C4OwAbuPy509VXVAl5q9u_LhoCl6c22O-CQ6zfAjdZgwOLDc2I13sHD0z6fW1wuonTv5qSRTEM1_rzUAdcUOi1yU5rG8x2vy0_BCjMQPb2fRrFSsfPSMlTJSv3MqaldQj306eYRlHYmvJyGjqDhUahRIzvb6yzhcgeSmetXAKBkUrKCwMLGkIfumYanH38HIOsLITtIWILE97"/>
+</div>
+<div class="p-8 text-center space-y-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Editorial Design</span>
+<h3 class="font-headline text-2xl">Veridian Papers</h3>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">Digital publication system for a quarterly literary journal.</p>
+<a class="inline-block mt-4 text-tertiary font-headline italic border-b border-tertiary/20 pb-1" href="#">Examine Case</a>
+</div>
+<div class="absolute top-4 right-4 opacity-10">
+<span class="material-symbols-outlined text-4xl">local_florist</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-low overflow-hidden rounded-sm border border-secondary/10 hover:border-secondary/30 transition-all">
+<div class="aspect-[3/4] overflow-hidden">
+<img alt="Somerset Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Luxury real estate photography showing a grand estate entrance, golden hour light, lush landscape, elegant architectural details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7QGoDCcvK1PXPCYaBEYCDc36q_9bbZrZwhfiTXlKuREuqi8EvTtbT0GiWAPoxVm5HZEmMhGbt3R0qjV6TcksoTTrTHscH6TRD-3r_graFM52SCiuWFz4OwypNKJguJf2y6D_y-bWXjHK5c1IdJayYCaDv-9eFif-ciYlfQLaVV3spshoz1t_v1mTgB98ZJPQk38x67KoKwCwCnSC-4rxUEPhKv4DUAkrNpLI9DDCBhQhead_13vxHPK8UW3SEN4Wfjtikyz2Y5M5Y"/>
+</div>
+<div class="p-8 text-center space-y-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary">Platform Design</span>
+<h3 class="font-headline text-2xl">Somerset Estate</h3>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">Interactive experience for a historic heritage site restoration project.</p>
+<a class="inline-block mt-4 text-tertiary font-headline italic border-b border-tertiary/20 pb-1" href="#">Examine Case</a>
+</div>
+<div class="absolute top-4 right-4 opacity-10">
+<span class="material-symbols-outlined text-4xl">local_florist</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container px-6 relative overflow-hidden" id="contact">
+<!-- Background Decoration -->
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-5">
+<div class="w-full h-full bg-ornamental"></div>
+</div>
+<div class="max-w-4xl mx-auto relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl md:text-5xl text-primary italic">Correspondence &amp; Letters</h2>
+<p class="font-body text-on-surface-variant mt-4">For inquiries, collaborations, or simply to express your thoughts.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 md:p-16 shadow-xl border border-secondary/10 relative">
+<!-- Corner Filigree -->
+<div class="absolute top-4 right-4 text-secondary/30">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<form class="space-y-12">
+<div class="grid md:grid-cols-2 gap-12">
+<div class="space-y-2">
+<label class="font-headline text-lg text-on-surface">Your Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary py-2 placeholder-on-surface-variant/30 font-body" placeholder="Mr./Ms. Julian Thorne" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-headline text-lg text-on-surface">Digital Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary py-2 placeholder-on-surface-variant/30 font-body" placeholder="j.thorne@london-estates.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-headline text-lg text-on-surface">Your Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary py-2 placeholder-on-surface-variant/30 font-body resize-none" placeholder="Write your letter here..." rows="4"></textarea>
+</div>
+<div class="flex justify-center pt-8">
+<button class="group relative w-32 h-32 bg-tertiary rounded-full flex items-center justify-center wax-seal-shadow hover:scale-105 active:scale-95 transition-all duration-500" type="submit">
+<div class="absolute inset-2 border-2 border-dashed border-secondary-fixed/30 rounded-full group-hover:rotate-45 transition-transform duration-1000"></div>
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl" data-weight="fill">mail</span>
+<span class="block font-label text-[10px] uppercase tracking-widest text-secondary-fixed mt-1">Dispatch</span>
+</div>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f7f3ed] dark:bg-[#1c1c18] w-full border-t-2 border-[#775a19] pt-12 pb-20 px-10">
+<div class="flex flex-col items-center gap-8 text-center max-w-7xl mx-auto">
+<div class="text-xl font-newsreader italic text-[#8e4766]">The Digital Curator</div>
+<div class="flex gap-12 text-[#775a19] dark:text-[#d886a7]">
+<a class="font-serif font-newsreader text-sm tracking-widest uppercase hover:text-[#af2b3e] transition-colors ease-in-out duration-500" href="#works">Archives</a>
+<a class="font-serif font-newsreader text-sm tracking-widest uppercase hover:text-[#af2b3e] transition-colors ease-in-out duration-500" href="#">Society Papers</a>
+<a class="font-serif font-newsreader text-sm tracking-widest uppercase hover:text-[#af2b3e] transition-colors ease-in-out duration-500" href="#">Privacy</a>
+</div>
+<div class="flex gap-6">
+<a class="text-secondary opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-secondary opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="material-symbols-outlined">collections</span></a>
+<a class="text-secondary opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+<p class="font-serif font-newsreader text-xs tracking-widest uppercase text-[#775a19] opacity-70 mt-8">
+                © 2024 The Digital Curator. All rights reserved. Handcrafted with Regency-era precision.
+            </p>
+</div>
+</footer>
+<!-- Floating Ornamental Wax Seal (FAB) - Suppressed on transactional/contact pages but useful for scrolling to top elsewhere -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-tertiary rounded-full flex items-center justify-center wax-seal-shadow md:hidden z-40">
+<span class="material-symbols-outlined text-secondary-fixed" data-weight="fill">stat_0</span>
+</button>
+</body></html>

@@ -7,18 +7,18 @@ const groups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16" style={{ backgroundColor: "#fdf0f3" }}>
+    <section id="skills" className="py-16" style={{ backgroundColor: "#f7f3ed" }}>
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center" style={{ color: "#7a1e3e" }}>
           Habilidades Técnicas
         </h2>
         <div className="b-section-line">
-          <span style={{ color: "#c8903a", fontSize: "0.65rem" }}>✦</span>
+          <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>
         </div>
 
         <div
           className="rounded-2xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
-          style={{ backgroundColor: "#fff8fa", border: "1px solid #e8a0b8", boxShadow: "0 2px 12px rgba(122,30,62,0.08)" }}
+          style={{ backgroundColor: "#fdf9f3", border: "1px solid rgba(200,144,58,0.25)", boxShadow: "0 2px 12px rgba(122,30,62,0.07)" }}
         >
           {groups.map((g) => (
             <div key={g.label}>

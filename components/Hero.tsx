@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="presentacion" className="pt-28 pb-16" style={{ backgroundColor: "#fce8ed" }}>
+    <section id="presentacion" className="pt-28 pb-16" style={{ backgroundColor: "#fdf9f3" }}>
       <div className="max-w-3xl mx-auto px-6 text-center">
 
         <Image
