@@ -51,10 +51,9 @@ function ProjectCard({ p }: { p: Project }) {
     <div
       className="group relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1"
       style={{
-        backgroundColor: "#fdf9f3",
-        border: "1px solid rgba(197,160,89,0.18)",
+        backgroundColor: "#ffffff",
         boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
-        borderRadius: "4px",
+        borderRadius: "2px",
       }}
     >
       {/* Icono botánico superpuesto al hover */}

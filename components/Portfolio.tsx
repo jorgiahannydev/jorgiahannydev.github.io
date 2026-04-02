@@ -31,10 +31,9 @@ export default function Portfolio() {
               key={p.title}
               className="group overflow-hidden hover:-translate-y-1 transition-all duration-300"
               style={{
-                backgroundColor: "#fdf9f3",
-                border: "1px solid rgba(197,160,89,0.2)",
+                backgroundColor: "#ffffff",
                 boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
-                borderRadius: "4px",
+                borderRadius: "2px",
               }}
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden">

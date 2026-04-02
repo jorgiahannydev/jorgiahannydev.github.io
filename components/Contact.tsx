@@ -61,7 +61,7 @@ export default function Contact() {
         {/* Card formulario */}
         <div
           className="relative p-8 md:p-14 shadow-xl"
-          style={{ backgroundColor: "#fdf9f3", border: "1px solid rgba(197,160,89,0.2)", borderRadius: "4px" }}
+          style={{ backgroundColor: "#ffffff", boxShadow: "0 12px 32px rgba(28,28,24,0.06)", borderRadius: "2px" }}
         >
           {/* Ornamento botánico */}
           <div className="absolute top-4 right-4 text-6xl pointer-events-none select-none"
@@ -156,7 +156,7 @@ export default function Contact() {
           {/* Datos de contacto directo — debajo del formulario */}
           <div
             className="grid sm:grid-cols-3 gap-4 mt-12 pt-8"
-            style={{ borderTop: "1px solid rgba(197,160,89,0.2)" }}
+            style={{ paddingTop: "2rem", marginTop: "1rem" }}
           >
             <div>
               <p className="b-label text-[0.65rem] mb-1">Correo</p>

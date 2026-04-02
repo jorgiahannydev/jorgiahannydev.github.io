@@ -125,10 +125,10 @@ export default function Experience() {
               <div
                 className="px-5 py-4"
                 style={{
-                  backgroundColor: "#f1ede7",
+                  backgroundColor: "#ffffff",
                   borderLeft: "3px solid " + (i % 2 === 0 ? "#800020" : "#C5A059"),
-                  boxShadow: "0 12px 32px rgba(28,28,24,0.04)",
-                  borderRadius: "0 4px 4px 0",
+                  boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
+                  borderRadius: "0 2px 2px 0",
                 }}
               >
                 <ul className="list-disc list-inside space-y-1">

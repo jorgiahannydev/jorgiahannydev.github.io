@@ -65,8 +65,8 @@ export default function Hero() {
           <div
             className="relative p-8 md:p-14"
             style={{
-              backgroundColor: "#f1ede7",
-              boxShadow: "0 12px 32px rgba(28,28,24,0.06), inset 0 1px 0 rgba(197,160,89,0.12)",
+              backgroundColor: "#ffffff",
+              boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
             }}
           >
             {/* Ornamentos de esquina de la tarjeta */}

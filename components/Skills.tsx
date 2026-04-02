@@ -22,9 +22,9 @@ export default function Skills() {
         <div
           className="p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
           style={{
-            backgroundColor: "#fdf9f3",
-            border: "1px solid rgba(197,160,89,0.22)",
+            backgroundColor: "#ffffff",
             boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
+            borderRadius: "2px",
           }}
         >
           {groups.map((g) => (

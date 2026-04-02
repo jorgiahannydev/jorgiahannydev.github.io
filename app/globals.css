@@ -162,19 +162,23 @@ h1, h2, h3, h4, h5 {
 ══════════════════════════════════════════════ */
 .b-input {
   width: 100%;
-  background: transparent;
+  background: #ffffff;
   border: none;
-  border-bottom: 1px solid rgba(197, 160, 89, 0.35);
-  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(214, 193, 199, 0.15);
+  padding: 0.6rem 0.5rem;
   outline: none;
   font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
   font-size: 0.95rem;
   color: var(--c-text);
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background 0.2s;
+  border-radius: 2px 2px 0 0;
 }
-.b-input:focus { border-bottom-color: var(--c-gold); }
+.b-input:focus {
+  border-bottom-color: var(--c-gold);
+  background: #fdf9f3;
+}
 .b-input::placeholder {
-  color: rgba(82, 67, 72, 0.4);
+  color: rgba(82, 67, 72, 0.35);
   font-style: italic;
 }
 
@@ -233,27 +237,28 @@ h1, h2, h3, h4, h5 {
 .carousel-arrow:disabled:hover { background-color: var(--c-burgundy); transform: none; }
 
 /* ══════════════════════════════════════════════
-   BOTONES — estilo formal victoriano
-   (rectangulares, no pill; con borde dorado)
+   BOTONES — Mayfair Edition spec
+   Primary:   gradient Primary → Primary Container (sm radius = 2px)
+   Secondary: ghost con Gold border (spec "outline" style)
 ══════════════════════════════════════════════ */
 .btn-bridgerton-primary {
-  background: linear-gradient(145deg, #D886A7 0%, #800020 100%);
-  color: #fdf9f3;
+  background: linear-gradient(145deg, #8e4766 0%, #D886A7 100%);
+  color: #ffffff;
   font-family: var(--font-newsreader), serif;
   font-weight: 600;
   font-size: 0.76rem;
   padding: 0.7rem 2.2rem;
-  border-radius: 4px;
+  border-radius: 2px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: opacity 0.2s, transform 0.12s, box-shadow 0.2s;
   display: inline-block;
-  box-shadow: 0 3px 14px rgba(28,28,24,0.12), inset 0 1px 0 rgba(197,160,89,0.2);
-  border: 1px solid rgba(197,160,89,0.35);
+  box-shadow: 0 12px 32px rgba(28,28,24,0.06);
+  border: none;
 }
 .btn-bridgerton-primary:hover {
-  opacity: 0.9;
-  box-shadow: 0 6px 22px rgba(28,28,24,0.18), inset 0 1px 0 rgba(197,160,89,0.28);
+  opacity: 0.88;
+  box-shadow: 0 16px 40px rgba(28,28,24,0.10);
 }
 .btn-bridgerton-primary:active { transform: scale(0.97); }
 
@@ -264,16 +269,16 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   font-size: 0.76rem;
   padding: 0.7rem 2.2rem;
-  border-radius: 4px;
+  border-radius: 2px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: background-color 0.2s, transform 0.12s, box-shadow 0.2s;
   display: inline-block;
-  background-color: rgba(253,249,243,0.7);
-  box-shadow: 0 2px 8px rgba(197,160,89,0.14);
+  background-color: transparent;
+  box-shadow: 0 12px 32px rgba(28,28,24,0.04);
 }
 .btn-bridgerton-outline:hover {
-  background-color: rgba(197,160,89,0.1);
-  box-shadow: 0 4px 14px rgba(197,160,89,0.28);
+  background-color: rgba(197,160,89,0.08);
+  box-shadow: 0 16px 40px rgba(28,28,24,0.08);
 }
 .btn-bridgerton-outline:active { transform: scale(0.97); }

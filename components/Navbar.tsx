@@ -47,8 +47,8 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 header-border pb-6 transition-shadow duration-300"
       style={{
         backgroundColor: "rgba(253, 249, 243, 0.95)",
-        backdropFilter: "blur(18px)",
-        WebkitBackdropFilter: "blur(18px)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
         borderBottom: "1px solid rgba(128,0,32,0.12)",
         boxShadow: scrolled
           ? "0 4px 24px rgba(28,28,24,0.10)"
@@ -166,14 +166,13 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="py-2.5 border-b transition-colors"
+              className="py-3 transition-colors"
               style={{
                 fontFamily: "var(--font-newsreader)",
                 fontSize: "0.78rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
                 color: active === l.href ? "#C5A059" : "#D886A7",
-                borderColor: "rgba(197,160,89,0.12)",
               }}
             >
               {l.label}

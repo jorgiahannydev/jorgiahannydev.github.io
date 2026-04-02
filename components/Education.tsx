@@ -27,10 +27,10 @@ export default function Education() {
               key={item.title}
               className="px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
               style={{
-                backgroundColor: "#f1ede7",
+                backgroundColor: "#ffffff",
                 borderLeft: "4px solid #C5A059",
-                boxShadow: "0 12px 32px rgba(28,28,24,0.04)",
-                borderRadius: "0 4px 4px 0",
+                boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
+                borderRadius: "0 2px 2px 0",
               }}
             >
               <div>
