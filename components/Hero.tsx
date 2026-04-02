@@ -1,3 +1,5 @@
+import SectionOrnaments from "./SectionOrnaments";
+
 export default function Hero() {
   return (
     <section
@@ -5,6 +7,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center pt-20 px-6 pb-16 overflow-hidden"
       style={{ backgroundColor: "#fdf9f3" }}
     >
+      <SectionOrnaments />
       {/* Corchetes decorativos de esquina */}
       <div className="absolute inset-0 pointer-events-none opacity-20 flex justify-between px-4 md:px-20 py-40">
         <div

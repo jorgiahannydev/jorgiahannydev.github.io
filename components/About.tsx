@@ -1,8 +1,10 @@
 import Image from "next/image";
+import SectionOrnaments from "./SectionOrnaments";
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="py-24 px-6" style={{ backgroundColor: "#fdf9f3" }}>
+    <section id="sobre-mi" className="relative py-24 px-6 overflow-hidden" style={{ backgroundColor: "#fdf9f3" }}>
+      <SectionOrnaments opacity={0.4} />
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* Foto con doble marco — efecto parallax Stitch */}

@@ -7,9 +7,12 @@ const workPhotos = [
   { img: "/img/FACIAL.png",  alt: "Göler",     title: "Göler Beauty & co.",        description: "Perfeccionamiento en estética facial y corporal." },
 ];
 
+import SectionOrnaments from "./SectionOrnaments";
+
 export default function Portfolio() {
   return (
-    <section id="portafolio" className="py-24" style={{ backgroundColor: "#f7f3ed" }}>
+    <section id="portafolio" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
+      <SectionOrnaments opacity={0.4} />
       <div className="max-w-5xl mx-auto px-6">
 
         {/* Carrusel con flechas (componente cliente) */}

@@ -1,23 +1,15 @@
 export default function Footer() {
   return (
     <footer
+      className="footer-border"
       style={{
         backgroundColor: "#f7f3ed",
-        borderTop: "4px double rgba(200,144,58,0.4)",
+        borderTop: "2px solid rgba(119,90,25,0.4)",
         color: "#9a4060",
+        paddingTop: "3.5rem",
       }}
     >
-      {/* Línea degradada dorada */}
-      <div
-        className="w-full"
-        style={{
-          height: "1px",
-          background: "linear-gradient(to right, transparent, rgba(200,144,58,0.55), transparent)",
-          marginTop: "1px",
-        }}
-      />
-
-      <div className="max-w-4xl mx-auto py-10 px-6 flex flex-col items-center gap-5 text-center">
+      <div className="max-w-4xl mx-auto pb-10 px-6 flex flex-col items-center gap-5 text-center">
 
         {/* Nombre en Newsreader italic */}
         <p

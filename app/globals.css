@@ -20,6 +20,47 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-newsreader), var(--font-playfair), "Palatino Linotype", Georgia, serif;
 }
 
+/* ── Victorian Edition: ornamentos de esquina en secciones ── */
+.section-ornament-corner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: url('/ornament-corner.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 5;
+}
+.corner-tl { top: 0; left: 0; }
+.corner-tr { top: 0; right: 0; transform: rotate(90deg); }
+.corner-bl { bottom: 0; left: 0; transform: rotate(-90deg); }
+.corner-br { bottom: 0; right: 0; transform: rotate(180deg); }
+
+/* ── Divisor ornamental entre secciones ── */
+.divider-ornament {
+  background-image: url('/ornament-divider.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 80px;
+  width: 100%;
+}
+
+/* ── Borde decorativo para navbar y footer ── */
+.header-border {
+  background-image: url('/ornament-border.png');
+  background-repeat: repeat-x;
+  background-size: auto 36px;
+  background-position: center bottom;
+}
+.footer-border {
+  background-image: url('/ornament-border.png');
+  background-repeat: repeat-x;
+  background-size: auto 36px;
+  background-position: center top;
+}
+
 /* ── Patrón ornamental (cruz/plus) en todas las secciones — estilo Stitch ── */
 #presentacion,
 #skills,

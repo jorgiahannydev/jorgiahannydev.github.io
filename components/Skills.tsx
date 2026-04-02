@@ -5,9 +5,12 @@ const groups = [
   { label: "En aprendizaje", skills: ["Next.js", "TypeScript", "React Native"],             learning: true  },
 ];
 
+import SectionOrnaments from "./SectionOrnaments";
+
 export default function Skills() {
   return (
-    <section id="skills" className="py-24" style={{ backgroundColor: "#f7f3ed" }}>
+    <section id="skills" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
+      <SectionOrnaments opacity={0.4} />
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>
           Habilidades Técnicas
