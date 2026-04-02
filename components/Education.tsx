@@ -27,7 +27,7 @@ export default function Education() {
               key={item.title}
               className="px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
               style={{
-                backgroundColor: "#fef9f3",
+                backgroundColor: "#f9f4ec",
                 borderLeft: "4px solid #b8891f",
                 boxShadow: "0 1px 8px rgba(122,30,62,0.07)",
               }}

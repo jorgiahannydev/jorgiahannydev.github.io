@@ -125,7 +125,7 @@ export default function Experience() {
               <div
                 className="px-5 py-4 rounded-sm"
                 style={{
-                  backgroundColor: "#fef9f3",
+                  backgroundColor: "#f9f4ec",
                   borderLeft: "3px solid " + (i % 2 === 0 ? "#3d0a1e" : "#b8891f"),
                   boxShadow: "0 1px 6px rgba(122,30,62,0.07)",
                 }}
