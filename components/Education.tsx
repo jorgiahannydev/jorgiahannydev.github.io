@@ -9,9 +9,9 @@ const items = [
 
 export default function Education() {
   return (
-    <section id="educacion" className="py-16" style={{ backgroundColor: "#fdf9f3" }}>
+    <section id="educacion" className="py-24" style={{ backgroundColor: "#fdf9f3" }}>
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center" style={{ color: "#7a1e3e" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>
           Educación
         </h2>
         <div className="b-section-line">

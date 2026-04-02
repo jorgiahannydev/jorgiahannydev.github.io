@@ -72,11 +72,12 @@ const jobs = [
 
 export default function Experience() {
   return (
-    <section id="experiencia" className="py-16" style={{ backgroundColor: "#fdf9f3" }}>
+    <section id="experiencia" className="py-24" style={{ backgroundColor: "#fdf9f3" }}>
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center" style={{ color: "#7a1e3e" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>
           Experiencia Laboral
         </h2>
+        <p className="text-center b-label mt-3 mb-2">Una trayectoria de logros</p>
         <div className="b-section-line">
           <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>
         </div>

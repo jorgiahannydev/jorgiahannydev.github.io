@@ -1,9 +1,9 @@
 export default function Contact() {
   return (
-    <section id="contacto" className="py-16" style={{ backgroundColor: "#f7f3ed" }}>
+    <section id="contacto" className="py-24" style={{ backgroundColor: "#f7f3ed" }}>
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center" style={{ color: "#7a1e3e" }}>
-          Contacto
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>
+          Correspondencia
         </h2>
         <div className="b-section-line">
           <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>

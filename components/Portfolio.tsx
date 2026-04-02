@@ -66,7 +66,7 @@ function ProjectCard({ p }: { p: Project }) {
       </div>
 
       {p.img ? (
-        <div className="relative h-44 w-full overflow-hidden">
+        <div className="relative aspect-[3/4] w-full overflow-hidden">
           <Image
             src={p.img} alt={p.alt} fill
             className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -74,11 +74,11 @@ function ProjectCard({ p }: { p: Project }) {
         </div>
       ) : (
         <div
-          className="h-44 flex items-center justify-center overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #7a1e3e 0%, #c8903a 100%)" }}
+          className="aspect-[3/4] flex items-center justify-center overflow-hidden"
+          style={{ background: "linear-gradient(160deg, #7a1e3e 0%, #c8903a 100%)" }}
         >
           <span
-            className="font-bold text-xl tracking-widest italic group-hover:scale-105 transition-transform duration-500 inline-block"
+            className="font-bold text-2xl tracking-widest italic group-hover:scale-105 transition-transform duration-500 inline-block"
             style={{ fontFamily: "var(--font-newsreader)", color: "#fdf9f3" }}
           >
             {p.placeholder}
@@ -128,9 +128,9 @@ function ProjectCard({ p }: { p: Project }) {
 
 export default function Portfolio() {
   return (
-    <section id="portafolio" className="py-16" style={{ backgroundColor: "#f7f3ed" }}>
+    <section id="portafolio" className="py-24" style={{ backgroundColor: "#f7f3ed" }}>
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center" style={{ color: "#7a1e3e" }}>Portafolio</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>Portafolio</h2>
         <div className="b-section-line">
           <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>
         </div>
@@ -152,7 +152,7 @@ export default function Portfolio() {
                 boxShadow: "0 2px 10px rgba(122,30,62,0.07)",
               }}
             >
-              <div className="relative h-44 w-full overflow-hidden">
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
                   src={p.img} alt={p.alt} fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
