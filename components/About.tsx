@@ -7,17 +7,17 @@ export default function About() {
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-        {/* Marco de pintura victoriana */}
+        {/* Marco de pintura victoriana floral */}
         <div className="flex flex-col items-center gap-0">
 
           {/* ── Marco exterior: madera oscura tallada ── */}
           <div
             className="relative group"
             style={{
-              padding: "18px",
+              padding: "38px",
               background: "linear-gradient(145deg, #3a0c16 0%, #1e0608 35%, #2a0a12 65%, #3a0c16 100%)",
               boxShadow:
-                "0 12px 48px rgba(20,4,8,0.55), " +
+                "0 16px 56px rgba(20,4,8,0.6), " +
                 "0 4px 16px rgba(20,4,8,0.35), " +
                 "inset 0 2px 3px rgba(255,255,255,0.07), " +
                 "inset 0 -2px 4px rgba(0,0,0,0.45), " +
@@ -25,25 +25,68 @@ export default function About() {
                 "inset -2px 0 4px rgba(0,0,0,0.35)",
             }}
           >
-            {/* Ornamentos de esquina en el marco exterior */}
-            {(["tl","tr","bl","br"] as const).map((pos) => (
-              <span
-                key={pos}
-                className="absolute text-xs pointer-events-none select-none"
-                style={{
-                  color: "#b8891f",
-                  opacity: 0.75,
-                  fontSize: "1.1rem",
-                  lineHeight: 1,
-                  ...(pos === "tl" && { top: "4px",    left:  "5px" }),
-                  ...(pos === "tr" && { top: "4px",    right: "5px" }),
-                  ...(pos === "bl" && { bottom: "4px", left:  "5px" }),
-                  ...(pos === "br" && { bottom: "4px", right: "5px" }),
-                }}
-              >
-                ✦
-              </span>
-            ))}
+            {/* ── Rosas victorianas en cada esquina ── */}
+            {([
+              { top: -4,   left:  -4,  tx: "0,0"       },
+              { top: -4,   right: -4,  tx: "-60px,0"   },
+              { bottom:-4, left:  -4,  tx: "0,-60px"   },
+              { bottom:-4, right: -4,  tx: "-60px,-60px"},
+            ] as const).map((corner, i) => {
+              const scaleX = i === 1 || i === 3 ? -1 : 1;
+              const scaleY = i === 2 || i === 3 ? -1 : 1;
+              return (
+                <svg
+                  key={i}
+                  viewBox="0 0 60 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute pointer-events-none"
+                  style={{ width: 64, height: 64, ...corner,
+                    transform: `scale(${scaleX},${scaleY})`,
+                    transformOrigin: "center" }}
+                >
+                  {/* Vine arm going right */}
+                  <path d="M26,22 Q34,17 42,19 Q50,21 56,18"
+                    stroke="#c8961e" strokeWidth="1" strokeOpacity="0.7"/>
+                  {/* Vine arm going down */}
+                  <path d="M22,26 Q17,34 19,42 Q21,50 18,56"
+                    stroke="#c8961e" strokeWidth="1" strokeOpacity="0.7"/>
+                  {/* Leaf pair right vine */}
+                  <path d="M38,19 Q35,12 30,18" fill="#9a7010" fillOpacity="0.55"/>
+                  <path d="M38,19 Q35,26 30,20" fill="#9a7010" fillOpacity="0.4"/>
+                  {/* Leaf pair down vine */}
+                  <path d="M19,38 Q12,35 18,30" fill="#9a7010" fillOpacity="0.55"/>
+                  <path d="M19,38 Q26,35 20,30" fill="#9a7010" fillOpacity="0.4"/>
+                  {/* Rosebud at end of right vine */}
+                  <ellipse cx="55" cy="17" rx="4" ry="3" fill="#d4a83a" fillOpacity="0.7"/>
+                  <ellipse cx="55" cy="17" rx="2.5" ry="1.8" fill="#e8c055" fillOpacity="0.75"/>
+                  <path d="M51,14 Q53,10 57,14" fill="#b8891f" fillOpacity="0.45"/>
+                  {/* Rosebud at end of down vine */}
+                  <ellipse cx="17" cy="55" rx="3" ry="4" fill="#d4a83a" fillOpacity="0.7"/>
+                  <ellipse cx="17" cy="55" rx="1.8" ry="2.5" fill="#e8c055" fillOpacity="0.75"/>
+                  <path d="M14,51 Q10,53 14,57" fill="#b8891f" fillOpacity="0.45"/>
+                  {/* Main rose — 6 outer petals */}
+                  {[0,60,120,180,240,300].map(a => (
+                    <ellipse key={a} cx="22" cy="12" rx="4.5" ry="9"
+                      fill="#c8961e" fillOpacity="0.7"
+                      transform={`rotate(${a} 22 22)`}/>
+                  ))}
+                  {/* 6 inner petals offset 30° */}
+                  {[30,90,150,210,270,330].map(a => (
+                    <ellipse key={a} cx="22" cy="15" rx="3.5" ry="7"
+                      fill="#d4a83a" fillOpacity="0.78"
+                      transform={`rotate(${a} 22 22)`}/>
+                  ))}
+                  {/* Rose center rings */}
+                  <circle cx="22" cy="22" r="5"   fill="#e8c055" fillOpacity="0.82"/>
+                  <circle cx="22" cy="22" r="3"   fill="#f0c84a" fillOpacity="0.88"/>
+                  <circle cx="22" cy="22" r="1.5" fill="#b8891f" fillOpacity="0.95"/>
+                  {/* Small leaves flanking rose */}
+                  <path d="M22,31 Q14,34 13,28 Q18,27 22,31" fill="#9a7010" fillOpacity="0.5"/>
+                  <path d="M31,22 Q34,14 28,13 Q27,18 31,22" fill="#9a7010" fillOpacity="0.5"/>
+                </svg>
+              );
+            })}
 
             {/* ── Borde dorado gilded ── */}
             <div
@@ -63,20 +106,19 @@ export default function About() {
                 }}
               >
                 {/* ── Imagen ── */}
-                <div className="overflow-hidden aspect-[4/5] relative" style={{ display: "block" }}>
+                <div className="relative overflow-hidden">
                   <Image
                     src="/img/cv2.png"
                     alt="Retrato de Jorgiahanny Almea Martínez"
-                    fill
-                    className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                    width={1024}
+                    height={1536}
+                    className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-700"
                     style={{ filter: "sepia(18%) contrast(1.04) brightness(0.97)" }}
                   />
                   {/* Viñeta interior del cuadro */}
                   <div
                     className="absolute inset-0 pointer-events-none"
-                    style={{
-                      boxShadow: "inset 0 0 40px rgba(20,4,8,0.28)",
-                    }}
+                    style={{ boxShadow: "inset 0 0 40px rgba(20,4,8,0.28)" }}
                   />
                 </div>
               </div>
