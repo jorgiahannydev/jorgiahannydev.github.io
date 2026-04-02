@@ -3,7 +3,7 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="relative py-24 px-6 overflow-hidden" style={{ backgroundColor: "#fdf9f3" }}>
+    <section id="sobre-mi" className="relative py-24 px-6 overflow-hidden" style={{ backgroundColor: "#f5efe6" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
@@ -15,7 +15,7 @@ export default function About() {
           />
           <div
             className="overflow-hidden shadow-xl aspect-[4/5] relative"
-            style={{ backgroundColor: "#f1ede7" }}
+            style={{ backgroundColor: "#f2eadd" }}
           >
             <Image
               src="/img/cv.png"
@@ -31,14 +31,14 @@ export default function About() {
         <div className="space-y-7">
           <h2
             className="text-4xl md:text-5xl italic leading-tight"
-            style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e", fontWeight: 600 }}
+            style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e", fontWeight: 600 }}
           >
             Una Trayectoria Multidisciplinaria
           </h2>
 
           <div
             className="space-y-5 leading-relaxed"
-            style={{ fontFamily: "var(--font-lora)", color: "#524348", fontSize: "1rem" }}
+            style={{ fontFamily: "var(--font-lora)", color: "#3a2428", fontSize: "1rem" }}
           >
             <p>
               Desarrolladora Web Full Stack en formación, con sólida experiencia previa en
@@ -61,7 +61,7 @@ export default function About() {
             <div>
               <span
                 className="block text-2xl"
-                style={{ fontFamily: "var(--font-newsreader)", color: "#c8903a", fontWeight: 600 }}
+                style={{ fontFamily: "var(--font-newsreader)", color: "#b8891f", fontWeight: 600 }}
               >
                 2+
               </span>
@@ -70,7 +70,7 @@ export default function About() {
             <div>
               <span
                 className="block text-2xl"
-                style={{ fontFamily: "var(--font-newsreader)", color: "#c8903a", fontWeight: 600 }}
+                style={{ fontFamily: "var(--font-newsreader)", color: "#b8891f", fontWeight: 600 }}
               >
                 5+
               </span>
@@ -79,7 +79,7 @@ export default function About() {
             <div>
               <span
                 className="block text-2xl"
-                style={{ fontFamily: "var(--font-newsreader)", color: "#c8903a", fontWeight: 600 }}
+                style={{ fontFamily: "var(--font-newsreader)", color: "#b8891f", fontWeight: 600 }}
               >
                 7+
               </span>

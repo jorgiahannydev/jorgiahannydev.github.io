@@ -6,25 +6,37 @@ html {
 
 :root {
   --font-newsreader: 'Newsreader';
+  /* ── Paleta Victorian Royal ── */
+  --c-burgundy:    #3d0a1e;   /* titulares, marcos exteriores */
+  --c-rose:        #7a2040;   /* acentos rosas */
+  --c-gold:        #b8891f;   /* oro principal */
+  --c-gold-light:  #d4a83a;   /* oro claro / hover */
+  --c-cream:       #f5efe6;   /* fondo principal (pergamino rico) */
+  --c-parchment:   #ede5d8;   /* secciones alternas */
+  --c-card:        #f9f4ec;   /* fondo de tarjetas */
+  --c-text:        #1e0c10;   /* cuerpo de texto */
+  --c-muted:       #3a2428;   /* texto secundario */
 }
 
 body {
   font-family: var(--font-lora), Georgia, serif;
   font-size: 1rem;
-  line-height: 1.8;
-  background-color: #fdf9f3;
-  color: #2a1015;
+  line-height: 1.85;
+  background-color: var(--c-cream);
+  color: var(--c-text);
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: var(--font-newsreader), var(--font-playfair), "Palatino Linotype", Georgia, serif;
+  font-family: var(--font-newsreader), "Palatino Linotype", Georgia, serif;
 }
 
-/* ── Victorian Edition: ornamentos de esquina en secciones ── */
+/* ══════════════════════════════════════════════
+   ORNAMENTOS VICTORIANOS — ESQUINAS DE SECCIÓN
+══════════════════════════════════════════════ */
 .section-ornament-corner {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   background-image: url('/ornament-corner.svg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -42,8 +54,8 @@ h1, h2, h3, h4, h5 {
   background-image: url('/ornament-divider.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 680px 60px;
-  height: 72px;
+  background-size: 720px 72px;
+  height: 88px;
   width: 100%;
 }
 
@@ -51,17 +63,19 @@ h1, h2, h3, h4, h5 {
 .header-border {
   background-image: url('/ornament-border.svg');
   background-repeat: repeat-x;
-  background-size: 120px 22px;
+  background-size: 140px 26px;
   background-position: center bottom;
 }
 .footer-border {
   background-image: url('/ornament-border.svg');
   background-repeat: repeat-x;
-  background-size: 120px 22px;
+  background-size: 140px 26px;
   background-position: center top;
 }
 
-/* ── Patrón arabesco floral victoriano — fondo de secciones ── */
+/* ══════════════════════════════════════════════
+   PATRÓN DAMASCO VICTORIANO — FONDO SECCIONES
+══════════════════════════════════════════════ */
 #presentacion,
 #skills,
 #experiencia,
@@ -69,11 +83,13 @@ h1, h2, h3, h4, h5 {
 #educacion,
 #contacto,
 #sobre-mi {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none'%3E%3C!-- Rombo central --%3E%3Cpolygon points='40,30 46,40 40,50 34,40' stroke='%23c8903a' stroke-width='0.6' stroke-opacity='0.13'/%3E%3C!-- 4 pétalos --%3E%3Cellipse cx='40' cy='24' rx='2.5' ry='5' fill='%239a4060' fill-opacity='0.055'/%3E%3Cellipse cx='56' cy='40' rx='5' ry='2.5' fill='%239a4060' fill-opacity='0.055'/%3E%3Cellipse cx='40' cy='56' rx='2.5' ry='5' fill='%239a4060' fill-opacity='0.055'/%3E%3Cellipse cx='24' cy='40' rx='5' ry='2.5' fill='%239a4060' fill-opacity='0.055'/%3E%3C!-- Líneas diagonales de conexión --%3E%3Cpath d='M10,10 Q20,0 30,10' stroke='%23c8903a' stroke-width='0.4' stroke-opacity='0.08'/%3E%3Cpath d='M50,10 Q60,0 70,10' stroke='%23c8903a' stroke-width='0.4' stroke-opacity='0.08'/%3E%3Cpath d='M10,70 Q20,80 30,70' stroke='%23c8903a' stroke-width='0.4' stroke-opacity='0.08'/%3E%3Cpath d='M50,70 Q60,80 70,70' stroke='%23c8903a' stroke-width='0.4' stroke-opacity='0.08'/%3E%3C!-- Punto central --%3E%3Ccircle cx='40' cy='40' r='1.8' fill='%23c8903a' fill-opacity='0.1'/%3E%3C!-- Corner dots --%3E%3Ccircle cx='0' cy='0' r='1.2' fill='%239a4060' fill-opacity='0.07'/%3E%3Ccircle cx='80' cy='0' r='1.2' fill='%239a4060' fill-opacity='0.07'/%3E%3Ccircle cx='0' cy='80' r='1.2' fill='%239a4060' fill-opacity='0.07'/%3E%3Ccircle cx='80' cy='80' r='1.2' fill='%239a4060' fill-opacity='0.07'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 80px 80px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none'%3E%3Ccircle cx='80' cy='80' r='24' stroke='%233d0a1e' stroke-width='0.7' stroke-opacity='0.06'/%3E%3Ccircle cx='80' cy='80' r='16' stroke='%23b8891f' stroke-width='0.4' stroke-opacity='0.05'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(45 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(90 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(135 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(180 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(225 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(270 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(315 80 80)'/%3E%3Ccircle cx='80' cy='80' r='4' fill='%23b8891f' fill-opacity='0.07'/%3E%3Cpath d='M88,88 Q102,96 110,110' stroke='%233d0a1e' stroke-width='0.6' stroke-opacity='0.055'/%3E%3Cpath d='M88,72 Q102,64 110,50' stroke='%233d0a1e' stroke-width='0.6' stroke-opacity='0.055'/%3E%3Cpath d='M72,88 Q58,96 50,110' stroke='%233d0a1e' stroke-width='0.6' stroke-opacity='0.055'/%3E%3Cpath d='M72,72 Q58,64 50,50' stroke='%233d0a1e' stroke-width='0.6' stroke-opacity='0.055'/%3E%3Ccircle cx='0' cy='0' r='10' stroke='%233d0a1e' stroke-width='0.5' stroke-opacity='0.052'/%3E%3Ccircle cx='160' cy='0' r='10' stroke='%233d0a1e' stroke-width='0.5' stroke-opacity='0.052'/%3E%3Ccircle cx='0' cy='160' r='10' stroke='%233d0a1e' stroke-width='0.5' stroke-opacity='0.052'/%3E%3Ccircle cx='160' cy='160' r='10' stroke='%233d0a1e' stroke-width='0.5' stroke-opacity='0.052'/%3E%3Cpolygon points='104,104 107,107 104,110 101,107' fill='%23b8891f' fill-opacity='0.06'/%3E%3Cpolygon points='104,56 107,53 104,50 101,53' fill='%23b8891f' fill-opacity='0.06'/%3E%3Cpolygon points='56,104 53,107 56,110 59,107' fill='%23b8891f' fill-opacity='0.06'/%3E%3Cpolygon points='56,56 53,53 56,50 59,53' fill='%23b8891f' fill-opacity='0.06'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 160px 160px;
 }
 
-/* ── Divisor hero: ····· texto ····· ── */
+/* ══════════════════════════════════════════════
+   DIVISOR HERO: ····· texto ·····
+══════════════════════════════════════════════ */
 .b-divider {
   display: flex;
   align-items: center;
@@ -88,7 +104,7 @@ h1, h2, h3, h4, h5 {
   height: 1px;
   background: repeating-linear-gradient(
     to right,
-    #c8903a 0px, #c8903a 3px,
+    #b8891f 0px, #b8891f 3px,
     transparent 3px, transparent 7px
   );
 }
@@ -103,129 +119,137 @@ h1, h2, h3, h4, h5 {
 }
 .b-section-line::before {
   content: "";
-  flex: 0 0 50px;
+  flex: 0 0 60px;
   height: 1px;
-  background: linear-gradient(to right, transparent, #c8903a);
+  background: linear-gradient(to right, transparent, #b8891f);
 }
 .b-section-line::after {
   content: "";
-  flex: 0 0 50px;
+  flex: 0 0 60px;
   height: 1px;
-  background: linear-gradient(to left, transparent, #c8903a);
+  background: linear-gradient(to left, transparent, #b8891f);
 }
 
 /* ── Texto decorativo dorado ── */
 .b-label {
-  font-family: var(--font-newsreader), var(--font-playfair), serif;
-  font-size: 0.84rem;
-  letter-spacing: 0.3em;
+  font-family: var(--font-newsreader), "Palatino Linotype", serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: #c8903a;
+  color: var(--c-gold);
 }
 
-/* ── Inputs estilo Stitch: solo subrayado ── */
+/* ══════════════════════════════════════════════
+   INPUTS — solo subrayado (estilo epistolar)
+══════════════════════════════════════════════ */
 .b-input {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(200, 144, 58, 0.35);
-  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(184, 137, 31, 0.35);
+  padding: 0.55rem 0;
   outline: none;
   font-family: var(--font-lora), Georgia, serif;
   font-size: 0.95rem;
-  color: #2a1015;
+  color: var(--c-text);
   transition: border-color 0.25s;
 }
-.b-input:focus {
-  border-bottom-color: #c8903a;
-}
+.b-input:focus { border-bottom-color: var(--c-gold); }
 .b-input::placeholder {
-  color: rgba(82, 67, 72, 0.28);
+  color: rgba(58, 36, 40, 0.3);
   font-style: italic;
 }
 
-/* ── Wax seal (botón circular tipo sello de cera) ── */
+/* ══════════════════════════════════════════════
+   WAX SEAL — botón circular sellado
+══════════════════════════════════════════════ */
 .wax-seal {
   position: relative;
   width: 7rem;
   height: 7rem;
-  background-color: #af2b3e;
+  background: radial-gradient(circle at 38% 36%, #8b1a2e, #5a0c1e);
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: transform 0.4s, box-shadow 0.4s;
-  box-shadow: 0 8px 28px rgba(28, 28, 24, 0.14);
+  box-shadow: 0 8px 28px rgba(61, 10, 30, 0.3), 0 2px 6px rgba(61,10,30,0.18);
 }
-.wax-seal:hover  { transform: scale(1.06); box-shadow: 0 12px 36px rgba(28,28,24,0.2); }
+.wax-seal:hover  { transform: scale(1.07); box-shadow: 0 14px 40px rgba(61,10,30,0.38); }
 .wax-seal:active { transform: scale(0.95); }
 .wax-seal-ring {
   position: absolute;
   inset: 0.5rem;
-  border: 2px dashed rgba(255, 222, 165, 0.35);
+  border: 2px dashed rgba(212, 168, 58, 0.38);
   border-radius: 9999px;
   transition: transform 1s;
 }
 .wax-seal:hover .wax-seal-ring { transform: rotate(45deg); }
 
-/* ── Flechas de carrusel ── */
+/* ══════════════════════════════════════════════
+   FLECHAS DE CARRUSEL
+══════════════════════════════════════════════ */
 .carousel-arrow {
   width: 3rem;
   height: 3rem;
   border-radius: 9999px;
-  border: 1px solid #c8903a;
+  border: 1px solid var(--c-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #c8903a;
+  color: var(--c-gold);
   background: transparent;
   transition: background-color 0.2s, color 0.2s;
   cursor: pointer;
   font-size: 1.1rem;
 }
-.carousel-arrow:hover   { background-color: #c8903a; color: #fdf9f3; }
-.carousel-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
-.carousel-arrow:disabled:hover { background-color: transparent; color: #c8903a; }
+.carousel-arrow:hover    { background-color: var(--c-gold); color: var(--c-cream); }
+.carousel-arrow:disabled { opacity: 0.28; cursor: not-allowed; }
+.carousel-arrow:disabled:hover { background-color: transparent; color: var(--c-gold); }
 
-/* ── Botones ── */
+/* ══════════════════════════════════════════════
+   BOTONES — estilo formal victoriano
+   (rectangulares, no pill; con borde dorado)
+══════════════════════════════════════════════ */
 .btn-bridgerton-primary {
-  background: linear-gradient(135deg, #b05070 0%, #7a1e3e 100%);
-  color: #fef0f4;
-  font-family: var(--font-newsreader), var(--font-playfair), serif;
+  background: linear-gradient(145deg, #6b1228 0%, #3d0a1e 100%);
+  color: #faebd7;
+  font-family: var(--font-newsreader), serif;
   font-weight: 600;
-  font-size: 0.78rem;
-  padding: 0.65rem 2rem;
-  border-radius: 9999px;
-  letter-spacing: 0.15em;
+  font-size: 0.76rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s;
+  transition: opacity 0.2s, transform 0.12s, box-shadow 0.2s;
   display: inline-block;
-  box-shadow: 0 3px 14px rgba(122, 30, 62, 0.25);
+  box-shadow: 0 3px 14px rgba(61,10,30,0.28), inset 0 1px 0 rgba(212,168,58,0.18);
+  border: 1px solid rgba(184,137,31,0.4);
 }
 .btn-bridgerton-primary:hover {
-  opacity: 0.88;
-  box-shadow: 0 5px 18px rgba(122, 30, 62, 0.35);
+  opacity: 0.9;
+  box-shadow: 0 6px 22px rgba(61,10,30,0.38), inset 0 1px 0 rgba(212,168,58,0.22);
 }
 .btn-bridgerton-primary:active { transform: scale(0.97); }
 
 .btn-bridgerton-outline {
-  border: 1.5px solid #c8903a;
-  color: #9a6520;
-  font-family: var(--font-newsreader), var(--font-playfair), serif;
+  border: 1.5px solid var(--c-gold);
+  color: #7a5a10;
+  font-family: var(--font-newsreader), serif;
   font-weight: 600;
-  font-size: 0.78rem;
-  padding: 0.65rem 2rem;
-  border-radius: 9999px;
-  letter-spacing: 0.15em;
+  font-size: 0.76rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+  transition: background-color 0.2s, transform 0.12s, box-shadow 0.2s;
   display: inline-block;
-  background-color: rgba(255, 248, 240, 0.6);
-  box-shadow: 0 2px 8px rgba(200, 144, 58, 0.15);
+  background-color: rgba(249, 244, 236, 0.7);
+  box-shadow: 0 2px 8px rgba(184,137,31,0.14);
 }
 .btn-bridgerton-outline:hover {
-  background-color: rgba(200, 144, 58, 0.12);
-  box-shadow: 0 4px 12px rgba(200, 144, 58, 0.25);
+  background-color: rgba(184,137,31,0.1);
+  box-shadow: 0 4px 14px rgba(184,137,31,0.28);
 }
 .btn-bridgerton-outline:active { transform: scale(0.97); }

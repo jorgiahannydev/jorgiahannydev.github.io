@@ -9,20 +9,20 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
+    <section id="skills" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#ede5d8" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}>
           Habilidades Técnicas
         </h2>
         <div className="b-section-line">
-          <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>
+          <span style={{ color: "#b8891f", fontSize: "1rem" }}>❦</span>
         </div>
 
         <div
           className="p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
           style={{
-            backgroundColor: "#fdf9f3",
+            backgroundColor: "#f5efe6",
             border: "1px solid rgba(200,144,58,0.25)",
             boxShadow: "0 2px 12px rgba(122,30,62,0.07)",
           }}
@@ -38,14 +38,14 @@ export default function Skills() {
                     style={
                       g.learning
                         ? {
-                            border: "1.5px solid #c8903a",
+                            border: "1.5px solid #b8891f",
                             color: "#9a6520",
                             backgroundColor: "#fef9f0",
                             fontFamily: "var(--font-lora)",
                           }
                         : {
-                            backgroundColor: "#7a1e3e",
-                            color: "#fdf9f3",
+                            backgroundColor: "#3d0a1e",
+                            color: "#f5efe6",
                             fontFamily: "var(--font-lora)",
                           }
                     }

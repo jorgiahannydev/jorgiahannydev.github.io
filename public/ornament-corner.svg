@@ -1,55 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
-  <!-- Outer L-frame (rose) -->
-  <path d="M4,4 L116,4" stroke="#9a4060" stroke-width="1.4" stroke-opacity="0.55"/>
-  <path d="M4,4 L4,116" stroke="#9a4060" stroke-width="1.4" stroke-opacity="0.55"/>
-  <!-- Inner L-frame (gold) -->
-  <path d="M9,9 L96,9" stroke="#c8903a" stroke-width="0.6" stroke-opacity="0.42"/>
-  <path d="M9,9 L9,96" stroke="#c8903a" stroke-width="0.6" stroke-opacity="0.42"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <!-- ── Double L-frame ── -->
+  <!-- Outer line: deep burgundy -->
+  <path d="M0,6 L160,6"   stroke="#3d0a1e" stroke-width="1.8" stroke-opacity="0.54"/>
+  <path d="M6,0 L6,160"   stroke="#3d0a1e" stroke-width="1.8" stroke-opacity="0.54"/>
+  <!-- Middle line: gold -->
+  <path d="M0,12 L148,12" stroke="#b8891f" stroke-width="0.9" stroke-opacity="0.48"/>
+  <path d="M12,0 L12,148" stroke="#b8891f" stroke-width="0.9" stroke-opacity="0.48"/>
+  <!-- Inner accent: gold thin -->
+  <path d="M18,18 L130,18" stroke="#b8891f" stroke-width="0.4" stroke-opacity="0.3"/>
+  <path d="M18,18 L18,130" stroke="#b8891f" stroke-width="0.4" stroke-opacity="0.3"/>
 
-  <!-- Corner rosette at (4,4)  6 petals + center -->
-  <circle cx="4" cy="4" r="12" stroke="#9a4060" stroke-width="0.9" stroke-opacity="0.42"/>
-  <ellipse cx="4" cy="-8" rx="3" ry="5.5" fill="#9a4060" fill-opacity="0.24"/>
-  <ellipse cx="4" cy="-8" rx="3" ry="5.5" fill="#9a4060" fill-opacity="0.24" transform="rotate(60 4 4)"/>
-  <ellipse cx="4" cy="-8" rx="3" ry="5.5" fill="#9a4060" fill-opacity="0.24" transform="rotate(120 4 4)"/>
-  <ellipse cx="4" cy="-8" rx="3" ry="5.5" fill="#9a4060" fill-opacity="0.24" transform="rotate(180 4 4)"/>
-  <ellipse cx="4" cy="-8" rx="3" ry="5.5" fill="#9a4060" fill-opacity="0.24" transform="rotate(240 4 4)"/>
-  <ellipse cx="4" cy="-8" rx="3" ry="5.5" fill="#9a4060" fill-opacity="0.24" transform="rotate(300 4 4)"/>
-  <circle cx="4" cy="4" r="4" fill="#c8903a" fill-opacity="0.55"/>
-  <circle cx="4" cy="4" r="1.8" fill="#9a4060" fill-opacity="0.6"/>
+  <!-- ── Corner medallion at (6,6) ── -->
+  <!-- Outer ring -->
+  <circle cx="6" cy="6" r="16" stroke="#3d0a1e" stroke-width="1.1" stroke-opacity="0.46"/>
+  <!-- Gold ring -->
+  <circle cx="6" cy="6" r="11" stroke="#b8891f" stroke-width="0.7" stroke-opacity="0.42"/>
+  <!-- 8 petals (ellipses rotated around center) -->
+  <ellipse cx="6" cy="-8"  rx="3.2" ry="6.5" fill="#3d0a1e" fill-opacity="0.28"/>
+  <ellipse cx="6" cy="-8"  rx="3.2" ry="6.5" fill="#3d0a1e" fill-opacity="0.28" transform="rotate(45  6 6)"/>
+  <ellipse cx="6" cy="-8"  rx="3.2" ry="6.5" fill="#3d0a1e" fill-opacity="0.28" transform="rotate(90  6 6)"/>
+  <ellipse cx="6" cy="-8"  rx="3.2" ry="6.5" fill="#3d0a1e" fill-opacity="0.28" transform="rotate(135 6 6)"/>
+  <ellipse cx="6" cy="-8"  rx="3.2" ry="6.5" fill="#3d0a1e" fill-opacity="0.28" transform="rotate(180 6 6)"/>
+  <ellipse cx="6" cy="-8"  rx="3.2" ry="6.5" fill="#3d0a1e" fill-opacity="0.28" transform="rotate(225 6 6)"/>
+  <ellipse cx="6" cy="-8"  rx="3.2" ry="6.5" fill="#3d0a1e" fill-opacity="0.28" transform="rotate(270 6 6)"/>
+  <ellipse cx="6" cy="-8"  rx="3.2" ry="6.5" fill="#3d0a1e" fill-opacity="0.28" transform="rotate(315 6 6)"/>
+  <!-- Center fill -->
+  <circle cx="6" cy="6" r="5"   fill="#b8891f" fill-opacity="0.58"/>
+  <circle cx="6" cy="6" r="2.2" fill="#3d0a1e" fill-opacity="0.68"/>
 
-  <!-- Wavy vine  horizontal arm -->
-  <path d="M18,4 Q26,0 34,4 Q42,8 50,4 Q58,0 66,4 Q74,8 82,4 Q90,0 98,4 Q106,8 114,4"
-        stroke="#c8903a" stroke-width="0.9" stroke-opacity="0.4"/>
+  <!-- ── Vine waves ── -->
+  <!-- Horizontal arm -->
+  <path d="M26,6 Q35,1 44,6 Q53,11 62,6 Q71,1 80,6 Q89,11 98,6 Q107,1 116,6 Q125,11 134,6 Q143,1 152,6"
+        stroke="#b8891f" stroke-width="1" stroke-opacity="0.42"/>
+  <!-- Vertical arm -->
+  <path d="M6,26 Q1,35 6,44 Q11,53 6,62 Q1,71 6,80 Q11,89 6,98 Q1,107 6,116 Q11,125 6,134 Q1,143 6,152"
+        stroke="#b8891f" stroke-width="1" stroke-opacity="0.42"/>
 
-  <!-- Wavy vine  vertical arm -->
-  <path d="M4,18 Q0,26 4,34 Q8,42 4,50 Q0,58 4,66 Q8,74 4,82 Q0,90 4,98 Q8,106 4,114"
-        stroke="#c8903a" stroke-width="0.9" stroke-opacity="0.4"/>
+  <!-- ── Leaf pairs — horizontal arm (at 44, 80, 116, 152) ── -->
+  <path d="M44,6 Q39,-5 31,6"   fill="#3d0a1e" fill-opacity="0.24" stroke="#3d0a1e" stroke-width="0.55" stroke-opacity="0.32"/>
+  <path d="M44,6 Q39,17 31,6"   fill="#3d0a1e" fill-opacity="0.17" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <path d="M80,6 Q75,-5 67,6"   fill="#3d0a1e" fill-opacity="0.24" stroke="#3d0a1e" stroke-width="0.55" stroke-opacity="0.32"/>
+  <path d="M80,6 Q75,17 67,6"   fill="#3d0a1e" fill-opacity="0.17" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <path d="M116,6 Q111,-5 103,6" fill="#3d0a1e" fill-opacity="0.24" stroke="#3d0a1e" stroke-width="0.55" stroke-opacity="0.32"/>
+  <path d="M116,6 Q111,17 103,6" fill="#3d0a1e" fill-opacity="0.17" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <path d="M152,6 Q147,-5 139,6" fill="#3d0a1e" fill-opacity="0.24" stroke="#3d0a1e" stroke-width="0.55" stroke-opacity="0.32"/>
+  <path d="M152,6 Q147,17 139,6" fill="#3d0a1e" fill-opacity="0.17" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
 
-  <!-- Leaf pairs  horizontal arm (at 34, 66, 98) -->
-  <path d="M34,4 Q29,-6 22,4" fill="#9a4060" fill-opacity="0.2" stroke="#9a4060" stroke-width="0.5" stroke-opacity="0.3"/>
-  <path d="M34,4 Q29,14 22,4" fill="#9a4060" fill-opacity="0.15" stroke="#9a4060" stroke-width="0.4" stroke-opacity="0.25"/>
-  <path d="M66,4 Q61,-6 54,4" fill="#9a4060" fill-opacity="0.2" stroke="#9a4060" stroke-width="0.5" stroke-opacity="0.3"/>
-  <path d="M66,4 Q61,14 54,4" fill="#9a4060" fill-opacity="0.15" stroke="#9a4060" stroke-width="0.4" stroke-opacity="0.25"/>
-  <path d="M98,4 Q93,-6 86,4" fill="#9a4060" fill-opacity="0.2" stroke="#9a4060" stroke-width="0.5" stroke-opacity="0.3"/>
-  <path d="M98,4 Q93,14 86,4" fill="#9a4060" fill-opacity="0.15" stroke="#9a4060" stroke-width="0.4" stroke-opacity="0.25"/>
+  <!-- ── Leaf pairs — vertical arm (at 44, 80, 116, 152) ── -->
+  <path d="M6,44  Q-5,39  6,31"  fill="#3d0a1e" fill-opacity="0.24" stroke="#3d0a1e" stroke-width="0.55" stroke-opacity="0.32"/>
+  <path d="M6,44  Q17,39  6,31"  fill="#3d0a1e" fill-opacity="0.17" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <path d="M6,80  Q-5,75  6,67"  fill="#3d0a1e" fill-opacity="0.24" stroke="#3d0a1e" stroke-width="0.55" stroke-opacity="0.32"/>
+  <path d="M6,80  Q17,75  6,67"  fill="#3d0a1e" fill-opacity="0.17" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <path d="M6,116 Q-5,111 6,103" fill="#3d0a1e" fill-opacity="0.24" stroke="#3d0a1e" stroke-width="0.55" stroke-opacity="0.32"/>
+  <path d="M6,116 Q17,111 6,103" fill="#3d0a1e" fill-opacity="0.17" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <path d="M6,152 Q-5,147 6,139" fill="#3d0a1e" fill-opacity="0.24" stroke="#3d0a1e" stroke-width="0.55" stroke-opacity="0.32"/>
+  <path d="M6,152 Q17,147 6,139" fill="#3d0a1e" fill-opacity="0.17" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
 
-  <!-- Leaf pairs  vertical arm (at 34, 66, 98) -->
-  <path d="M4,34 Q-6,29 4,22" fill="#9a4060" fill-opacity="0.2" stroke="#9a4060" stroke-width="0.5" stroke-opacity="0.3"/>
-  <path d="M4,34 Q14,29 4,22" fill="#9a4060" fill-opacity="0.15" stroke="#9a4060" stroke-width="0.4" stroke-opacity="0.25"/>
-  <path d="M4,66 Q-6,61 4,54" fill="#9a4060" fill-opacity="0.2" stroke="#9a4060" stroke-width="0.5" stroke-opacity="0.3"/>
-  <path d="M4,66 Q14,61 4,54" fill="#9a4060" fill-opacity="0.15" stroke="#9a4060" stroke-width="0.4" stroke-opacity="0.25"/>
-  <path d="M4,98 Q-6,93 4,86" fill="#9a4060" fill-opacity="0.2" stroke="#9a4060" stroke-width="0.5" stroke-opacity="0.3"/>
-  <path d="M4,98 Q14,93 4,86" fill="#9a4060" fill-opacity="0.15" stroke="#9a4060" stroke-width="0.4" stroke-opacity="0.25"/>
+  <!-- ── Mid-arm floral ornaments ── -->
+  <circle cx="62" cy="6" r="7"   stroke="#b8891f" stroke-width="0.7" stroke-opacity="0.46"/>
+  <circle cx="62" cy="6" r="2.8" fill="#b8891f"  fill-opacity="0.5"/>
+  <circle cx="6" cy="62" r="7"   stroke="#b8891f" stroke-width="0.7" stroke-opacity="0.46"/>
+  <circle cx="6" cy="62" r="2.8" fill="#b8891f"  fill-opacity="0.5"/>
 
-  <!-- Small floral at mid horizontal (x=50) -->
-  <circle cx="50" cy="4" r="5" stroke="#c8903a" stroke-width="0.5" stroke-opacity="0.4"/>
-  <circle cx="50" cy="4" r="2" fill="#c8903a" fill-opacity="0.4"/>
-
-  <!-- Small floral at mid vertical (y=50) -->
-  <circle cx="4" cy="50" r="5" stroke="#c8903a" stroke-width="0.5" stroke-opacity="0.4"/>
-  <circle cx="4" cy="50" r="2" fill="#c8903a" fill-opacity="0.4"/>
-
-  <!-- Terminal diamonds -->
-  <polygon points="116,4 120,1 120,7 116,4" fill="#c8903a" fill-opacity="0.52"/>
-  <polygon points="4,116 1,120 7,120 4,116" fill="#c8903a" fill-opacity="0.52"/>
+  <!-- ── Fleur-de-lis tips at arm ends ── -->
+  <!-- Horizontal tip -->
+  <polygon points="155,6 158,3 160,6 158,9"     fill="#b8891f" fill-opacity="0.58"/>
+  <path d="M158,3 Q161,-1 164,3"                fill="#b8891f" fill-opacity="0.38" stroke="#b8891f" stroke-width="0.5" stroke-opacity="0.4"/>
+  <path d="M158,9 Q161,13 164,9"                fill="#b8891f" fill-opacity="0.3"  stroke="#b8891f" stroke-width="0.4" stroke-opacity="0.32"/>
+  <!-- Vertical tip -->
+  <polygon points="6,155 3,158 6,160 9,158"     fill="#b8891f" fill-opacity="0.58"/>
+  <path d="M3,158 Q-1,161 3,164"                fill="#b8891f" fill-opacity="0.38" stroke="#b8891f" stroke-width="0.5" stroke-opacity="0.4"/>
+  <path d="M9,158 Q13,161 13,164"               fill="#b8891f" fill-opacity="0.3"  stroke="#b8891f" stroke-width="0.4" stroke-opacity="0.32"/>
 </svg>

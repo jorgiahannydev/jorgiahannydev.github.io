@@ -74,15 +74,15 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function Experience() {
   return (
-    <section id="experiencia" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#fdf9f3" }}>
+    <section id="experiencia" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f5efe6" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}>
           Experiencia Laboral
         </h2>
         <p className="text-center b-label mt-3 mb-2">Una trayectoria de logros</p>
         <div className="b-section-line">
-          <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>
+          <span style={{ color: "#b8891f", fontSize: "1rem" }}>❦</span>
         </div>
 
         {/* Timeline */}
@@ -94,8 +94,8 @@ export default function Experience() {
               <div
                 className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-4"
                 style={{
-                  backgroundColor: i % 2 === 0 ? "#7a1e3e" : "#c8903a",
-                  borderColor: "#fdf9f3",
+                  backgroundColor: i % 2 === 0 ? "#3d0a1e" : "#b8891f",
+                  borderColor: "#f5efe6",
                   boxShadow: "0 0 0 1px rgba(122,30,62,0.25)",
                 }}
               />
@@ -103,7 +103,7 @@ export default function Experience() {
               {/* Fecha */}
               <span
                 className="block text-sm italic mb-0.5"
-                style={{ fontFamily: "var(--font-playfair)", color: "#c8903a" }}
+                style={{ fontFamily: "var(--font-playfair)", color: "#b8891f" }}
               >
                 {job.date}
               </span>
@@ -111,13 +111,13 @@ export default function Experience() {
               {/* Título */}
               <h3
                 className="font-bold text-base leading-snug"
-                style={{ fontFamily: "var(--font-playfair)", color: "#7a1e3e" }}
+                style={{ fontFamily: "var(--font-playfair)", color: "#3d0a1e" }}
               >
                 {job.title}
               </h3>
 
               {/* Empresa */}
-              <p className="text-sm italic mb-3" style={{ color: "#9a4060" }}>
+              <p className="text-sm italic mb-3" style={{ color: "#7a2040" }}>
                 {job.company}
               </p>
 
@@ -126,13 +126,13 @@ export default function Experience() {
                 className="px-5 py-4 rounded-sm"
                 style={{
                   backgroundColor: "#fef9f3",
-                  borderLeft: "3px solid " + (i % 2 === 0 ? "#7a1e3e" : "#c8903a"),
+                  borderLeft: "3px solid " + (i % 2 === 0 ? "#3d0a1e" : "#b8891f"),
                   boxShadow: "0 1px 6px rgba(122,30,62,0.07)",
                 }}
               >
                 <ul className="list-disc list-inside space-y-1">
                   {job.items.map((item) => (
-                    <li key={item} className="text-sm leading-relaxed" style={{ color: "#3d1520" }}>
+                    <li key={item} className="text-sm leading-relaxed" style={{ color: "#3d0a1e" }}>
                       {item}
                     </li>
                   ))}

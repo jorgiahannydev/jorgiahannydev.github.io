@@ -12,10 +12,11 @@ const links = [
 ];
 
 const navStyle: React.CSSProperties = {
-  backgroundColor: "rgba(253, 249, 243, 0.90)",
-  backdropFilter: "blur(14px)",
-  WebkitBackdropFilter: "blur(14px)",
-  borderBottom: "1px solid rgba(200, 144, 58, 0.35)",
+  backgroundColor: "rgba(245, 239, 230, 0.93)",
+  backdropFilter: "blur(16px)",
+  WebkitBackdropFilter: "blur(16px)",
+  borderBottom: "1px solid rgba(61, 10, 30, 0.18)",
+  boxShadow: "0 1px 12px rgba(61,10,30,0.06)",
 };
 
 export default function Navbar() {
@@ -27,7 +28,7 @@ export default function Navbar() {
         <a
           href="#presentacion"
           className="text-sm md:text-base tracking-widest truncate italic"
-          style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}
+          style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}
         >
           Jorgiahanny Almea Martínez
         </a>
@@ -39,9 +40,9 @@ export default function Navbar() {
               <a
                 href={l.href}
                 className="text-sm tracking-widest uppercase transition-colors"
-                style={{ color: "#9a4060", fontFamily: "var(--font-newsreader)", fontSize: "0.72rem" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#c8903a")}
-                onMouseLeave={e => (e.currentTarget.style.color = "#9a4060")}
+                style={{ color: "#7a2040", fontFamily: "var(--font-newsreader)", fontSize: "0.72rem" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#b8891f")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#7a2040")}
               >
                 {l.label}
               </a>
@@ -52,7 +53,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           className="md:hidden"
-          style={{ color: "#7a1e3e" }}
+          style={{ color: "#3d0a1e" }}
           onClick={() => setOpen(!open)}
           aria-label="Abrir menú"
         >
@@ -81,7 +82,7 @@ export default function Navbar() {
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className="block text-sm py-1 tracking-widest uppercase transition-colors"
-                style={{ color: "#9a4060", fontFamily: "var(--font-newsreader)", fontSize: "0.72rem" }}
+                style={{ color: "#7a2040", fontFamily: "var(--font-newsreader)", fontSize: "0.72rem" }}
               >
                 {l.label}
               </a>

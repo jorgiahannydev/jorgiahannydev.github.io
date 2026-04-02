@@ -51,14 +51,14 @@ function ProjectCard({ p }: { p: Project }) {
     <div
       className="group relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1"
       style={{
-        backgroundColor: "#fdf9f3",
+        backgroundColor: "#f5efe6",
         border: "1px solid rgba(200,144,58,0.18)",
         boxShadow: "0 2px 10px rgba(122,30,62,0.07)",
       }}
     >
       {/* Icono botánico superpuesto al hover */}
       <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-15 transition-opacity duration-500 text-3xl pointer-events-none"
-        style={{ color: "#7a1e3e" }}>
+        style={{ color: "#3d0a1e" }}>
         ❧
       </div>
 
@@ -73,11 +73,11 @@ function ProjectCard({ p }: { p: Project }) {
       ) : (
         <div
           className="aspect-[3/4] flex items-center justify-center overflow-hidden"
-          style={{ background: "linear-gradient(160deg, #7a1e3e 0%, #c8903a 100%)" }}
+          style={{ background: "linear-gradient(160deg, #3d0a1e 0%, #b8891f 100%)" }}
         >
           <span
             className="font-bold text-2xl tracking-widest italic group-hover:scale-105 transition-transform duration-500 inline-block"
-            style={{ fontFamily: "var(--font-newsreader)", color: "#fdf9f3" }}
+            style={{ fontFamily: "var(--font-newsreader)", color: "#f5efe6" }}
           >
             {p.placeholder}
           </span>
@@ -89,11 +89,11 @@ function ProjectCard({ p }: { p: Project }) {
         <span className="b-label text-[0.65rem]">{p.category}</span>
         <h4
           className="font-semibold text-xl italic leading-snug"
-          style={{ fontFamily: "var(--font-newsreader)", color: "#3d1520" }}
+          style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}
         >
           {p.title}
         </h4>
-        <p className="text-sm leading-relaxed flex-1" style={{ color: "#524348", fontFamily: "var(--font-lora)" }}>
+        <p className="text-sm leading-relaxed flex-1" style={{ color: "#3a2428", fontFamily: "var(--font-lora)" }}>
           {p.description}
         </p>
 
@@ -136,13 +136,13 @@ export default function PortfolioCarousel() {
         <div>
           <h2
             className="text-4xl md:text-5xl font-bold italic"
-            style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}
+            style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}
           >
             Galería de Obras
           </h2>
           <p
             className="mt-3 italic"
-            style={{ fontFamily: "var(--font-lora)", color: "#524348", fontSize: "0.95rem" }}
+            style={{ fontFamily: "var(--font-lora)", color: "#3a2428", fontSize: "0.95rem" }}
           >
             Proyectos que definen el estilo y la técnica moderna.
           </p>
@@ -187,7 +187,7 @@ export default function PortfolioCarousel() {
               width: i === page ? "1.5rem" : "0.5rem",
               height: "0.5rem",
               borderRadius: "9999px",
-              backgroundColor: i === page ? "#c8903a" : "rgba(200,144,58,0.3)",
+              backgroundColor: i === page ? "#b8891f" : "rgba(200,144,58,0.3)",
             }}
             aria-label={`Página ${i + 1}`}
           />

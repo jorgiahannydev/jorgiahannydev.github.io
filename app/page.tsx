@@ -15,17 +15,17 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <OrnamentDivider bg="#fdf9f3" />
+        <OrnamentDivider bg="#f5efe6" />
         <About />
-        <OrnamentDivider bg="#f7f3ed" />
+        <OrnamentDivider bg="#ede5d8" />
         <Skills />
-        <OrnamentDivider bg="#fdf9f3" />
+        <OrnamentDivider bg="#f5efe6" />
         <Experience />
-        <OrnamentDivider bg="#f7f3ed" />
+        <OrnamentDivider bg="#ede5d8" />
         <Portfolio />
-        <OrnamentDivider bg="#fdf9f3" />
+        <OrnamentDivider bg="#f5efe6" />
         <Education />
-        <OrnamentDivider bg="#f7f3ed" />
+        <OrnamentDivider bg="#ede5d8" />
         <Contact />
       </main>
       <Footer />
