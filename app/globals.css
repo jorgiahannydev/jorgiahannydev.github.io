@@ -16,7 +16,18 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-playfair), "Palatino Linotype", Georgia, serif;
 }
 
-/* ── Divisor hero: ····· texto ····· (estilo portada) ── */
+/* ── Patrón floral sutil en todas las secciones ── */
+#presentacion,
+#skills,
+#experiencia,
+#portafolio,
+#educacion,
+#contacto {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><g transform='translate(50 50)'><ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14'/><ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14' transform='rotate(72)'/>  <ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14' transform='rotate(144)'/><ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14' transform='rotate(216)'/><ellipse cx='0' cy='-13' rx='4.5' ry='9' fill='%23d4849e' opacity='0.14' transform='rotate(288)'/><circle r='4' fill='%23c8903a' opacity='0.13'/></g><circle cx='0' cy='0' r='1.5' fill='%23c8903a' opacity='0.12'/><circle cx='100' cy='0' r='1.5' fill='%23c8903a' opacity='0.12'/><circle cx='0' cy='100' r='1.5' fill='%23c8903a' opacity='0.12'/><circle cx='100' cy='100' r='1.5' fill='%23c8903a' opacity='0.12'/></svg>");
+  background-size: 100px 100px;
+}
+
+/* ── Divisor hero: ····· texto ····· ── */
 .b-divider {
   display: flex;
   align-items: center;
@@ -44,23 +55,23 @@ h1, h2, h3, h4, h5 {
   gap: 8px;
   margin: 0.4rem auto 2.5rem;
 }
-.b-section-line::before,
+.b-section-line::before {
+  content: "";
+  flex: 0 0 50px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c8903a);
+}
 .b-section-line::after {
   content: "";
   flex: 0 0 50px;
   height: 1px;
-}
-.b-section-line::before {
-  background: linear-gradient(to right, transparent, #c8903a);
-}
-.b-section-line::after {
   background: linear-gradient(to left, transparent, #c8903a);
 }
 
 /* ── Texto decorativo dorado ── */
 .b-label {
   font-family: var(--font-playfair), serif;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #c8903a;
@@ -68,8 +79,8 @@ h1, h2, h3, h4, h5 {
 
 /* ── Botones ── */
 .btn-bridgerton-primary {
-  background-color: #7a1e3e;
-  color: #fce8ed;
+  background: linear-gradient(135deg, #b05070 0%, #7a1e3e 100%);
+  color: #fef0f4;
   font-family: var(--font-playfair), serif;
   font-weight: 600;
   font-size: 0.72rem;
@@ -77,15 +88,19 @@ h1, h2, h3, h4, h5 {
   border-radius: 9999px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  transition: background-color 0.2s, transform 0.1s;
+  transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s;
   display: inline-block;
+  box-shadow: 0 3px 14px rgba(122, 30, 62, 0.25);
 }
-.btn-bridgerton-primary:hover  { background-color: #5e1630; }
+.btn-bridgerton-primary:hover {
+  opacity: 0.88;
+  box-shadow: 0 5px 18px rgba(122, 30, 62, 0.35);
+}
 .btn-bridgerton-primary:active { transform: scale(0.97); }
 
 .btn-bridgerton-outline {
   border: 1.5px solid #c8903a;
-  color: #c8903a;
+  color: #9a6520;
   font-family: var(--font-playfair), serif;
   font-weight: 600;
   font-size: 0.72rem;
@@ -93,9 +108,13 @@ h1, h2, h3, h4, h5 {
   border-radius: 9999px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  transition: background-color 0.2s, transform 0.1s;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
   display: inline-block;
-  background-color: transparent;
+  background-color: rgba(255, 248, 240, 0.6);
+  box-shadow: 0 2px 8px rgba(200, 144, 58, 0.15);
 }
-.btn-bridgerton-outline:hover  { background-color: rgba(200,144,58,0.08); }
+.btn-bridgerton-outline:hover {
+  background-color: rgba(200, 144, 58, 0.12);
+  box-shadow: 0 4px 12px rgba(200, 144, 58, 0.25);
+}
 .btn-bridgerton-outline:active { transform: scale(0.97); }
