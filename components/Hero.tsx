@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="presentacion"
-      className="relative min-h-screen flex items-center justify-center pt-20 px-6 pb-16 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-32 px-6 pb-16 overflow-hidden"
       style={{ backgroundColor: "#f5efe6" }}
     >
       <SectionOrnaments />

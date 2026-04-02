@@ -3,12 +3,12 @@ import { useState } from "react";
 
 const links = [
   { href: "#presentacion", label: "Inicio" },
-  { href: "#sobre-mi",     label: "Bio" },
-  { href: "#skills",       label: "Skills" },
+  { href: "#sobre-mi",     label: "Trayectoria" },
+  { href: "#skills",       label: "Habilidades" },
   { href: "#experiencia",  label: "Experiencia" },
-  { href: "#portafolio",   label: "Portafolio" },
+  { href: "#portafolio",   label: "Obras" },
   { href: "#educacion",    label: "Educación" },
-  { href: "#contacto",     label: "Contacto" },
+  { href: "#contacto",     label: "Correspondencia" },
 ];
 
 const navStyle: React.CSSProperties = {

@@ -121,7 +121,7 @@ export default function Contact() {
             <div className="flex justify-center pt-4">
               <button type="submit" className="wax-seal" aria-label="Enviar mensaje">
                 <div className="wax-seal-ring" />
-                <div className="text-center relative z-10">
+                <div className="flex flex-col items-center justify-center relative z-10">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32" height="32" viewBox="0 0 24 24"
