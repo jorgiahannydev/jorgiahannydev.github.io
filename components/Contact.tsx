@@ -3,7 +3,7 @@ import SectionOrnaments from "./SectionOrnaments";
 export default function Contact() {
   return (
     <section id="contacto" className="py-24 relative overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
-      <SectionOrnaments opacity={0.4} />
+      <SectionOrnaments opacity={0.82} />
       <div className="max-w-4xl mx-auto px-6 relative z-10">
 
         {/* Título centrado — igual que Stitch */}

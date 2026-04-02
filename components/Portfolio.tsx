@@ -12,7 +12,7 @@ import SectionOrnaments from "./SectionOrnaments";
 export default function Portfolio() {
   return (
     <section id="portafolio" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
-      <SectionOrnaments opacity={0.4} />
+      <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto px-6">
 
         {/* Carrusel con flechas (componente cliente) */}

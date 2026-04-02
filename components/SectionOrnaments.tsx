@@ -1,4 +1,4 @@
-export default function SectionOrnaments({ opacity = 0.5 }: { opacity?: number }) {
+export default function SectionOrnaments({ opacity = 0.85 }: { opacity?: number }) {
   return (
     <>
       <div className="section-ornament-corner corner-tl" style={{ opacity }} />

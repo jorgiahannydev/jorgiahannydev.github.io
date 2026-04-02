@@ -75,7 +75,7 @@ import SectionOrnaments from "./SectionOrnaments";
 export default function Experience() {
   return (
     <section id="experiencia" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#fdf9f3" }}>
-      <SectionOrnaments opacity={0.4} />
+      <SectionOrnaments opacity={0.82} />
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>
           Experiencia Laboral
