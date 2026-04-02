@@ -1,49 +1,53 @@
 const groups = [
-  {
-    label: "Frontend",
-    skills: ["HTML5", "CSS3", "JavaScript", "React", "Bootstrap"],
-    learning: false,
-  },
-  {
-    label: "Backend",
-    skills: ["Node.js", "Express", "SQL"],
-    learning: false,
-  },
-  {
-    label: "Herramientas",
-    skills: ["Git", "GitHub", "VS Code", "Vercel"],
-    learning: false,
-  },
-  {
-    label: "En aprendizaje",
-    skills: ["Next.js", "TypeScript", "React Native"],
-    learning: true,
-  },
+  { label: "Frontend",       skills: ["HTML5", "CSS3", "JavaScript", "React", "Bootstrap"], learning: false },
+  { label: "Backend",        skills: ["Node.js", "Express", "SQL"],                         learning: false },
+  { label: "Herramientas",   skills: ["Git", "GitHub", "VS Code", "Vercel"],                learning: false },
+  { label: "En aprendizaje", skills: ["Next.js", "TypeScript", "React Native"],             learning: true  },
 ];
+
+import SectionOrnaments from "./SectionOrnaments";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 bg-gray-50">
+    <section id="skills" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#ede5d8" }}>
+      <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-800 text-center mb-2">
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}>
           Habilidades Técnicas
         </h2>
-        <div className="w-12 h-1 bg-pink-300 rounded mx-auto mb-10" />
+        <div className="b-section-line">
+          <span style={{ color: "#b8891f", fontSize: "1rem" }}>❦</span>
+        </div>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div
+          className="p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+          style={{
+            backgroundColor: "#f5efe6",
+            border: "1px solid rgba(200,144,58,0.25)",
+            boxShadow: "0 2px 12px rgba(122,30,62,0.07)",
+          }}
+        >
           {groups.map((g) => (
             <div key={g.label}>
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">
-                {g.label}
-              </p>
+              <p className="b-label mb-3">{g.label}</p>
               <div className="flex flex-wrap gap-2">
                 {g.skills.map((s) => (
                   <span
                     key={s}
-                    className={
+                    className="text-sm font-medium px-3 py-1"
+                    style={
                       g.learning
-                        ? "text-xs font-medium px-3 py-1 rounded-full border border-pink-300 text-pink-400"
-                        : "text-xs font-medium px-3 py-1 rounded-full bg-slate-800 text-white"
+                        ? {
+                            border: "1.5px solid #b8891f",
+                            color: "#9a6520",
+                            backgroundColor: "#fef9f0",
+                            fontFamily: "var(--font-lora)",
+                          }
+                        : {
+                            backgroundColor: "#3d0a1e",
+                            color: "#f5efe6",
+                            fontFamily: "var(--font-lora)",
+                          }
                     }
                   >
                     {s}

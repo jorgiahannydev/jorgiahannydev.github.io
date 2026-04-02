@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 28" fill="none">
+  <path d="M0,14 L140,14" stroke="#b8891f" stroke-width="0.7" stroke-opacity="0.42"/>
+  <path d="M0,19 L140,19" stroke="#3d0a1e" stroke-width="0.35" stroke-opacity="0.22"/>
+  <path d="M18,14 Q13,6 7,14"    fill="#3d0a1e" fill-opacity="0.2"  stroke="#3d0a1e" stroke-width="0.45" stroke-opacity="0.3"/>
+  <path d="M18,14 Q13,22 7,14"   fill="#3d0a1e" fill-opacity="0.14" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <polygon points="35,11 38,14 35,17 32,14" fill="#b8891f" fill-opacity="0.44"/>
+  <path d="M52,14 Q47,6 41,14"   fill="#3d0a1e" fill-opacity="0.2"  stroke="#3d0a1e" stroke-width="0.45" stroke-opacity="0.3"/>
+  <path d="M52,14 Q47,22 41,14"  fill="#3d0a1e" fill-opacity="0.14" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <circle cx="70" cy="14" r="5.5" stroke="#3d0a1e" stroke-width="0.7" stroke-opacity="0.42"/>
+  <circle cx="70" cy="14" r="2.5" fill="#b8891f" fill-opacity="0.48"/>
+  <circle cx="70" cy="8" r="1.2" fill="#b8891f" fill-opacity="0.38"/>
+  <path d="M88,14 Q83,6 77,14"   fill="#3d0a1e" fill-opacity="0.2"  stroke="#3d0a1e" stroke-width="0.45" stroke-opacity="0.3"/>
+  <path d="M88,14 Q83,22 77,14"  fill="#3d0a1e" fill-opacity="0.14" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+  <polygon points="105,11 108,14 105,17 102,14" fill="#b8891f" fill-opacity="0.44"/>
+  <path d="M122,14 Q117,6 111,14" fill="#3d0a1e" fill-opacity="0.2"  stroke="#3d0a1e" stroke-width="0.45" stroke-opacity="0.3"/>
+  <path d="M122,14 Q117,22 111,14" fill="#3d0a1e" fill-opacity="0.14" stroke="#3d0a1e" stroke-width="0.4"  stroke-opacity="0.22"/>
+</svg>

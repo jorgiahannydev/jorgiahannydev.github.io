@@ -70,37 +70,74 @@ const jobs = [
   },
 ];
 
+import SectionOrnaments from "./SectionOrnaments";
+
 export default function Experience() {
   return (
-    <section id="experiencia" className="py-16 bg-white">
-      <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-800 text-center mb-2">
+    <section id="experiencia" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f5efe6" }}>
+      <SectionOrnaments opacity={0.82} />
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}>
           Experiencia Laboral
         </h2>
-        <div className="w-12 h-1 bg-pink-300 rounded mx-auto mb-10" />
+        <p className="text-center b-label mt-3 mb-2">Una trayectoria de logros</p>
+        <div className="b-section-line">
+          <span style={{ color: "#b8891f", fontSize: "1rem" }}>❦</span>
+        </div>
 
-        <div className="flex flex-col gap-4">
-          {jobs.map((job) => (
-            <div
-              key={job.title + job.date}
-              className="bg-white rounded-xl border-l-4 border-pink-300 shadow-sm px-6 py-5"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
-                <div>
-                  <h3 className="font-bold text-slate-800 text-base">{job.title}</h3>
-                  <p className="text-pink-400 font-medium text-sm">{job.company}</p>
-                </div>
-                <span className="text-gray-400 text-xs italic sm:text-right whitespace-nowrap pt-0.5">
-                  {job.date}
-                </span>
+        {/* Timeline */}
+        <div className="relative pl-8 ml-2" style={{ borderLeft: "2px solid rgba(122,30,62,0.18)" }}>
+          {jobs.map((job, i) => (
+            <div key={job.title + job.date} className={`relative ${i < jobs.length - 1 ? "mb-10" : ""}`}>
+
+              {/* Punto en la línea */}
+              <div
+                className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-4"
+                style={{
+                  backgroundColor: i % 2 === 0 ? "#3d0a1e" : "#b8891f",
+                  borderColor: "#f5efe6",
+                  boxShadow: "0 0 0 1px rgba(122,30,62,0.25)",
+                }}
+              />
+
+              {/* Fecha */}
+              <span
+                className="block text-sm italic mb-0.5"
+                style={{ fontFamily: "var(--font-playfair)", color: "#b8891f" }}
+              >
+                {job.date}
+              </span>
+
+              {/* Título */}
+              <h3
+                className="font-bold text-base leading-snug"
+                style={{ fontFamily: "var(--font-playfair)", color: "#3d0a1e" }}
+              >
+                {job.title}
+              </h3>
+
+              {/* Empresa */}
+              <p className="text-sm italic mb-3" style={{ color: "#7a2040" }}>
+                {job.company}
+              </p>
+
+              {/* Descripción */}
+              <div
+                className="px-5 py-4 rounded-sm"
+                style={{
+                  backgroundColor: "#fef9f3",
+                  borderLeft: "3px solid " + (i % 2 === 0 ? "#3d0a1e" : "#b8891f"),
+                  boxShadow: "0 1px 6px rgba(122,30,62,0.07)",
+                }}
+              >
+                <ul className="list-disc list-inside space-y-1">
+                  {job.items.map((item) => (
+                    <li key={item} className="text-sm leading-relaxed" style={{ color: "#3d0a1e" }}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="list-disc list-inside space-y-1">
-                {job.items.map((item) => (
-                  <li key={item} className="text-gray-600 text-sm">
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 90" fill="none">
+  <path d="M0,38 L390,38"  stroke="#3d0a1e" stroke-width="1"   stroke-opacity="0.38"/>
+  <path d="M450,38 L840,38" stroke="#3d0a1e" stroke-width="1"  stroke-opacity="0.38"/>
+  <path d="M0,44 L388,44"  stroke="#b8891f" stroke-width="0.5" stroke-opacity="0.3"/>
+  <path d="M452,44 L840,44" stroke="#b8891f" stroke-width="0.5" stroke-opacity="0.3"/>
+  <circle cx="420" cy="45" r="26" stroke="#3d0a1e" stroke-width="1.1" stroke-opacity="0.48"/>
+  <circle cx="420" cy="45" r="19" stroke="#b8891f" stroke-width="0.6" stroke-opacity="0.4"/>
+  <ellipse cx="420" cy="19" rx="3" ry="7" fill="#3d0a1e" fill-opacity="0.23"/>
+  <ellipse cx="420" cy="19" rx="3" ry="7" fill="#3d0a1e" fill-opacity="0.23" transform="rotate(45 420 45)"/>
+  <ellipse cx="420" cy="19" rx="3" ry="7" fill="#3d0a1e" fill-opacity="0.23" transform="rotate(90 420 45)"/>
+  <ellipse cx="420" cy="19" rx="3" ry="7" fill="#3d0a1e" fill-opacity="0.23" transform="rotate(135 420 45)"/>
+  <ellipse cx="420" cy="19" rx="3" ry="7" fill="#3d0a1e" fill-opacity="0.23" transform="rotate(180 420 45)"/>
+  <ellipse cx="420" cy="19" rx="3" ry="7" fill="#3d0a1e" fill-opacity="0.23" transform="rotate(225 420 45)"/>
+  <ellipse cx="420" cy="19" rx="3" ry="7" fill="#3d0a1e" fill-opacity="0.23" transform="rotate(270 420 45)"/>
+  <ellipse cx="420" cy="19" rx="3" ry="7" fill="#3d0a1e" fill-opacity="0.23" transform="rotate(315 420 45)"/>
+  <circle cx="420" cy="45" r="6" fill="#b8891f" fill-opacity="0.52"/>
+  <circle cx="420" cy="45" r="2.8" fill="#3d0a1e" fill-opacity="0.62"/>
+  <path d="M410,19 L410,10 L415,14 L420,7 L425,14 L430,10 L430,19 Z" fill="#b8891f" fill-opacity="0.45" stroke="#b8891f" stroke-width="0.6" stroke-opacity="0.52"/>
+  <circle cx="420" cy="7" r="1.8" fill="#b8891f" fill-opacity="0.6"/>
+  <circle cx="410" cy="10" r="1.4" fill="#b8891f" fill-opacity="0.5"/>
+  <circle cx="430" cy="10" r="1.4" fill="#b8891f" fill-opacity="0.5"/>
+  <polygon points="420,19 422,23 420,27 418,23" fill="#b8891f" fill-opacity="0.55"/>
+  <polygon points="420,63 422,67 420,71 418,67" fill="#b8891f" fill-opacity="0.55"/>
+  <polygon points="394,45 398,43 402,45 398,47" fill="#b8891f" fill-opacity="0.55"/>
+  <polygon points="438,45 442,43 446,45 442,47" fill="#b8891f" fill-opacity="0.55"/>
+  <path d="M340,41 Q352,34 364,41 Q374,48 388,41" stroke="#b8891f" stroke-width="0.85" stroke-opacity="0.36"/>
+  <path d="M322,41 Q311,31 298,41 Q311,51 322,41" fill="#3d0a1e" fill-opacity="0.14" stroke="#3d0a1e" stroke-width="0.5" stroke-opacity="0.24"/>
+  <polygon points="274,38 278,41 274,44 270,41" stroke="#b8891f" stroke-width="0.8" stroke-opacity="0.44"/>
+  <path d="M220,41 Q232,33 244,41 Q254,49 264,41" stroke="#b8891f" stroke-width="0.75" stroke-opacity="0.32"/>
+  <circle cx="186" cy="41" r="5" stroke="#3d0a1e" stroke-width="0.65" stroke-opacity="0.38"/>
+  <circle cx="186" cy="41" r="2.2" fill="#b8891f" fill-opacity="0.42"/>
+  <polygon points="140,38 144,41 140,44 136,41" fill="#b8891f" fill-opacity="0.36"/>
+  <path d="M98,41 Q87,31 74,41 Q87,51 98,41" fill="#3d0a1e" fill-opacity="0.1" stroke="#3d0a1e" stroke-width="0.45" stroke-opacity="0.2"/>
+  <path d="M452,41 Q466,48 480,41 Q492,34 504,41" stroke="#b8891f" stroke-width="0.85" stroke-opacity="0.36"/>
+  <path d="M518,41 Q530,31 542,41 Q530,51 518,41" fill="#3d0a1e" fill-opacity="0.14" stroke="#3d0a1e" stroke-width="0.5" stroke-opacity="0.24"/>
+  <polygon points="566,38 570,41 566,44 562,41" stroke="#b8891f" stroke-width="0.8" stroke-opacity="0.44"/>
+  <path d="M576,41 Q588,49 600,41 Q610,33 622,41" stroke="#b8891f" stroke-width="0.75" stroke-opacity="0.32"/>
+  <circle cx="654" cy="41" r="5" stroke="#3d0a1e" stroke-width="0.65" stroke-opacity="0.38"/>
+  <circle cx="654" cy="41" r="2.2" fill="#b8891f" fill-opacity="0.42"/>
+  <polygon points="700,38 704,41 700,44 696,41" fill="#b8891f" fill-opacity="0.36"/>
+  <path d="M742,41 Q754,31 766,41 Q754,51 742,41" fill="#3d0a1e" fill-opacity="0.1" stroke="#3d0a1e" stroke-width="0.45" stroke-opacity="0.2"/>
+</svg>

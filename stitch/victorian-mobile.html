@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Digital Curator | Clarissa Harrington</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#775a19",
+                        "inverse-surface": "#31302d",
+                        "inverse-primary": "#ffb0ce",
+                        "surface-bright": "#fdf9f3",
+                        "outline": "#847378",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#8e0f28",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f7f3ed",
+                        "secondary-fixed": "#ffdea5",
+                        "secondary-container": "#fed488",
+                        "surface-tint": "#8e4766",
+                        "surface-container": "#f1ede7",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#524348",
+                        "tertiary-container": "#ff717c",
+                        "on-surface": "#1c1c18",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf9f3",
+                        "tertiary-fixed": "#ffdada",
+                        "surface-container-highest": "#e6e2dc",
+                        "on-secondary-fixed": "#261900",
+                        "primary-fixed": "#ffd9e5",
+                        "surface-container-high": "#ebe8e2",
+                        "on-secondary-container": "#785a1a",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e6e2dc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#40000b",
+                        "inverse-on-surface": "#f4f0ea",
+                        "secondary-fixed-dim": "#e9c176",
+                        "primary": "#8e4766",
+                        "tertiary": "#af2b3e",
+                        "primary-container": "#d886a7",
+                        "on-primary-fixed-variant": "#72304e",
+                        "on-background": "#1c1c18",
+                        "primary-fixed-dim": "#ffb0ce",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fdf9f3",
+                        "on-primary-fixed": "#3b0322",
+                        "on-primary-container": "#5d1f3d",
+                        "surface-dim": "#dddad4",
+                        "on-tertiary-container": "#72001c",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d6c1c7",
+                        "on-secondary-fixed-variant": "#5d4201"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Noto Serif", "serif"],
+                        "label": ["Noto Serif", "serif"],
+                        "newsreader": ["Newsreader", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.bg-ornamental {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0c1.1 0 2 .9 2 2v26h26c1.1 0 2 .9 2 2s-.9 2-2 2H32v26c0 1.1-.9 2-2 2s-2-.9-2-2V32H2c-1.1 0-2-.9-2-2s.9-2 2-2h26V2c0-1.1.9-2 2-2z' fill='%23775a19' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E")
+    }
+.bg-filigree {
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8zm0 2c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 62c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8zm0 2c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zM0 40c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8zm2 0c0 3.3 2.7 6 6 6s6-2.7 6-6-2.7-6-6-6-6 2.7-6 6zm62 0c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8zm2 0c0 3.3 2.7 6 6 6s6-2.7 6-6-2.7-6-6-6-6 2.7-6 6z' fill='%238e4766' fill-opacity='0.04'/%3E%3C/svg%3E")
+    }
+.wax-seal-shadow {
+    box-shadow: 0 12px 32px rgba(28, 28, 24, 0.08)
+    }
+.regency-border {
+    border: 12px solid transparent;
+    border-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0V0zm10 10v80h80V10H10z' fill='%23775a19' fill-opacity='0.1'/%3E%3Ccircle cx='10' cy='10' r='4' fill='%238e4766'/%3E%3Ccircle cx='90' cy='10' r='4' fill='%238e4766'/%3E%3Ccircle cx='10' cy='90' r='4' fill='%238e4766'/%3E%3Ccircle cx='90' cy='90' r='4' fill='%238e4766'/%3E%3C/svg%3E") 30 stretch
+    }
+.victorian-divider {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD2WBkqLf9MwlKPxse7P1CClre6tIXEK0wpT4WIFQX7sgmkPD9p52AEOG5rXrOjFbBOMxzAP2dazaf-9EufDE4BCo_w02AlLEPi6TQou0e4OY6nwXyk_fBCb535TdT9tTV-JwdOTl6tI0ICPvp6AafHHj8gh48D0ooS4vBeMLaXNbR6nOICunHVe9iDYn4Vmak_e6gNBTrCuFRrTxUnVDHoaWV_OLBHIrScHUXXvKh8a0ldBwN1v8achJos34FJ12uBtrS8OwlMepVx);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 48px;
+    width: 100%
+    }</style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9f3]/95 backdrop-blur-md border-b-4 border-double border-[#8e4766]/20">
+<div class="absolute top-0 left-0 w-full pointer-events-none">
+<img alt="Top Border" class="w-full h-auto object-cover max-h-4 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGH4IN0nTjedh7wqQqHYKsfSQQhYvmUGFGHC0DI8pOHtD4hWA_npOZNIBVddkTjvTtzGSuFZhN6NJRjyCpbcYsj45-6diTiWHiNEdpF1PQmWiPM56v1TZFYhm0Wgn5Wmf-W1BT19CWChU_gBsz0OllE_fnBqGlG-Mnt-KgbGPGVGJEhAPK05Ytrcgw8gr8Vk7r31q_FhLIw-u0P5GQZBRQxcS3GntWbUNa0zYESCQ4Fb55hVJN3Cj8yeNy7aJru_RHwSZIJi45-x4H"/>
+</div>
+<div class="px-4 py-4 flex flex-col items-center gap-1">
+<div class="text-xl font-newsreader font-bold text-[#8e4766] tracking-tight">The Digital Curator</div>
+<div class="flex gap-4 items-center">
+<span class="text-[10px] uppercase tracking-[0.2em] text-secondary/60">Portfolio Collection</span>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col items-center justify-center px-6 py-12 bg-filigree overflow-hidden" id="hero">
+<img alt="Corner Decor" class="absolute top-4 left-4 w-12 h-12 opacity-40 rotate-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<img alt="Corner Decor" class="absolute top-4 right-4 w-12 h-12 opacity-40 rotate-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<div class="max-w-md w-full text-center z-10 space-y-8">
+<div class="inline-block px-6 py-1 border-y-2 border-primary/20 mb-2">
+<span class="font-label uppercase tracking-[0.4em] text-primary text-[10px]">Collector's Edition No. 1</span>
+</div>
+<h1 class="font-headline text-5xl italic text-primary leading-tight px-2">Clarissa Harrington</h1>
+<div class="relative bg-surface-container-low p-8 border-2 border-primary/10 shadow-sm rounded-sm">
+<div class="absolute -top-3 -left-3 w-8 h-8 flex items-center justify-center bg-background border border-primary/20 rounded-full">
+<span class="material-symbols-outlined text-primary text-xl">park</span>
+</div>
+<div class="absolute -bottom-3 -right-3 w-8 h-8 flex items-center justify-center bg-background border border-primary/20 rounded-full">
+<span class="material-symbols-outlined text-primary text-xl">park</span>
+</div>
+<h2 class="font-headline text-2xl mb-4 text-on-surface">The Digital Curator</h2>
+<p class="font-body text-base text-on-surface-variant leading-relaxed mb-8">
+                        Preserving the elegance of the past through the precision of the digital future.
+                    </p>
+<div class="flex flex-col gap-4">
+<a class="w-full py-4 bg-primary text-on-primary font-label text-xs uppercase tracking-widest shadow-md active:scale-95 transition-all" href="#works">Enter the Archives</a>
+<a class="w-full py-4 border-2 border-secondary/30 text-secondary font-label text-xs uppercase tracking-widest active:bg-secondary/5 transition-all" href="#bio">Learn More</a>
+</div>
+</div>
+</div>
+<img alt="Corner Decor" class="absolute bottom-4 left-4 w-12 h-12 opacity-40 -rotate-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<img alt="Corner Decor" class="absolute bottom-4 right-4 w-12 h-12 opacity-40 rotate-180" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+</section>
+<!-- Divider -->
+<div class="victorian-divider opacity-70"></div>
+<!-- Bio Section -->
+<section class="py-20 bg-surface px-6 overflow-hidden relative" id="bio">
+<div class="max-w-md mx-auto space-y-12">
+<div class="relative">
+<div class="absolute -inset-2 border-2 border-primary/10 rounded-sm translate-x-2 translate-y-2"></div>
+<div class="regency-border p-2 bg-surface-container shadow-lg relative">
+<img alt="Photo Corner" class="absolute -top-2 -left-2 w-8 h-8 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Portrait of Clarissa Harrington" class="w-full h-full object-cover grayscale-[20%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1M5jhqwU2VErmGe8r3SgLPLPJCaoEbQoYCTlTtYHi_224VtN7CrgCsFfWuxNN5l8R8p-is5IOAsjjSA-f0lU78j_CrXxEATa6zx976cHmoO1bQKK8djVekNwdtDMwCGOgxOSID7HNQQOzbu05TCve2dCGAdeGRMPmEzjZW1EGRMnxwpzLuwSiFLcNweHt2bAsWCkk0F4htyQhyoCbtMOffjjWlPLEedFOv9XS1LfDq4_6_sVLlqT04hvFO7O3VxR5sgC1w7vnntad"/>
+</div>
+<img alt="Photo Corner" class="absolute -bottom-2 -right-2 w-8 h-8 opacity-60 rotate-180" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+</div>
+</div>
+<div class="victorian-divider opacity-40 scale-75"></div>
+<div class="space-y-6 text-center">
+<h2 class="font-headline text-4xl text-primary italic leading-snug">A Life of Curated Experiences</h2>
+<p class="text-on-surface-variant font-body leading-relaxed text-base">
+                        Born from a deep reverence for the archival arts and the beauty of handwritten history, Clarissa has spent a decade refining the intersection of classical aesthetics and modern functionality.
+                    </p>
+<div class="grid grid-cols-2 gap-4 pt-6">
+<div class="bg-surface-container-low p-4 border border-primary/5">
+<span class="block font-headline text-3xl text-primary">X+</span>
+<span class="font-label uppercase text-[9px] tracking-widest text-secondary">Years of Practice</span>
+</div>
+<div class="bg-surface-container-low p-4 border border-primary/5">
+<span class="block font-headline text-3xl text-primary">LV</span>
+<span class="font-label uppercase text-[9px] tracking-widest text-secondary">Selected Works</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="victorian-divider opacity-70"></div>
+<!-- Experience Section -->
+<section class="py-20 bg-surface-container-low px-6 relative" id="experience">
+<div class="max-w-md mx-auto">
+<div class="text-center mb-16 relative">
+<img alt="Section Header" class="w-32 h-auto mx-auto mb-4 opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGH4IN0nTjedh7wqQqHYKsfSQQhYvmUGFGHC0DI8pOHtD4hWA_npOZNIBVddkTjvTtzGSuFZhN6NJRjyCpbcYsj45-6diTiWHiNEdpF1PQmWiPM56v1TZFYhm0Wgn5Wmf-W1BT19CWChU_gBsz0OllE_fnBqGlG-Mnt-KgbGPGVGJEhAPK05Ytrcgw8gr8Vk7r31q_FhLIw-u0P5GQZBRQxcS3GntWbUNa0zYESCQ4Fb55hVJN3Cj8yeNy7aJru_RHwSZIJi45-x4H"/>
+<h2 class="font-headline text-4xl text-primary">The Professional Season</h2>
+<p class="font-label uppercase tracking-widest text-[10px] mt-2 text-secondary/70">A Timeline of Achievements</p>
+</div>
+<div class="space-y-12 border-l-2 border-primary/20 pl-6 ml-2">
+<!-- Entry I -->
+<div class="relative">
+<div class="absolute -left-[31px] top-2 w-4 h-4 rounded-full bg-primary border-4 border-surface-container-low"></div>
+<span class="font-headline text-2xl text-secondary">MMXXIV - Present</span>
+<h3 class="font-headline text-xl mt-1">Principal Curator</h3>
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant mb-3">The Harrington Studio</p>
+<div class="bg-surface-container-lowest p-5 shadow-sm border-l-4 border-primary relative">
+<img alt="Accent" class="absolute -top-1 -right-1 w-6 h-6 opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<p class="font-body text-sm leading-relaxed italic">Overseeing the digital identity of luxury brands focusing on visual storytelling.</p>
+</div>
+</div>
+<!-- Entry II -->
+<div class="relative">
+<div class="absolute -left-[31px] top-2 w-4 h-4 rounded-full bg-secondary border-4 border-surface-container-low"></div>
+<span class="font-headline text-2xl text-secondary">MMXXI - MMXXIII</span>
+<h3 class="font-headline text-xl mt-1">Senior Visual Architect</h3>
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant mb-3">Belle Époque Digital</p>
+<div class="bg-surface-container-lowest p-5 shadow-sm border-l-4 border-secondary relative">
+<img alt="Accent" class="absolute -top-1 -right-1 w-6 h-6 opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<p class="font-body text-sm leading-relaxed italic">Pioneered the 'Regency Web' design system for editorial UI excellence.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="victorian-divider opacity-70"></div>
+<!-- Gallery Section -->
+<section class="py-20 bg-surface px-6 bg-filigree relative" id="works">
+<div class="max-w-md mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl text-primary">Gallery of Works</h2>
+<img alt="Divider" class="w-48 h-auto mx-auto mt-4 mb-2 opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2WBkqLf9MwlKPxse7P1CClre6tIXEK0wpT4WIFQX7sgmkPD9p52AEOG5rXrOjFbBOMxzAP2dazaf-9EufDE4BCo_w02AlLEPi6TQou0e4OY6nwXyk_fBCb535TdT9tTV-JwdOTl6tI0ICPvp6AafHHj8gh48D0ooS4vBeMLaXNbR6nOICunHVe9iDYn4Vmak_e6gNBTrCuFRrTxUnVDHoaWV_OLBHIrScHUXXvKh8a0ldBwN1v8achJos34FJ12uBtrS8OwlMepVx"/>
+<p class="font-body text-on-surface-variant italic text-sm mt-4">Selected projects from the archives.</p>
+</div>
+<div class="space-y-12">
+<!-- Card 1 -->
+<div class="bg-surface-container-low overflow-hidden rounded-sm border-2 border-primary/10 shadow-md relative">
+<img alt="Decor" class="absolute top-2 left-2 w-6 h-6 opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<div class="aspect-[3/4] overflow-hidden border-b border-primary/10">
+<img alt="The Ivory Collection" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfK-ZMA1yi_DTjhm2VoiY_FCqhdCBkDH04RSFezwUReag5UCJOjY3JFtqL9KHn48Yk3G8u5AygUvdAxWxMn_lhZ3e4TDP9300Bo8VNvY8hBjr0zKLRyvM_WJTE0bE1xPtnaZAeB7IGeQM67mIUPdfrxbXSoJ7ejF5RPdTyXM5i2fOyIOAOuP_MM7YI_jhdAoKThRkYdl12xXLtj08lrSzSIlUOyh3CAoEtxrFymWIibdzvpk4q9TOaRqpwDOD93hJEjJTy3NEve0rc"/>
+</div>
+<div class="p-8 text-center space-y-3 relative">
+<span class="font-label text-[9px] uppercase tracking-[0.2em] text-secondary">Visual Identity</span>
+<h3 class="font-headline text-2xl">The Ivory Collection</h3>
+<a class="inline-block mt-2 text-primary font-headline italic border-b border-primary/30 pb-1 text-sm" href="#">Examine Case</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low overflow-hidden rounded-sm border-2 border-primary/10 shadow-md relative">
+<img alt="Decor" class="absolute top-2 right-2 w-6 h-6 opacity-30 rotate-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<div class="aspect-[3/4] overflow-hidden border-b border-primary/10">
+<img alt="Veridian Papers" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqfsVsPwLeeIu6WTtiIVafisMDZq2orcpshvosaEk2u8f6EMZO13YnHpqebfoQA57C4OwAbuPy509VXVAl5q9u_LhoCl6c22O-CQ6zfAjdZgwOLDc2I13sHD0z6fW1wuonTv5qSRTEM1_rzUAdcUOi1yU5rG8x2vy0_BCjMQPb2fRrFSsfPSMlTJSv3MqaldQj306eYRlHYmvJyGjqDhUahRIzvb6yzhcgeSmetXAKBkUrKCwMLGkIfumYanH38HIOsLITtIWILE97"/>
+</div>
+<div class="p-8 text-center space-y-3 relative">
+<span class="font-label text-[9px] uppercase tracking-[0.2em] text-secondary">Editorial Design</span>
+<h3 class="font-headline text-2xl">Veridian Papers</h3>
+<a class="inline-block mt-2 text-primary font-headline italic border-b border-primary/30 pb-1 text-sm" href="#">Examine Case</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="victorian-divider opacity-70"></div>
+<!-- Contact Section -->
+<section class="py-20 bg-surface-container px-6 relative" id="contact">
+<div class="max-w-md mx-auto relative z-10">
+<div class="text-center mb-12">
+<img alt="Section Head" class="w-24 h-auto mx-auto mb-4 opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGH4IN0nTjedh7wqQqHYKsfSQQhYvmUGFGHC0DI8pOHtD4hWA_npOZNIBVddkTjvTtzGSuFZhN6NJRjyCpbcYsj45-6diTiWHiNEdpF1PQmWiPM56v1TZFYhm0Wgn5Wmf-W1BT19CWChU_gBsz0OllE_fnBqGlG-Mnt-KgbGPGVGJEhAPK05Ytrcgw8gr8Vk7r31q_FhLIw-u0P5GQZBRQxcS3GntWbUNa0zYESCQ4Fb55hVJN3Cj8yeNy7aJru_RHwSZIJi45-x4H"/>
+<h2 class="font-headline text-4xl text-primary italic leading-tight">Correspondence</h2>
+<p class="font-body text-on-surface-variant mt-3 text-sm">For inquiries or collaborations.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 shadow-xl border-2 border-primary/10 relative overflow-hidden">
+<img alt="Form Corner" class="absolute top-0 left-0 w-10 h-10 opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<img alt="Form Corner" class="absolute bottom-0 right-0 w-10 h-10 opacity-20 rotate-180" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<form class="space-y-8 relative z-10">
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="font-headline text-base text-on-surface">Your Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary py-2 placeholder-on-surface-variant/20 font-body text-sm" placeholder="Julian Thorne" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-headline text-base text-on-surface">Digital Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary py-2 placeholder-on-surface-variant/20 font-body text-sm" placeholder="j.thorne@london.com" type="email"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-headline text-base text-on-surface">Your Letter</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary py-2 placeholder-on-surface-variant/20 font-body text-sm resize-none" placeholder="Begin your message..." rows="4"></textarea>
+</div>
+<div class="flex justify-center pt-4">
+<button class="group relative w-24 h-24 bg-tertiary rounded-full flex flex-col items-center justify-center wax-seal-shadow active:scale-90 transition-all duration-300" type="submit">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl">mail</span>
+<span class="font-label text-[8px] uppercase tracking-widest text-secondary-fixed mt-1">Dispatch</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t-4 border-double border-secondary/20 pt-12 pb-16 px-6 relative overflow-hidden">
+<div class="max-w-md mx-auto text-center flex flex-col items-center gap-8 relative z-10">
+<div class="text-xl font-newsreader italic text-primary">The Digital Curator</div>
+<img alt="Footer Divider" class="w-32 h-auto opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2WBkqLf9MwlKPxse7P1CClre6tIXEK0wpT4WIFQX7sgmkPD9p52AEOG5rXrOjFbBOMxzAP2dazaf-9EufDE4BCo_w02AlLEPi6TQou0e4OY6nwXyk_fBCb535TdT9tTV-JwdOTl6tI0ICPvp6AafHHj8gh48D0ooS4vBeMLaXNbR6nOICunHVe9iDYn4Vmak_e6gNBTrCuFRrTxUnVDHoaWV_OLBHIrScHUXXvKh8a0ldBwN1v8achJos34FJ12uBtrS8OwlMepVx"/>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-secondary/80">
+<a class="font-label text-[10px] tracking-widest uppercase" href="#works">Archives</a>
+<a class="font-label text-[10px] tracking-widest uppercase" href="#">Papers</a>
+<a class="font-label text-[10px] tracking-widest uppercase" href="#">Legal</a>
+</div>
+<div class="flex gap-8">
+<a class="text-primary/60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-primary/60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">collections</span></a>
+<a class="text-primary/60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+<p class="font-newsreader text-[10px] tracking-widest uppercase text-secondary/60 leading-relaxed max-w-[240px]">
+                © 2024 The Digital Curator. Handcrafted with Regency-era precision.
+            </p>
+</div>
+<div class="absolute bottom-0 left-0 w-full pointer-events-none">
+<img alt="Bottom Border" class="w-full h-auto object-cover max-h-4 opacity-60 rotate-180" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGH4IN0nTjedh7wqQqHYKsfSQQhYvmUGFGHC0DI8pOHtD4hWA_npOZNIBVddkTjvTtzGSuFZhN6NJRjyCpbcYsj45-6diTiWHiNEdpF1PQmWiPM56v1TZFYhm0Wgn5Wmf-W1BT19CWChU_gBsz0OllE_fnBqGlG-Mnt-KgbGPGVGJEhAPK05Ytrcgw8gr8Vk7r31q_FhLIw-u0P5GQZBRQxcS3GntWbUNa0zYESCQ4Fb55hVJN3Cj8yeNy7aJru_RHwSZIJi45-x4H"/>
+</div>
+</footer>
+<!-- Mobile Floating Action Seal -->
+<button class="fixed bottom-6 right-6 w-14 h-14 bg-tertiary rounded-full flex items-center justify-center wax-seal-shadow z-40 border-2 border-dashed border-secondary-fixed/20 overflow-hidden">
+<img alt="Seal Decor" class="absolute inset-0 w-full h-full object-cover opacity-20 scale-150" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lmakwwZmZa7v4hv4NNoXVqULnosK8OkjhUJ1ZlUgHPeA21kevvCul0Oxm2q80VzzINbiWQWuHL3QAizQATrF3ZG2kQQI3BYrbXysULoOprCHU2b7ijbdM0PrYW_MlQhcYMyRggEHJGmsymnqV7W0qxbTmNymRtJZdxUgIYFCyObYlcbGLsiLV1BCONrnsgFJt499rR5zZY6c1w2hWLxgBEmTFLHTdNNAgEO_6TUkQ6-W8xNRywUh46bMM87EcMrFDugsmMeOqc6v"/>
+<span class="material-symbols-outlined text-secondary-fixed text-2xl relative z-10">history_edu</span>
+</button>
+</body></html>

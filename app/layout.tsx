@@ -1,5 +1,24 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Lora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
 
 export const metadata: Metadata = {
   title: "Jorgiahanny Almea | Full Stack Developer Jr.",
@@ -22,8 +41,45 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className="bg-gray-50 text-gray-800 font-sans antialiased">
+    <html lang="es" className={`${playfair.variable} ${lora.variable}`}>
+      <head>
+        {/* Newsreader — fuente de eje óptico, se carga via CDN por incompatibilidad con Turbopack */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      {/* Google Analytics GA4 */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-5WQ04073WE"
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5WQ04073WE');
+      `}</Script>
+      {/* Google Tag Manager — script principal */}
+      <Script id="gtm" strategy="afterInteractive">{`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W2LXZFHP');
+      `}</Script>
+      <body className="bg-[#fdf9f3] text-stone-800 antialiased">
+        {/* Google Tag Manager — noscript fallback */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W2LXZFHP"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {children}
       </body>
     </html>
