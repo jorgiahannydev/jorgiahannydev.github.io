@@ -81,6 +81,71 @@ h1, h2, h3, h4, h5 {
   color: #c8903a;
 }
 
+/* ── Inputs estilo Stitch: solo subrayado ── */
+.b-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(200, 144, 58, 0.35);
+  padding: 0.5rem 0;
+  outline: none;
+  font-family: var(--font-lora), Georgia, serif;
+  font-size: 0.95rem;
+  color: #2a1015;
+  transition: border-color 0.25s;
+}
+.b-input:focus {
+  border-bottom-color: #c8903a;
+}
+.b-input::placeholder {
+  color: rgba(82, 67, 72, 0.28);
+  font-style: italic;
+}
+
+/* ── Wax seal (botón circular tipo sello de cera) ── */
+.wax-seal {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  background-color: #af2b3e;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 8px 28px rgba(28, 28, 24, 0.14);
+}
+.wax-seal:hover  { transform: scale(1.06); box-shadow: 0 12px 36px rgba(28,28,24,0.2); }
+.wax-seal:active { transform: scale(0.95); }
+.wax-seal-ring {
+  position: absolute;
+  inset: 0.5rem;
+  border: 2px dashed rgba(255, 222, 165, 0.35);
+  border-radius: 9999px;
+  transition: transform 1s;
+}
+.wax-seal:hover .wax-seal-ring { transform: rotate(45deg); }
+
+/* ── Flechas de carrusel ── */
+.carousel-arrow {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  border: 1px solid #c8903a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c8903a;
+  background: transparent;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.carousel-arrow:hover   { background-color: #c8903a; color: #fdf9f3; }
+.carousel-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+.carousel-arrow:disabled:hover { background-color: transparent; color: #c8903a; }
+
 /* ── Botones ── */
 .btn-bridgerton-primary {
   background: linear-gradient(135deg, #b05070 0%, #7a1e3e 100%);

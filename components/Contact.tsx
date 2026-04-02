@@ -1,104 +1,165 @@
 export default function Contact() {
   return (
-    <section id="contacto" className="py-24" style={{ backgroundColor: "#f7f3ed" }}>
-      <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}>
-          Correspondencia
-        </h2>
-        <div className="b-section-line">
-          <span style={{ color: "#c8903a", fontSize: "1rem" }}>❦</span>
+    <section id="contacto" className="py-24 relative overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
+
+        {/* Título centrado — igual que Stitch */}
+        <div className="text-center mb-14">
+          <h2
+            className="text-4xl md:text-5xl font-bold italic"
+            style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e" }}
+          >
+            Correspondencia
+          </h2>
+          <p
+            className="mt-4 italic"
+            style={{ fontFamily: "var(--font-lora)", color: "#524348", fontSize: "0.95rem" }}
+          >
+            Para consultas, colaboraciones o simplemente ponernos en contacto.
+          </p>
         </div>
 
-        {/* Card con ornamento en esquina — estilo Stitch */}
+        {/* Card del formulario */}
         <div
-          className="relative p-8 md:p-10 max-w-lg mx-auto"
+          className="relative p-8 md:p-14 shadow-xl"
           style={{
             backgroundColor: "#fdf9f3",
-            border: "1px solid rgba(200,144,58,0.3)",
-            boxShadow: "0 2px 14px rgba(122,30,62,0.09)",
+            border: "1px solid rgba(200,144,58,0.2)",
           }}
         >
-          {/* Ornamento botánico en esquina superior derecha */}
+          {/* Ornamento botánico en esquina — igual que Stitch */}
           <div
-            className="absolute top-4 right-4 text-3xl opacity-10 pointer-events-none"
-            style={{ color: "#7a1e3e" }}
+            className="absolute top-4 right-4 text-6xl pointer-events-none select-none"
+            style={{ color: "#7a1e3e", opacity: 0.06 }}
           >
             ❧
           </div>
 
-          {/* Nombre */}
-          <p
-            className="text-xl italic mb-1"
-            style={{ fontFamily: "var(--font-newsreader)", color: "#7a1e3e", fontWeight: 600 }}
+          <form
+            action="mailto:jorgiahannya@gmail.com"
+            method="post"
+            encType="text/plain"
+            className="space-y-10 relative z-10"
           >
-            Jorgiahanny Almea Martínez
-          </p>
-          <p className="b-label mb-6">Full Stack Developer Jr.</p>
+            {/* Fila: nombre + email */}
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="space-y-2">
+                <label
+                  className="block text-lg"
+                  style={{ fontFamily: "var(--font-newsreader)", color: "#2a1015" }}
+                >
+                  Tu nombre
+                </label>
+                <input
+                  type="text"
+                  name="nombre"
+                  className="b-input"
+                  placeholder="Nombre Apellido"
+                />
+              </div>
+              <div className="space-y-2">
+                <label
+                  className="block text-lg"
+                  style={{ fontFamily: "var(--font-newsreader)", color: "#2a1015" }}
+                >
+                  Dirección digital
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  className="b-input"
+                  placeholder="correo@ejemplo.com"
+                />
+              </div>
+            </div>
 
-          {/* Información de contacto — sin emojis */}
-          <ul className="space-y-3 mb-7" style={{ fontFamily: "var(--font-lora)" }}>
-            <li className="flex items-baseline gap-2 text-sm">
-              <span className="b-label text-[0.65rem]">Correo</span>
-              <a
-                href="mailto:jorgiahannya@gmail.com"
-                className="hover:underline"
-                style={{ color: "#3d1520" }}
+            {/* Mensaje */}
+            <div className="space-y-2">
+              <label
+                className="block text-lg"
+                style={{ fontFamily: "var(--font-newsreader)", color: "#2a1015" }}
               >
-                jorgiahannya@gmail.com
-              </a>
-            </li>
-            <li className="flex items-baseline gap-2 text-sm">
-              <span className="b-label text-[0.65rem]">Teléfono</span>
-              <a href="tel:+56975895960" className="hover:underline" style={{ color: "#3d1520" }}>
-                +56 975 895 960
-              </a>
-            </li>
-            <li className="flex items-baseline gap-2 text-sm">
-              <span className="b-label text-[0.65rem]">WhatsApp</span>
-              <a
-                href="https://wa.me/56926947724"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-                style={{ color: "#3d1520" }}
-              >
-                +56 926 947 724
-              </a>
-            </li>
-          </ul>
+                Tu mensaje
+              </label>
+              <textarea
+                name="mensaje"
+                rows={4}
+                className="b-input resize-none"
+                placeholder="Escribe tu carta aquí…"
+              />
+            </div>
 
-          {/* Línea decorativa */}
-          <div
-            className="mb-6"
-            style={{
-              height: "1px",
-              background: "linear-gradient(to right, transparent, rgba(200,144,58,0.45), transparent)",
-            }}
-          />
+            {/* Datos de contacto directo */}
+            <div
+              className="grid sm:grid-cols-3 gap-4 py-6"
+              style={{ borderTop: "1px solid rgba(200,144,58,0.2)", borderBottom: "1px solid rgba(200,144,58,0.2)" }}
+            >
+              <div>
+                <p className="b-label text-[0.65rem] mb-1">Correo</p>
+                <a href="mailto:jorgiahannya@gmail.com" className="text-sm hover:underline" style={{ color: "#3d1520", fontFamily: "var(--font-lora)" }}>
+                  jorgiahannya@gmail.com
+                </a>
+              </div>
+              <div>
+                <p className="b-label text-[0.65rem] mb-1">Teléfono</p>
+                <a href="tel:+56975895960" className="text-sm hover:underline" style={{ color: "#3d1520", fontFamily: "var(--font-lora)" }}>
+                  +56 975 895 960
+                </a>
+              </div>
+              <div>
+                <p className="b-label text-[0.65rem] mb-1">WhatsApp</p>
+                <a href="https://wa.me/56926947724" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline" style={{ color: "#3d1520", fontFamily: "var(--font-lora)" }}>
+                  +56 926 947 724
+                </a>
+              </div>
+            </div>
 
-          {/* Botones */}
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://www.linkedin.com/in/jorgiahanny-almea-0b3b852ab/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-bridgerton-primary"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/jorgiahannydev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-bridgerton-primary"
-            >
-              GitHub
-            </a>
-            <a href="/cv.pdf" download className="btn-bridgerton-outline">
-              Descargar CV
-            </a>
-          </div>
+            {/* Botón wax seal — idéntico a Stitch */}
+            <div className="flex justify-center pt-4">
+              <button type="submit" className="wax-seal" aria-label="Enviar mensaje">
+                <div className="wax-seal-ring" />
+                <div className="text-center relative z-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32" height="32" viewBox="0 0 24 24"
+                    fill="rgba(255,222,165,0.9)"
+                  >
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                  <span
+                    className="block mt-1 text-[0.55rem] tracking-widest uppercase"
+                    style={{ color: "rgba(255,222,165,0.9)", fontFamily: "var(--font-newsreader)" }}
+                  >
+                    Enviar
+                  </span>
+                </div>
+              </button>
+            </div>
+
+          </form>
         </div>
+
+        {/* Links secundarios */}
+        <div className="flex justify-center gap-6 mt-10">
+          <a
+            href="https://www.linkedin.com/in/jorgiahanny-almea-0b3b852ab/"
+            target="_blank" rel="noopener noreferrer"
+            className="btn-bridgerton-primary"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/jorgiahannydev"
+            target="_blank" rel="noopener noreferrer"
+            className="btn-bridgerton-primary"
+          >
+            GitHub
+          </a>
+          <a href="/cv.pdf" download className="btn-bridgerton-outline">
+            Descargar CV
+          </a>
+        </div>
+
       </div>
     </section>
   );
