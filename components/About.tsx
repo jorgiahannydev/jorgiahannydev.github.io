@@ -125,21 +125,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* ── Plaqueta de museoa ── */}
-          <div
-            className="flex items-center gap-3 px-5 py-2 mt-0"
-            style={{
-              background: "linear-gradient(135deg, #d4a83a 0%, #b8891f 40%, #d4a83a 100%)",
-              boxShadow: "0 3px 10px rgba(20,4,8,0.3)",
-            }}
-          >
-            <span
-              className="italic text-sm tracking-wider"
-              style={{ fontFamily: "var(--font-newsreader)", color: "#1e0608", fontWeight: 500 }}
-            >
-              Jorgiahanny Almea Martínez
-            </span>
-          </div>
 
         </div>
 
