@@ -6,20 +6,38 @@ html {
 
 :root {
   --font-newsreader: 'Newsreader';
-  /* ── Paleta Victorian Royal ── */
-  --c-burgundy:    #3d0a1e;   /* titulares, marcos exteriores */
-  --c-rose:        #7a2040;   /* acentos rosas */
-  --c-gold:        #b8891f;   /* oro principal */
-  --c-gold-light:  #d4a83a;   /* oro claro / hover */
-  --c-cream:       #f5efe6;   /* fondo principal (pergamino rico) */
-  --c-parchment:   #ede5d8;   /* secciones alternas */
-  --c-card:        #f9f4ec;   /* fondo de tarjetas */
-  --c-text:        #1e0c10;   /* cuerpo de texto */
-  --c-muted:       #3a2428;   /* texto secundario */
+  --font-noto-serif: 'Noto Serif';
+
+  /* ══ Mayfair Edition — Design System Oficial ══ */
+  /* Tertiary (Burgundy "Wax Seal") */
+  --c-burgundy:        #800020;   /* override_tertiary — acciones fuertes, sello */
+  --c-burgundy-mid:    #af2b3e;   /* tertiary */
+  /* Primary (Dusty Rose) */
+  --c-rose:            #D886A7;   /* override_primary — color primario oficial */
+  --c-rose-dark:       #D886A7;   /* primary — variante oscura para texto */
+  --c-rose-fixed:      #ffd9e5;   /* primary_fixed */
+  /* Secondary (Gold Foil) */
+  --c-gold:            #C5A059;   /* override_secondary — oro principal */
+  --c-gold-dark:       #775a19;   /* secondary */
+  --c-gold-light:      #fed488;   /* secondary_container */
+  /* Surface hierarchy (sin bordes 1px — sólo capas tonales) */
+  --c-cream:           #fdf9f3;   /* surface / background — papel de lino */
+  --c-surface-low:     #f7f3ed;   /* surface_container_low — secciones alternas */
+  --c-parchment:       #f7f3ed;   /* alias de surface_container_low */
+  --c-card:            #f1ede7;   /* surface_container — tarjetas */
+  --c-surface-high:    #ebe8e2;   /* surface_container_high */
+  --c-surface-highest: #e6e2dc;   /* surface_container_highest */
+  --c-white:           #ffffff;   /* surface_container_lowest */
+  /* On-surface (tinta sobre pergamino, nunca negro puro) */
+  --c-text:            #1c1c18;   /* on_surface */
+  --c-muted:           #524348;   /* on_surface_variant */
+  /* Outline */
+  --c-outline:         #847378;   /* outline */
+  --c-outline-v:       #d6c1c7;   /* outline_variant */
 }
 
 body {
-  font-family: var(--font-lora), Georgia, serif;
+  font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
   font-size: 1rem;
   line-height: 1.85;
   background-color: var(--c-cream);
@@ -83,7 +101,7 @@ h1, h2, h3, h4, h5 {
 #educacion,
 #contacto,
 #sobre-mi {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none'%3E%3Ccircle cx='80' cy='80' r='24' stroke='%233d0a1e' stroke-width='0.7' stroke-opacity='0.06'/%3E%3Ccircle cx='80' cy='80' r='16' stroke='%23b8891f' stroke-width='0.4' stroke-opacity='0.05'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(45 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(90 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(135 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(180 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(225 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(270 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%233d0a1e' fill-opacity='0.048' transform='rotate(315 80 80)'/%3E%3Ccircle cx='80' cy='80' r='4' fill='%23b8891f' fill-opacity='0.07'/%3E%3Cpath d='M88,88 Q102,96 110,110' stroke='%233d0a1e' stroke-width='0.6' stroke-opacity='0.055'/%3E%3Cpath d='M88,72 Q102,64 110,50' stroke='%233d0a1e' stroke-width='0.6' stroke-opacity='0.055'/%3E%3Cpath d='M72,88 Q58,96 50,110' stroke='%233d0a1e' stroke-width='0.6' stroke-opacity='0.055'/%3E%3Cpath d='M72,72 Q58,64 50,50' stroke='%233d0a1e' stroke-width='0.6' stroke-opacity='0.055'/%3E%3Ccircle cx='0' cy='0' r='10' stroke='%233d0a1e' stroke-width='0.5' stroke-opacity='0.052'/%3E%3Ccircle cx='160' cy='0' r='10' stroke='%233d0a1e' stroke-width='0.5' stroke-opacity='0.052'/%3E%3Ccircle cx='0' cy='160' r='10' stroke='%233d0a1e' stroke-width='0.5' stroke-opacity='0.052'/%3E%3Ccircle cx='160' cy='160' r='10' stroke='%233d0a1e' stroke-width='0.5' stroke-opacity='0.052'/%3E%3Cpolygon points='104,104 107,107 104,110 101,107' fill='%23b8891f' fill-opacity='0.06'/%3E%3Cpolygon points='104,56 107,53 104,50 101,53' fill='%23b8891f' fill-opacity='0.06'/%3E%3Cpolygon points='56,104 53,107 56,110 59,107' fill='%23b8891f' fill-opacity='0.06'/%3E%3Cpolygon points='56,56 53,53 56,50 59,53' fill='%23b8891f' fill-opacity='0.06'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none'%3E%3Ccircle cx='80' cy='80' r='24' stroke='%23D886A7' stroke-width='0.7' stroke-opacity='0.07'/%3E%3Ccircle cx='80' cy='80' r='16' stroke='%23C5A059' stroke-width='0.4' stroke-opacity='0.06'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%23D886A7' fill-opacity='0.05'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%23D886A7' fill-opacity='0.05' transform='rotate(45 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%23D886A7' fill-opacity='0.05' transform='rotate(90 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%23D886A7' fill-opacity='0.05' transform='rotate(135 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%23D886A7' fill-opacity='0.05' transform='rotate(180 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%23D886A7' fill-opacity='0.05' transform='rotate(225 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%23D886A7' fill-opacity='0.05' transform='rotate(270 80 80)'/%3E%3Cellipse cx='80' cy='56' rx='3' ry='7' fill='%23D886A7' fill-opacity='0.05' transform='rotate(315 80 80)'/%3E%3Ccircle cx='80' cy='80' r='4' fill='%23C5A059' fill-opacity='0.08'/%3E%3Cpath d='M88,88 Q102,96 110,110' stroke='%23D886A7' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Cpath d='M88,72 Q102,64 110,50' stroke='%23D886A7' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Cpath d='M72,88 Q58,96 50,110' stroke='%23D886A7' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Cpath d='M72,72 Q58,64 50,50' stroke='%23D886A7' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Ccircle cx='0' cy='0' r='10' stroke='%23D886A7' stroke-width='0.5' stroke-opacity='0.055'/%3E%3Ccircle cx='160' cy='0' r='10' stroke='%23D886A7' stroke-width='0.5' stroke-opacity='0.055'/%3E%3Ccircle cx='0' cy='160' r='10' stroke='%23D886A7' stroke-width='0.5' stroke-opacity='0.055'/%3E%3Ccircle cx='160' cy='160' r='10' stroke='%23D886A7' stroke-width='0.5' stroke-opacity='0.055'/%3E%3Cpolygon points='104,104 107,107 104,110 101,107' fill='%23C5A059' fill-opacity='0.07'/%3E%3Cpolygon points='104,56 107,53 104,50 101,53' fill='%23C5A059' fill-opacity='0.07'/%3E%3Cpolygon points='56,104 53,107 56,110 59,107' fill='%23C5A059' fill-opacity='0.07'/%3E%3Cpolygon points='56,56 53,53 56,50 59,53' fill='%23C5A059' fill-opacity='0.07'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 160px 160px;
 }
 
@@ -104,7 +122,7 @@ h1, h2, h3, h4, h5 {
   height: 1px;
   background: repeating-linear-gradient(
     to right,
-    #b8891f 0px, #b8891f 3px,
+    #C5A059 0px, #C5A059 3px,
     transparent 3px, transparent 7px
   );
 }
@@ -121,13 +139,13 @@ h1, h2, h3, h4, h5 {
   content: "";
   flex: 0 0 60px;
   height: 1px;
-  background: linear-gradient(to right, transparent, #b8891f);
+  background: linear-gradient(to right, transparent, #C5A059);
 }
 .b-section-line::after {
   content: "";
   flex: 0 0 60px;
   height: 1px;
-  background: linear-gradient(to left, transparent, #b8891f);
+  background: linear-gradient(to left, transparent, #C5A059);
 }
 
 /* ── Texto decorativo dorado ── */
@@ -144,19 +162,23 @@ h1, h2, h3, h4, h5 {
 ══════════════════════════════════════════════ */
 .b-input {
   width: 100%;
-  background: transparent;
+  background: #ffffff;
   border: none;
-  border-bottom: 1px solid rgba(184, 137, 31, 0.35);
-  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(214, 193, 199, 0.15);
+  padding: 0.6rem 0.5rem;
   outline: none;
-  font-family: var(--font-lora), Georgia, serif;
+  font-family: var(--font-noto-serif), 'Noto Serif', Georgia, serif;
   font-size: 0.95rem;
   color: var(--c-text);
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background 0.2s;
+  border-radius: 2px 2px 0 0;
 }
-.b-input:focus { border-bottom-color: var(--c-gold); }
+.b-input:focus {
+  border-bottom-color: var(--c-gold);
+  background: #fdf9f3;
+}
 .b-input::placeholder {
-  color: rgba(58, 36, 40, 0.3);
+  color: rgba(82, 67, 72, 0.35);
   font-style: italic;
 }
 
@@ -167,21 +189,21 @@ h1, h2, h3, h4, h5 {
   position: relative;
   width: 7rem;
   height: 7rem;
-  background: radial-gradient(circle at 38% 36%, #8b1a2e, #5a0c1e);
+  background: radial-gradient(circle at 38% 36%, #D886A7, #8e4766);
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: transform 0.4s, box-shadow 0.4s;
-  box-shadow: 0 8px 28px rgba(61, 10, 30, 0.3), 0 2px 6px rgba(61,10,30,0.18);
+  box-shadow: 0 12px 32px rgba(28,28,24,0.06), 0 4px 12px rgba(128,0,32,0.22);
 }
-.wax-seal:hover  { transform: scale(1.07); box-shadow: 0 14px 40px rgba(61,10,30,0.38); }
+.wax-seal:hover  { transform: scale(1.07); box-shadow: 0 16px 40px rgba(28,28,24,0.10), 0 6px 18px rgba(128,0,32,0.30); }
 .wax-seal:active { transform: scale(0.95); }
 .wax-seal-ring {
   position: absolute;
   inset: 0.5rem;
-  border: 2px dashed rgba(212, 168, 58, 0.38);
+  border: 2px dashed rgba(197, 160, 89, 0.42);
   border-radius: 9999px;
   transition: transform 1s;
 }
@@ -194,62 +216,69 @@ h1, h2, h3, h4, h5 {
   width: 3rem;
   height: 3rem;
   border-radius: 9999px;
-  border: 1px solid var(--c-gold);
+  border: 2px solid var(--c-burgundy);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--c-gold);
-  background: transparent;
-  transition: background-color 0.2s, color 0.2s;
+  color: var(--c-cream);
+  background-color: var(--c-burgundy);
+  transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 10px rgba(61,10,30,0.25);
 }
-.carousel-arrow:hover    { background-color: var(--c-gold); color: var(--c-cream); }
-.carousel-arrow:disabled { opacity: 0.28; cursor: not-allowed; }
-.carousel-arrow:disabled:hover { background-color: transparent; color: var(--c-gold); }
+.carousel-arrow:hover:not(:disabled) {
+  background-color: var(--c-gold);
+  border-color: var(--c-gold);
+  color: var(--c-burgundy);
+  transform: scale(1.08);
+}
+.carousel-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+.carousel-arrow:disabled:hover { background-color: var(--c-burgundy); transform: none; }
 
 /* ══════════════════════════════════════════════
-   BOTONES — estilo formal victoriano
-   (rectangulares, no pill; con borde dorado)
+   BOTONES — Mayfair Edition spec
+   Primary:   gradient Primary → Primary Container (sm radius = 2px)
+   Secondary: ghost con Gold border (spec "outline" style)
 ══════════════════════════════════════════════ */
 .btn-bridgerton-primary {
-  background: linear-gradient(145deg, #6b1228 0%, #3d0a1e 100%);
-  color: #faebd7;
+  background: linear-gradient(145deg, #8e4766 0%, #D886A7 100%);
+  color: #ffffff;
   font-family: var(--font-newsreader), serif;
   font-weight: 600;
   font-size: 0.76rem;
   padding: 0.7rem 2.2rem;
   border-radius: 2px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: opacity 0.2s, transform 0.12s, box-shadow 0.2s;
   display: inline-block;
-  box-shadow: 0 3px 14px rgba(61,10,30,0.28), inset 0 1px 0 rgba(212,168,58,0.18);
-  border: 1px solid rgba(184,137,31,0.4);
+  box-shadow: 0 12px 32px rgba(28,28,24,0.06);
+  border: none;
 }
 .btn-bridgerton-primary:hover {
-  opacity: 0.9;
-  box-shadow: 0 6px 22px rgba(61,10,30,0.38), inset 0 1px 0 rgba(212,168,58,0.22);
+  opacity: 0.88;
+  box-shadow: 0 16px 40px rgba(28,28,24,0.10);
 }
 .btn-bridgerton-primary:active { transform: scale(0.97); }
 
 .btn-bridgerton-outline {
   border: 1.5px solid var(--c-gold);
-  color: #7a5a10;
+  color: var(--c-gold-dark);
   font-family: var(--font-newsreader), serif;
   font-weight: 600;
   font-size: 0.76rem;
   padding: 0.7rem 2.2rem;
   border-radius: 2px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: background-color 0.2s, transform 0.12s, box-shadow 0.2s;
   display: inline-block;
-  background-color: rgba(249, 244, 236, 0.7);
-  box-shadow: 0 2px 8px rgba(184,137,31,0.14);
+  background-color: transparent;
+  box-shadow: 0 12px 32px rgba(28,28,24,0.04);
 }
 .btn-bridgerton-outline:hover {
-  background-color: rgba(184,137,31,0.1);
-  box-shadow: 0 4px 14px rgba(184,137,31,0.28);
+  background-color: rgba(197,160,89,0.08);
+  box-shadow: 0 16px 40px rgba(28,28,24,0.08);
 }
 .btn-bridgerton-outline:active { transform: scale(0.97); }

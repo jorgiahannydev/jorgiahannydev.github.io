@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="presentacion"
       className="relative min-h-screen flex items-center justify-center pt-32 px-6 pb-16 overflow-hidden"
-      style={{ backgroundColor: "#f5efe6" }}
+      style={{ backgroundColor: "#fdf9f3" }}
     >
       <SectionOrnaments />
 
@@ -13,11 +13,11 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none opacity-15 flex justify-between px-4 md:px-20 py-36">
         <div
           className="w-72 h-72 border-t-2 border-l-2"
-          style={{ borderColor: "#b8891f", borderRadius: "120px 0 0 0" }}
+          style={{ borderColor: "#C5A059", borderRadius: "120px 0 0 0" }}
         />
         <div
           className="w-72 h-72 border-b-2 border-r-2 self-end"
-          style={{ borderColor: "#b8891f", borderRadius: "0 0 120px 0" }}
+          style={{ borderColor: "#C5A059", borderRadius: "0 0 120px 0" }}
         />
       </div>
 
@@ -27,8 +27,8 @@ export default function Hero() {
         <div
           className="inline-block px-5 py-1.5"
           style={{
-            borderTop:    "1px solid rgba(184,137,31,0.5)",
-            borderBottom: "1px solid rgba(184,137,31,0.5)",
+            borderTop:    "1px solid rgba(197,160,89,0.5)",
+            borderBottom: "1px solid rgba(197,160,89,0.5)",
           }}
         >
           <span className="b-label" style={{ letterSpacing: "0.35em" }}>Currículum Vitae</span>
@@ -40,9 +40,9 @@ export default function Hero() {
           style={{
             fontFamily: "var(--font-newsreader)",
             fontWeight: 600,
-            color: "#3d0a1e",
+            color: "#8e4766",
             fontSize: "clamp(2.8rem, 8vw, 5.8rem)",
-            textShadow: "0 2px 16px rgba(61,10,30,0.08)",
+            textShadow: "0 2px 16px rgba(128,0,32,0.08)",
           }}
         >
           Jorgiahanny Almea Martínez
@@ -53,71 +53,41 @@ export default function Hero() {
           {/* Marco exterior — burgundy */}
           <div
             className="absolute -inset-2"
-            style={{ border: "1px solid rgba(61,10,30,0.22)" }}
+            style={{ border: "1px solid rgba(128,0,32,0.18)" }}
           />
           {/* Marco interior — gold */}
           <div
             className="absolute -inset-0.5"
-            style={{ border: "1px solid rgba(184,137,31,0.35)" }}
+            style={{ border: "1px solid rgba(197,160,89,0.32)" }}
           />
 
           {/* Tarjeta */}
           <div
             className="relative p-8 md:p-14"
             style={{
-              backgroundColor: "#f9f4ec",
-              boxShadow: "0 4px 32px rgba(61,10,30,0.12), inset 0 1px 0 rgba(212,168,58,0.12)",
+              backgroundColor: "#ffffff",
+              boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
             }}
           >
             {/* Ornamentos de esquina de la tarjeta */}
-            <div
-              className="absolute -top-4 -left-4 w-10 h-10 flex items-center justify-center"
-              style={{
-                backgroundColor: "#f5efe6",
-                border: "1px solid rgba(184,137,31,0.5)",
-                color: "#b8891f",
-                fontSize: "1.1rem",
-              }}
-            >
-              ❧
-            </div>
-            <div
-              className="absolute -top-4 -right-4 w-10 h-10 flex items-center justify-center"
-              style={{
-                backgroundColor: "#f5efe6",
-                border: "1px solid rgba(184,137,31,0.5)",
-                color: "#b8891f",
-                fontSize: "1.1rem",
-              }}
-            >
-              ❧
-            </div>
-            <div
-              className="absolute -bottom-4 -left-4 w-10 h-10 flex items-center justify-center"
-              style={{
-                backgroundColor: "#f5efe6",
-                border: "1px solid rgba(184,137,31,0.5)",
-                color: "#b8891f",
-                fontSize: "1.1rem",
-              }}
-            >
-              ❧
-            </div>
-            <div
-              className="absolute -bottom-4 -right-4 w-10 h-10 flex items-center justify-center"
-              style={{
-                backgroundColor: "#f5efe6",
-                border: "1px solid rgba(184,137,31,0.5)",
-                color: "#b8891f",
-                fontSize: "1.1rem",
-              }}
-            >
-              ❧
-            </div>
+            {["-top-4 -left-4", "-top-4 -right-4", "-bottom-4 -left-4", "-bottom-4 -right-4"].map((pos) => (
+              <div
+                key={pos}
+                className={`absolute ${pos} w-10 h-10 flex items-center justify-center`}
+                style={{
+                  backgroundColor: "#fdf9f3",
+                  border: "1px solid rgba(197,160,89,0.5)",
+                  color: "#C5A059",
+                  fontSize: "1.1rem",
+                }}
+              >
+                ❧
+              </div>
+            ))}
 
             <h2
               className="text-2xl md:text-3xl font-semibold italic mb-5"
-              style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}
+              style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
             >
               Full Stack Developer Jr.
             </h2>
@@ -131,7 +101,7 @@ export default function Hero() {
 
             <p
               className="leading-relaxed mb-8 text-center"
-              style={{ color: "#3a2428", fontSize: "1rem", fontFamily: "var(--font-lora)" }}
+              style={{ color: "#524348", fontSize: "1rem", fontFamily: "var(--font-noto-serif)" }}
             >
               Desarrolladora Web Full Stack en formación, combinando precisión técnica
               y una mirada multidisciplinaria para crear experiencias digitales de calidad.

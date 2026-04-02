@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lora } from "next/font/google";
+import { Playfair_Display, Noto_Serif } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -11,9 +11,9 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const lora = Lora({
+const notoSerif = Noto_Serif({
   subsets: ["latin"],
-  variable: "--font-lora",
+  variable: "--font-noto-serif",
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${playfair.variable} ${lora.variable}`}>
+    <html lang="es" className={`${playfair.variable} ${notoSerif.variable}`}>
       <head>
         {/* Newsreader — fuente de eje óptico, se carga via CDN por incompatibilidad con Turbopack */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,7 +70,7 @@ export default function RootLayout({
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-W2LXZFHP');
       `}</Script>
-      <body className="bg-[#fdf9f3] text-stone-800 antialiased">
+      <body className="bg-[#fdf9f3] text-[#1c1c18] antialiased">
         {/* Google Tag Manager — noscript fallback */}
         <noscript>
           <iframe

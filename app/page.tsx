@@ -8,6 +8,7 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import OrnamentDivider from "@/components/OrnamentDivider";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -15,20 +16,21 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <OrnamentDivider bg="#f5efe6" />
+        <OrnamentDivider bg="#fdf9f3" />
         <About />
-        <OrnamentDivider bg="#ede5d8" />
+        <OrnamentDivider bg="#f7f3ed" />
         <Skills />
-        <OrnamentDivider bg="#f5efe6" />
+        <OrnamentDivider bg="#fdf9f3" />
         <Experience />
-        <OrnamentDivider bg="#ede5d8" />
+        <OrnamentDivider bg="#f7f3ed" />
         <Portfolio />
-        <OrnamentDivider bg="#f5efe6" />
+        <OrnamentDivider bg="#fdf9f3" />
         <Education />
-        <OrnamentDivider bg="#ede5d8" />
+        <OrnamentDivider bg="#f7f3ed" />
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

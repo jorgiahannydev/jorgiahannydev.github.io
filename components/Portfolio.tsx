@@ -11,7 +11,7 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function Portfolio() {
   return (
-    <section id="portafolio" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#ede5d8" }}>
+    <section id="portafolio" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto px-6">
 
@@ -20,7 +20,7 @@ export default function Portfolio() {
 
         {/* Divisor ❦ */}
         <div className="b-section-line my-14">
-          <span style={{ color: "#b8891f", fontSize: "1rem" }}>❦</span>
+          <span style={{ color: "#C5A059", fontSize: "1rem" }}>❦</span>
         </div>
 
         {/* Trayectoria profesional — grid estático */}
@@ -31,9 +31,9 @@ export default function Portfolio() {
               key={p.title}
               className="group overflow-hidden hover:-translate-y-1 transition-all duration-300"
               style={{
-                backgroundColor: "#f5efe6",
-                border: "1px solid rgba(200,144,58,0.22)",
-                boxShadow: "0 2px 10px rgba(122,30,62,0.07)",
+                backgroundColor: "#ffffff",
+                boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
+                borderRadius: "2px",
               }}
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden">
@@ -45,11 +45,11 @@ export default function Portfolio() {
               <div className="p-4">
                 <h4
                   className="font-semibold text-sm mb-1 italic"
-                  style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}
+                  style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
                 >
                   {p.title}
                 </h4>
-                <p className="text-sm" style={{ color: "#3a2428", fontFamily: "var(--font-lora)" }}>
+                <p className="text-sm" style={{ color: "#524348", fontFamily: "var(--font-noto-serif)" }}>
                   {p.description}
                 </p>
               </div>

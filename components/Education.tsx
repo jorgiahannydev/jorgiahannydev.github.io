@@ -11,14 +11,14 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function Education() {
   return (
-    <section id="educacion" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#f5efe6" }}>
+    <section id="educacion" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#fdf9f3" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}>
           Educación
         </h2>
         <div className="b-section-line">
-          <span style={{ color: "#b8891f", fontSize: "1rem" }}>❦</span>
+          <span style={{ color: "#C5A059", fontSize: "1rem" }}>❦</span>
         </div>
 
         <div className="flex flex-col gap-3">
@@ -27,25 +27,26 @@ export default function Education() {
               key={item.title}
               className="px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
               style={{
-                backgroundColor: "#fef9f3",
-                borderLeft: "4px solid #b8891f",
-                boxShadow: "0 1px 8px rgba(122,30,62,0.07)",
+                backgroundColor: "#ffffff",
+                borderLeft: "4px solid #C5A059",
+                boxShadow: "0 12px 32px rgba(28,28,24,0.06)",
+                borderRadius: "0 2px 2px 0",
               }}
             >
               <div>
                 <h3
                   className="font-semibold text-sm leading-snug italic"
-                  style={{ fontFamily: "var(--font-newsreader)", color: "#3d0a1e" }}
+                  style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
                 >
                   {item.title}
                 </h3>
-                <p className="text-sm mt-0.5" style={{ color: "#7a2040", fontFamily: "var(--font-lora)" }}>
+                <p className="text-sm mt-0.5" style={{ color: "#D886A7", fontFamily: "var(--font-noto-serif)" }}>
                   {item.institution}
                 </p>
               </div>
               <span
                 className="text-xs italic whitespace-nowrap"
-                style={{ fontFamily: "var(--font-newsreader)", color: "#b8891f" }}
+                style={{ fontFamily: "var(--font-newsreader)", color: "#C5A059" }}
               >
                 {item.date}
               </span>
