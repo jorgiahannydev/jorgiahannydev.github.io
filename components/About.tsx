@@ -7,24 +7,98 @@ export default function About() {
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-        {/* Foto con doble marco — efecto parallax Stitch */}
-        <div className="relative group">
+        {/* Marco de pintura victoriana */}
+        <div className="flex flex-col items-center gap-0">
+
+          {/* ── Marco exterior: madera oscura tallada ── */}
           <div
-            className="absolute -inset-4 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"
-            style={{ border: "1px solid rgba(200,144,58,0.3)" }}
-          />
-          <div
-            className="overflow-hidden shadow-xl aspect-[4/5] relative"
-            style={{ backgroundColor: "#f2eadd" }}
+            className="relative group"
+            style={{
+              padding: "18px",
+              background: "linear-gradient(145deg, #3a0c16 0%, #1e0608 35%, #2a0a12 65%, #3a0c16 100%)",
+              boxShadow:
+                "0 12px 48px rgba(20,4,8,0.55), " +
+                "0 4px 16px rgba(20,4,8,0.35), " +
+                "inset 0 2px 3px rgba(255,255,255,0.07), " +
+                "inset 0 -2px 4px rgba(0,0,0,0.45), " +
+                "inset 2px 0 3px rgba(255,255,255,0.04), " +
+                "inset -2px 0 4px rgba(0,0,0,0.35)",
+            }}
           >
-            <Image
-              src="/img/cv.png"
-              alt="Retrato de Jorgiahanny Almea Martínez"
-              fill
-              className="object-cover"
-              style={{ filter: "grayscale(15%)" }}
-            />
+            {/* Ornamentos de esquina en el marco exterior */}
+            {(["tl","tr","bl","br"] as const).map((pos) => (
+              <span
+                key={pos}
+                className="absolute text-xs pointer-events-none select-none"
+                style={{
+                  color: "#b8891f",
+                  opacity: 0.75,
+                  fontSize: "1.1rem",
+                  lineHeight: 1,
+                  ...(pos === "tl" && { top: "4px",    left:  "5px" }),
+                  ...(pos === "tr" && { top: "4px",    right: "5px" }),
+                  ...(pos === "bl" && { bottom: "4px", left:  "5px" }),
+                  ...(pos === "br" && { bottom: "4px", right: "5px" }),
+                }}
+              >
+                ✦
+              </span>
+            ))}
+
+            {/* ── Borde dorado gilded ── */}
+            <div
+              style={{
+                padding: "5px",
+                background:
+                  "linear-gradient(135deg, #f0c84a 0%, #b8891f 20%, #e8ba38 40%, #9a7218 60%, #d4a83a 80%, #b8891f 100%)",
+                boxShadow: "inset 0 1px 2px rgba(255,255,255,0.3), inset 0 -1px 2px rgba(0,0,0,0.25)",
+              }}
+            >
+              {/* ── Margen interior (passepartout) ── */}
+              <div
+                style={{
+                  padding: "10px",
+                  backgroundColor: "#f5efe6",
+                  boxShadow: "inset 0 2px 10px rgba(20,4,8,0.18), inset 0 -1px 6px rgba(20,4,8,0.1)",
+                }}
+              >
+                {/* ── Imagen ── */}
+                <div className="overflow-hidden aspect-[4/5] relative" style={{ display: "block" }}>
+                  <Image
+                    src="/img/cv2.png"
+                    alt="Retrato de Jorgiahanny Almea Martínez"
+                    fill
+                    className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                    style={{ filter: "sepia(18%) contrast(1.04) brightness(0.97)" }}
+                  />
+                  {/* Viñeta interior del cuadro */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      boxShadow: "inset 0 0 40px rgba(20,4,8,0.28)",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* ── Plaqueta de museoa ── */}
+          <div
+            className="flex items-center gap-3 px-5 py-2 mt-0"
+            style={{
+              background: "linear-gradient(135deg, #d4a83a 0%, #b8891f 40%, #d4a83a 100%)",
+              boxShadow: "0 3px 10px rgba(20,4,8,0.3)",
+            }}
+          >
+            <span
+              className="italic text-sm tracking-wider"
+              style={{ fontFamily: "var(--font-newsreader)", color: "#1e0608", fontWeight: 500 }}
+            >
+              Jorgiahanny Almea Martínez
+            </span>
+          </div>
+
         </div>
 
         {/* Texto */}
