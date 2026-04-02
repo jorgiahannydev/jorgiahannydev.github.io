@@ -117,7 +117,7 @@ export default function Experience() {
               </h3>
 
               {/* Empresa */}
-              <p className="text-sm italic mb-3" style={{ color: "#8e4766" }}>
+              <p className="text-sm italic mb-3" style={{ color: "#D886A7" }}>
                 {job.company}
               </p>
 

@@ -5,7 +5,7 @@ export default function Footer() {
       style={{
         backgroundColor: "#f7f3ed",
         borderTop: "3px double rgba(128,0,32,0.28)",
-        color: "#8e4766",
+        color: "#D886A7",
         paddingTop: "3.5rem",
         boxShadow: "0 -2px 20px rgba(28,28,24,0.05)",
       }}
@@ -33,7 +33,7 @@ export default function Footer() {
               key={l.href}
               href={l.href}
               className="text-xs tracking-widest uppercase hover:text-[#C5A059] transition-colors"
-              style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
+              style={{ fontFamily: "var(--font-newsreader)", color: "#D886A7" }}
             >
               {l.label}
             </a>

@@ -65,7 +65,7 @@ export default function Contact() {
         >
           {/* Ornamento botánico */}
           <div className="absolute top-4 right-4 text-6xl pointer-events-none select-none"
-            style={{ color: "#8e4766", opacity: 0.06 }}>❧</div>
+            style={{ color: "#D886A7", opacity: 0.06 }}>❧</div>
 
           {/* Formulario */}
           <form onSubmit={handleSubmit} className="space-y-10 relative z-10">

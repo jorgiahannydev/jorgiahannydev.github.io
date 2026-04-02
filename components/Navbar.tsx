@@ -91,10 +91,10 @@ export default function Navbar() {
                     fontSize: "0.72rem",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
-                    color: isActive ? "#C5A059" : "#8e4766",
+                    color: isActive ? "#C5A059" : "#D886A7",
                   }}
                   onMouseEnter={e => (e.currentTarget.style.color = "#C5A059")}
-                  onMouseLeave={e => (e.currentTarget.style.color = isActive ? "#C5A059" : "#8e4766")}
+                  onMouseLeave={e => (e.currentTarget.style.color = isActive ? "#C5A059" : "#D886A7")}
                 >
                   {l.label}
                   {/* Underline activo */}
@@ -172,7 +172,7 @@ export default function Navbar() {
                 fontSize: "0.78rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: active === l.href ? "#C5A059" : "#8e4766",
+                color: active === l.href ? "#C5A059" : "#D886A7",
                 borderColor: "rgba(197,160,89,0.12)",
               }}
             >

@@ -40,7 +40,7 @@ export default function Education() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-sm mt-0.5" style={{ color: "#8e4766", fontFamily: "var(--font-noto-serif)" }}>
+                <p className="text-sm mt-0.5" style={{ color: "#D886A7", fontFamily: "var(--font-noto-serif)" }}>
                   {item.institution}
                 </p>
               </div>

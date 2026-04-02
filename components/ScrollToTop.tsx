@@ -29,7 +29,7 @@ export default function ScrollToTop() {
         pointerEvents: visible ? "auto" : "none",
         transform: visible ? "translateY(0)" : "translateY(12px)",
       }}
-      onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#8e4766")}
+      onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#D886A7")}
       onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#800020")}
     >
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -59,7 +59,7 @@ function ProjectCard({ p }: { p: Project }) {
     >
       {/* Icono botánico superpuesto al hover */}
       <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-15 transition-opacity duration-500 text-3xl pointer-events-none"
-        style={{ color: "#8e4766" }}>
+        style={{ color: "#D886A7" }}>
         ❧
       </div>
 
@@ -104,7 +104,7 @@ function ProjectCard({ p }: { p: Project }) {
             <a
               href={p.demo} target="_blank" rel="noopener noreferrer"
               className="italic border-b pb-0.5"
-              style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766", borderColor: "rgba(142,71,102,0.3)", fontSize: "0.9rem" }}
+              style={{ fontFamily: "var(--font-newsreader)", color: "#D886A7", borderColor: "rgba(142,71,102,0.3)", fontSize: "0.9rem" }}
             >
               Ver en vivo
             </a>
@@ -113,7 +113,7 @@ function ProjectCard({ p }: { p: Project }) {
             <a
               href={p.code} target="_blank" rel="noopener noreferrer"
               className="italic border-b pb-0.5"
-              style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766", borderColor: "rgba(142,71,102,0.3)", fontSize: "0.9rem" }}
+              style={{ fontFamily: "var(--font-newsreader)", color: "#D886A7", borderColor: "rgba(142,71,102,0.3)", fontSize: "0.9rem" }}
             >
               Ver código
             </a>
