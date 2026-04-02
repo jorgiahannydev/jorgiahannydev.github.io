@@ -5,8 +5,9 @@ html {
 }
 
 body {
-  font-family: var(--font-garamond), Georgia, "Times New Roman", serif;
-  font-size: 1.05rem;
+  font-family: var(--font-lora), Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
   background-color: #fce8ed;
   color: #2a1015;
 }
