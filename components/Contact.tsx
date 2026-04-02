@@ -49,7 +49,7 @@ export default function Contact() {
         <div className="text-center mb-14">
           <h2
             className="text-4xl md:text-5xl font-bold italic"
-            style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}
+            style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
           >
             Correspondencia
           </h2>
@@ -139,7 +139,7 @@ export default function Contact() {
 
               {/* Mensajes de estado */}
               {status === "success" && (
-                <p className="text-sm italic" style={{ color: "#800020", fontFamily: "var(--font-noto-serif)" }}>
+                <p className="text-sm italic" style={{ color: "#8e4766", fontFamily: "var(--font-noto-serif)" }}>
                   ✦ Tu mensaje fue enviado con éxito. Te responderé pronto.
                 </p>
               )}
@@ -161,21 +161,21 @@ export default function Contact() {
             <div>
               <p className="b-label text-[0.65rem] mb-1">Correo</p>
               <a href="mailto:jorgiahannya@gmail.com" className="text-sm hover:underline"
-                style={{ color: "#800020", fontFamily: "var(--font-noto-serif)" }}>
+                style={{ color: "#8e4766", fontFamily: "var(--font-noto-serif)" }}>
                 jorgiahannya@gmail.com
               </a>
             </div>
             <div>
               <p className="b-label text-[0.65rem] mb-1">Teléfono</p>
               <a href="tel:+56975895960" className="text-sm hover:underline"
-                style={{ color: "#800020", fontFamily: "var(--font-noto-serif)" }}>
+                style={{ color: "#8e4766", fontFamily: "var(--font-noto-serif)" }}>
                 +56 975 895 960
               </a>
             </div>
             <div>
               <p className="b-label text-[0.65rem] mb-1">WhatsApp</p>
               <a href="https://wa.me/56926947724" target="_blank" rel="noopener noreferrer"
-                className="text-sm hover:underline" style={{ color: "#800020", fontFamily: "var(--font-noto-serif)" }}>
+                className="text-sm hover:underline" style={{ color: "#8e4766", fontFamily: "var(--font-noto-serif)" }}>
                 +56 926 947 724
               </a>
             </div>

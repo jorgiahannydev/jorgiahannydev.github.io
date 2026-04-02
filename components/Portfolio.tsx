@@ -45,7 +45,7 @@ export default function Portfolio() {
               <div className="p-4">
                 <h4
                   className="font-semibold text-sm mb-1 italic"
-                  style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}
+                  style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
                 >
                   {p.title}
                 </h4>

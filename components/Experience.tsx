@@ -77,7 +77,7 @@ export default function Experience() {
     <section id="experiencia" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#fdf9f3" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}>
           Experiencia Laboral
         </h2>
         <p className="text-center b-label mt-3 mb-2">Una trayectoria de logros</p>
@@ -111,7 +111,7 @@ export default function Experience() {
               {/* Título */}
               <h3
                 className="font-bold text-base leading-snug"
-                style={{ fontFamily: "var(--font-playfair)", color: "#800020" }}
+                style={{ fontFamily: "var(--font-playfair)", color: "#8e4766" }}
               >
                 {job.title}
               </h3>

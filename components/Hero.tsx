@@ -40,7 +40,7 @@ export default function Hero() {
           style={{
             fontFamily: "var(--font-newsreader)",
             fontWeight: 600,
-            color: "#800020",
+            color: "#8e4766",
             fontSize: "clamp(2.8rem, 8vw, 5.8rem)",
             textShadow: "0 2px 16px rgba(128,0,32,0.08)",
           }}
@@ -87,7 +87,7 @@ export default function Hero() {
 
             <h2
               className="text-2xl md:text-3xl font-semibold italic mb-5"
-              style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}
+              style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
             >
               Full Stack Developer Jr.
             </h2>

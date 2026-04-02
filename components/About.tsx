@@ -120,7 +120,7 @@ export default function About() {
         <div className="space-y-7">
           <h2
             className="text-4xl md:text-5xl italic leading-tight"
-            style={{ fontFamily: "var(--font-newsreader)", color: "#800020", fontWeight: 600 }}
+            style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766", fontWeight: 600 }}
           >
             Una Trayectoria Multidisciplinaria
           </h2>

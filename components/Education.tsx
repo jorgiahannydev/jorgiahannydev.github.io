@@ -14,7 +14,7 @@ export default function Education() {
     <section id="educacion" className="relative py-24 overflow-hidden" style={{ backgroundColor: "#fdf9f3" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-center italic" style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}>
           Educación
         </h2>
         <div className="b-section-line">
@@ -36,7 +36,7 @@ export default function Education() {
               <div>
                 <h3
                   className="font-semibold text-sm leading-snug italic"
-                  style={{ fontFamily: "var(--font-newsreader)", color: "#800020" }}
+                  style={{ fontFamily: "var(--font-newsreader)", color: "#8e4766" }}
                 >
                   {item.title}
                 </h3>
