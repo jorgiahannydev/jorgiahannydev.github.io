@@ -183,7 +183,7 @@ export default function Contact() {
         </div>
 
         {/* Links secundarios */}
-        <div className="flex justify-center gap-6 mt-10">
+        <div className="flex flex-wrap justify-center gap-4 mt-10">
           <a href="https://www.linkedin.com/in/jorgiahanny-almea-0b3b852ab/"
             target="_blank" rel="noopener noreferrer" className="btn-bridgerton-primary">
             LinkedIn
