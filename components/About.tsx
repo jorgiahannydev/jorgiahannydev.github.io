@@ -147,7 +147,7 @@ export default function About() {
           </div>
 
           {/* Stats */}
-          <div className="pt-6 flex justify-center md:justify-start gap-8 md:gap-12"
+          <div className="pt-6 flex flex-wrap justify-center md:justify-start gap-6 md:gap-12"
             style={{ borderTop: "1px solid rgba(197,160,89,0.22)" }}
           >
             {[

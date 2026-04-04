@@ -149,8 +149,8 @@ export default function PortfolioCarousel() {
           </p>
         </div>
 
-        {/* Flechas de navegación */}
-        <div className="flex gap-3 flex-shrink-0">
+        {/* Flechas de navegación — solo desktop */}
+        <div className="hidden md:flex gap-3 flex-shrink-0">
           <button
             onClick={() => setPage((p) => Math.max(0, p - 1))}
             disabled={page === 0}
@@ -200,15 +200,25 @@ export default function PortfolioCarousel() {
         </div>
       </div>
 
-      {/* Grid de tarjetas — 3 columnas desktop, 1 móvil */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 min-h-[400px]">
+      {/* Mobile: scroll horizontal con snap — 1 card visible */}
+      <div className="flex md:hidden overflow-x-auto gap-4 pb-4 snap-x snap-mandatory"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+        {projects.map((p) => (
+          <div key={p.title} className="snap-start shrink-0 w-[80vw] max-w-[300px]">
+            <ProjectCard p={p} />
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: grid paginado — 3 columnas */}
+      <div className="hidden md:grid md:grid-cols-3 gap-6 min-h-[400px]">
         {visible.map((p) => (
           <ProjectCard key={p.title} p={p} />
         ))}
       </div>
 
-      {/* Indicadores de página */}
-      <div className="flex justify-center gap-2 mt-6">
+      {/* Indicadores de página — solo desktop */}
+      <div className="hidden md:flex justify-center gap-2 mt-6">
         {Array.from({ length: totalPages }).map((_, i) => (
           <button
             key={i}
