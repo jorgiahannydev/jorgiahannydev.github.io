@@ -3,18 +3,18 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="relative py-24 px-6 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
+    <section id="sobre-mi" className="relative py-16 md:py-24 px-4 sm:px-6 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
       <SectionOrnaments opacity={0.82} />
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
 
         {/* Marco de pintura victoriana floral */}
-        <div className="flex flex-col items-center gap-0">
+        <div className="flex flex-col items-center gap-0 w-full">
 
-          {/* ── Marco exterior: madera oscura tallada ── */}
+          {/* ── Marco exterior ── */}
           <div
-            className="relative group"
+            className="relative group w-full max-w-xs sm:max-w-sm md:max-w-full mx-auto"
             style={{
-              padding: "38px",
+              padding: "clamp(16px, 5vw, 38px)",
               background: "linear-gradient(145deg, #5a2e47 0%, #8e4766 35%, #D886A7 65%, #8e4766 100%)",
               boxShadow:
                 "0 16px 56px rgba(28,28,24,0.45), " +
@@ -41,7 +41,7 @@ export default function About() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="absolute pointer-events-none"
-                  style={{ width: 64, height: 64, ...corner,
+                  style={{ width: "clamp(36px, 8vw, 64px)", height: "clamp(36px, 8vw, 64px)", ...corner,
                     transform: `scale(${scaleX},${scaleY})`,
                     transformOrigin: "center" }}
                 >
