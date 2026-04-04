@@ -6,7 +6,7 @@ export default function About() {
     <section id="sobre-mi" className="relative py-16 md:py-24 px-6 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
       <SectionOrnaments opacity={0.82} />
 
-      <div className="max-w-5xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
         {/* ── Columna imagen — centrada en mobile, izquierda en desktop ── */}
         <div className="w-full flex justify-center">
