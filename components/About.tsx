@@ -3,22 +3,25 @@ import SectionOrnaments from "./SectionOrnaments";
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="relative py-16 md:py-24 px-4 sm:px-6 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
+    <section id="sobre-mi" className="relative py-24 px-6 overflow-hidden" style={{ backgroundColor: "#f7f3ed" }}>
       <SectionOrnaments opacity={0.82} />
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
 
         {/* Marco de pintura victoriana floral */}
         <div className="flex flex-col items-center gap-0 w-full">
 
+          {/* Contenedor responsivo — limita ancho en mobile */}
+          <div className="w-full max-w-[300px] sm:max-w-[360px] md:max-w-full">
+
           {/* ── Marco exterior ── */}
           <div
-            className="relative group w-full max-w-xs sm:max-w-sm md:max-w-full mx-auto"
+            className="relative group w-full"
             style={{
               padding: "clamp(16px, 5vw, 38px)",
               background: "linear-gradient(145deg, #5a2e47 0%, #8e4766 35%, #D886A7 65%, #8e4766 100%)",
               boxShadow:
-                "0 16px 56px rgba(28,28,24,0.45), " +
-                "0 4px 16px rgba(28,28,24,0.25), " +
+                "0 16px 56px rgba(28,28,24,0.35), " +
+                "0 4px 16px rgba(28,28,24,0.20), " +
                 "inset 0 2px 3px rgba(255,255,255,0.07), " +
                 "inset 0 -2px 4px rgba(0,0,0,0.45), " +
                 "inset 2px 0 3px rgba(255,255,255,0.04), " +
@@ -41,7 +44,7 @@ export default function About() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="absolute pointer-events-none"
-                  style={{ width: "clamp(36px, 8vw, 64px)", height: "clamp(36px, 8vw, 64px)", ...corner,
+                  style={{ width: "clamp(40px, 8vw, 64px)", height: "clamp(40px, 8vw, 64px)", ...corner,
                     transform: `scale(${scaleX},${scaleY})`,
                     transformOrigin: "center" }}
                 >
@@ -114,6 +117,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          </div>{/* cierre max-w wrapper */}
         </div>
 
         {/* Texto */}
