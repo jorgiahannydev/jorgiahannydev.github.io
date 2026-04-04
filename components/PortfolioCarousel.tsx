@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 
 type Project = {
@@ -125,10 +125,33 @@ function ProjectCard({ p }: { p: Project }) {
 
 export default function PortfolioCarousel() {
   const [page, setPage] = useState(0);
+  const [mobileIndex, setMobileIndex] = useState(0);
   const [hoveredArrow, setHoveredArrow] = useState<"prev" | "next" | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const perPage = 3;
   const totalPages = Math.ceil(projects.length / perPage);
   const visible = projects.slice(page * perPage, page * perPage + perPage);
+
+  function scrollMobileTo(index: number) {
+    if (!scrollRef.current) return;
+    const container = scrollRef.current;
+    const card = container.children[index] as HTMLElement;
+    if (card) container.scrollTo({ left: card.offsetLeft, behavior: "smooth" });
+    setMobileIndex(index);
+  }
+
+  function handlePrev() {
+    scrollMobileTo(Math.max(0, mobileIndex - 1));
+    setPage((p) => Math.max(0, p - 1));
+  }
+
+  function handleNext() {
+    scrollMobileTo(Math.min(projects.length - 1, mobileIndex + 1));
+    setPage((p) => Math.min(totalPages - 1, p + 1));
+  }
+
+  const atStart = page === 0 && mobileIndex === 0;
+  const atEnd   = page === totalPages - 1 && mobileIndex === projects.length - 1;
 
   return (
     <div>
@@ -149,60 +172,58 @@ export default function PortfolioCarousel() {
           </p>
         </div>
 
-        {/* Flechas de navegación — solo desktop */}
-        <div className="hidden md:flex gap-3 flex-shrink-0">
-          <button
-            onClick={() => setPage((p) => Math.max(0, p - 1))}
-            disabled={page === 0}
-            aria-label="Anterior"
-            onMouseEnter={() => setHoveredArrow("prev")}
-            onMouseLeave={() => setHoveredArrow(null)}
-            style={{
-              width: "3rem", height: "3rem", borderRadius: "9999px",
-              border: `2px solid ${hoveredArrow === "prev" && page !== 0 ? "#C5A059" : "#8e4766"}`,
-              background: hoveredArrow === "prev" && page !== 0 ? "#C5A059" : "linear-gradient(145deg, #8e4766, #D886A7)",
-              color: hoveredArrow === "prev" && page !== 0 ? "#8e4766" : "#ffffff",
-              fontSize: "1.2rem",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              cursor: page === 0 ? "not-allowed" : "pointer",
-              opacity: page === 0 ? 0.3 : 1,
-              boxShadow: "0 12px 32px rgba(28,28,24,0.12)",
-              transform: hoveredArrow === "prev" && page !== 0 ? "scale(1.08)" : "scale(1)",
-              transition: "background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s",
-              flexShrink: 0,
-            }}
-          >
-            ←
-          </button>
-          <button
-            onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
-            disabled={page === totalPages - 1}
-            aria-label="Siguiente"
-            onMouseEnter={() => setHoveredArrow("next")}
-            onMouseLeave={() => setHoveredArrow(null)}
-            style={{
-              width: "3rem", height: "3rem", borderRadius: "9999px",
-              border: `2px solid ${hoveredArrow === "next" && page !== totalPages - 1 ? "#C5A059" : "#8e4766"}`,
-              background: hoveredArrow === "next" && page !== totalPages - 1 ? "#C5A059" : "linear-gradient(145deg, #8e4766, #D886A7)",
-              color: hoveredArrow === "next" && page !== totalPages - 1 ? "#8e4766" : "#ffffff",
-              fontSize: "1.2rem",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              cursor: page === totalPages - 1 ? "not-allowed" : "pointer",
-              opacity: page === totalPages - 1 ? 0.3 : 1,
-              boxShadow: "0 12px 32px rgba(28,28,24,0.12)",
-              transform: hoveredArrow === "next" && page !== totalPages - 1 ? "scale(1.08)" : "scale(1)",
-              transition: "background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s",
-              flexShrink: 0,
-            }}
-          >
-            →
-          </button>
+        {/* Flechas — visibles en mobile y desktop */}
+        <div className="flex gap-3 flex-shrink-0">
+          {[
+            { dir: "prev", label: "Anterior", disabled: atStart, icon: "←" },
+            { dir: "next", label: "Siguiente", disabled: atEnd,   icon: "→" },
+          ].map(({ dir, label, disabled, icon }) => {
+            const isHov = hoveredArrow === dir && !disabled;
+            return (
+              <button
+                key={dir}
+                onClick={dir === "prev" ? handlePrev : handleNext}
+                disabled={disabled}
+                aria-label={label}
+                onMouseEnter={() => setHoveredArrow(dir as "prev" | "next")}
+                onMouseLeave={() => setHoveredArrow(null)}
+                style={{
+                  width: "3rem", height: "3rem", borderRadius: "9999px",
+                  border: `2px solid ${isHov ? "#C5A059" : "#8e4766"}`,
+                  background: isHov ? "#C5A059" : "linear-gradient(145deg, #8e4766, #D886A7)",
+                  color: isHov ? "#8e4766" : "#ffffff",
+                  fontSize: "1.2rem",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  cursor: disabled ? "not-allowed" : "pointer",
+                  opacity: disabled ? 0.3 : 1,
+                  boxShadow: "0 12px 32px rgba(28,28,24,0.12)",
+                  transform: isHov ? "scale(1.08)" : "scale(1)",
+                  transition: "background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s",
+                  flexShrink: 0,
+                }}
+              >
+                {icon}
+              </button>
+            );
+          })}
         </div>
       </div>
 
       {/* Mobile: scroll horizontal con snap — 1 card visible */}
-      <div className="flex md:hidden overflow-x-auto gap-4 pb-4 snap-x snap-mandatory"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+      <div
+        ref={scrollRef}
+        className="flex md:hidden overflow-x-auto gap-4 pb-4 snap-x snap-mandatory"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        onScroll={() => {
+          if (!scrollRef.current) return;
+          const { scrollLeft, offsetWidth } = scrollRef.current;
+          const card = scrollRef.current.children[0] as HTMLElement;
+          if (!card) return;
+          const cardW = card.offsetWidth + 16; // width + gap
+          const idx = Math.round(scrollLeft / cardW);
+          setMobileIndex(idx);
+        }}
+      >
         {projects.map((p) => (
           <div key={p.title} className="snap-start shrink-0 w-[80vw] max-w-[300px]">
             <ProjectCard p={p} />
